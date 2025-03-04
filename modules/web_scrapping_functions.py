@@ -67,7 +67,7 @@ def scrap_all_recipies(url, base_url):
             sub_soup = BeautifulSoup(sub_response.text, "html.parser")    
         
             # obtain recipies title and urls by ingredients
-            recipies_list = scrap_recipes_titles_and_url(sub_soup)
+            recipies_list = scrap_recipes_titles_and_url(sub_soup,base_url)
             
             # Group recipes by ingredient in a dictionary
             recipes[ingredient] = recipies_list
@@ -167,3 +167,61 @@ def view_recipes_by_category (recipe_df, field, category):
     for index, row in recipe_df.iterrows():    
         if  row[field]  ==   category:
             print(row["Title"])
+
+def ask_for_dish_menu_order(recipe):
+    options = ["1. Lehen platera", "2. Bigarren platera", "3. Azkenburukoa"]
+    end_char = "q"
+
+    while True:
+        print(f"\nDetermine '{recipe}' dish order. This dish is: ")
+        for option in options:
+            print(option)
+        print(f"Enter '{end_char}' to quit.")
+
+        choice = input("Select an option (1-3) or 'q' to quit: ").strip()
+
+        if choice == end_char:
+            break
+        elif choice in ["1", "2", "3"]:
+            if int(choice) == 1:
+                return "Lehen platerak"
+            elif int(choice) == 2:
+                return "Bigarren platerak"
+            else:
+                return "Azkenburukoak"
+        else:
+            print("Invalid choice! Please enter 1, 2, or 3.")
+
+def complete_dish_order_by_user(recipe_df, no_order_list):
+    for index, row in recipe_df.iterrows():
+        if row['Title'] in no_order_list:
+            row["Order"] = ask_for_dish_menu_order(row['Title'])
+
+def ask_for_recipes_by_order(recipe_df):
+
+    no_order = complete_dish_order(recipe_df)
+    if len(no_order) == 0:
+        print("\nAll recipes has dish order")
+
+    options = ["1. Lehen platerak", "2. Bigarren platerak", "3. Azkenburukoak"]
+    end_char = "q"
+
+    while True:
+        print(f"\nWhich recipes you want to see? ")
+        for option in options:
+            print(option)
+        print(f"Enter '{end_char}' to quit.")
+
+        choice = input("Select an option (1-3) or 'q' to quit: ").strip()
+
+        if choice == end_char:
+            break
+        elif choice in ["1", "2", "3"]:
+            if int(choice) == 1:
+                view_recipes_by_category(recipe_df, "Order", "Lehen platerak")
+            elif int(choice) == 2:
+                view_recipes_by_category(recipe_df, "Order", "Bigarren platerak")
+            else:
+                view_recipes_by_category(recipe_df, "Order", "Azkenburukoak")
+        else:
+            print("Invalid choice! Please enter 1, 2, or 3.")

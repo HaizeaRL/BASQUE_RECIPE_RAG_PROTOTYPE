@@ -30,6 +30,36 @@ recipe_df = wsf.recipes_dict_to_df(recipes, techniques_dict , order_dict)
 
 # COMPLETE DATA: ADD DISH_ORDER TO EMPTY RECIPES BY LOGIC
 no_order = wsf.complete_dish_order(recipe_df)
+if len(no_order) >0:
+    print("Recipes without dish order")
+    for recipe in no_order:
+        print("- ", recipe)
 
-# ASK USER TO COMPLETE THE REST DISH ORDER
+# FIX RECIPE TITLE FROM DF '“ Tomate nahaskia'
+for index, row in recipe_df.iterrows():
+    if '“ ' in row['Title']:
+        # correct recipe_df value
+        aux = row['Title']
+        row['Title'] = aux.replace('“ ',"")
+
+# FIX FROM NO_ORDER LIST
+no_order = [item.replace('“ ', "") if '“ ' in item else item for item in no_order]
+if len(no_order) >0:
+    print("\nRecipes without dish order (corrected)")
+    for recipe in no_order:
+        print("- ", recipe)
+
+# ASK USER TO COMPLETE THOSE RECIPES WITHOUT DISH ORDER
+wsf.complete_dish_order_by_user(recipe_df, no_order)
+
+# validate result, NO RECIPE WITHOUT DISH ORDER
+no_order = wsf.complete_dish_order(recipe_df)
+if len(no_order) >0:
+    print("Recipes without dish order")
+    for recipe in no_order:
+        print("- ", recipe)
+
+# RECIPES BY DISH ORDER
+wsf.ask_for_recipes_by_order(recipe_df)
+
 
