@@ -27,39 +27,49 @@ order_dict = wsf.scrap_recipes_by_category_list(url, base_url,dish_order_categor
 
 # DATA JOIN: RELATE INGREDIENT BASED RECIPES WITH TECHNIQUE AND DISH ORDER
 recipe_df = wsf.recipes_dict_to_df(recipes, techniques_dict , order_dict)
+#print("Shape df: ", recipe_df.shape)
 
-# COMPLETE DATA: ADD DISH_ORDER TO EMPTY RECIPES BY LOGIC
-no_order = wsf.complete_dish_order(recipe_df)
-if len(no_order) >0:
-    print("Recipes without dish order")
-    for recipe in no_order:
-        print("- ", recipe)
+# GROUP RECIPES BY INGREDIENTS
+recipe_df_grouped = wsf.group_titles_with_ingredients(recipe_df)
+'''for index, row in recipe_df_grouped.iterrows():    
+    print(f"RECIPE: {row['Title']} INGREDIENTS: {row['Ingredient']}, ORDER: {row['Order']}, TECH: {row['Technique']}")
+print("Shape df: ", recipe_df_grouped.shape)'''
 
 # FIX RECIPE TITLE FROM DF '“ Tomate nahaskia'
-for index, row in recipe_df.iterrows():
+for index, row in recipe_df_grouped.iterrows():
     if '“ ' in row['Title']:
         # correct recipe_df value
         aux = row['Title']
         row['Title'] = aux.replace('“ ',"")
 
-# FIX FROM NO_ORDER LIST
-no_order = [item.replace('“ ', "") if '“ ' in item else item for item in no_order]
+
+# COMPLETE DATA: ADD DISH_ORDER TO EMPTY RECIPES BY LOGIC
+no_order = wsf.complete_dish_order(recipe_df_grouped)
 if len(no_order) >0:
-    print("\nRecipes without dish order (corrected)")
-    for recipe in no_order:
-        print("- ", recipe)
+    print("Recipes without dish order: ", len(no_order))
 
 # ASK USER TO COMPLETE THOSE RECIPES WITHOUT DISH ORDER
-wsf.complete_dish_order_by_user(recipe_df, no_order)
+wsf.complete_dish_order_by_user(recipe_df_grouped, no_order)
 
 # validate result, NO RECIPE WITHOUT DISH ORDER
-no_order = wsf.complete_dish_order(recipe_df)
+no_order = wsf.complete_dish_order(recipe_df_grouped)
 if len(no_order) >0:
     print("Recipes without dish order")
     for recipe in no_order:
         print("- ", recipe)
+else:
+    print("There is no recipes without dish order")
 
-# RECIPES BY DISH ORDER
-wsf.ask_for_recipes_by_order(recipe_df)
+# SAVE RECIPES TABLE UNTIL NOW
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+data_folder = os.path.join(project_root, 'data')
+
+# Ensure the 'data' folder exists
+os.makedirs(data_folder, exist_ok=True)
+recipe_df_grouped.to_csv(os.path.join(data_folder, "recipes.csv"), index = False)
+
+
+'''# RECIPES BY DISH ORDER
+wsf.ask_for_recipes_by_order(recipe_df)'''
 
 

@@ -146,19 +146,41 @@ def recipes_dict_to_df(recipes, techniques_dict, order_dict ):
     # convert table to df
     return pd.DataFrame(recipes_tab)
 
-def complete_dish_order(recipe_df):
+def group_titles_with_ingredients(df):
+    # Group by 'Title' and aggregate:
+    grouped_df = (df.groupby('Title', as_index=False)
+                    .agg({
+                        "Ingredient": list, 
+                        "Order": lambda x: sorted(set(x.dropna())),  # Unique sorted list without NaN
+                        "Technique": lambda x: sorted(set(x.dropna())),  # Unique sorted list without NaN
+                        "Url": list
+                    }))
+    return grouped_df
+
+
+def complete_dish_order(df):
     no_order = []
-    for index, row in recipe_df.iterrows():
+    for index, row in df.iterrows():
         ingredient = row['Ingredient']
         dish_order = row['Order']
         title = row['Title']
-        if dish_order == None and ingredient in ["Arraina", "Haragia", "Barraskiloak", "Itsaskia"]:
-            row["Order"] = "Bigarren platerak"
-        elif dish_order == None and ingredient in ["Arroza", "Pasta", "Lekaleak", "Barazkia"]:
-            row["Order"] = "Lehen platerak"
-        elif dish_order == None and ingredient in ["Esnekiak", "Fruta",  "Txokolatea"]:
-            row["Order"] = "Azkenburukoak"
-        elif dish_order == None:
+        if not dish_order and any(ing in ["Arraina", "Haragia", "Barraskiloak", "Itsaskia"] for ing in ingredient):
+            row["Order"] = ["Bigarren platerak"]
+        elif not dish_order and any(ing in ["Arroza", "Pasta", "Lekaleak", "Barazkia"] for ing in ingredient):                
+            row["Order"] = ["Lehen platerak"]
+        elif not dish_order and any(ing in ["Esnekiak", "Fruta",  "Txokolatea"] for ing in ingredient):
+            # correct: Guakamole
+            if any(term in row['Title'] for term in ["Guakamole"]):
+                row["Order"] = ["Lehen platerak"]            
+            # correct: Eperrak txokolate saltsan
+            if any(term in row['Title'] for term in ["saltsan"]):
+                row["Order"] = ["Bigarren platerak"]                
+            row["Order"] = ["Azkenburukoak"]
+        elif dish_order and any(ing in ["Barazkia"] for ing in ingredient):
+            # correct: Barazki eta txekor azpizun erregosia
+            if any(term in row['Title'] for term in ["erregosi"]):
+                row["Order"] = ["Bigarren platerak"]  
+        elif not dish_order:
             no_order.append(title)
     return no_order
 
@@ -184,11 +206,11 @@ def ask_for_dish_menu_order(recipe):
             break
         elif choice in ["1", "2", "3"]:
             if int(choice) == 1:
-                return "Lehen platerak"
+                return ["Lehen platerak"]
             elif int(choice) == 2:
-                return "Bigarren platerak"
+                return ["Bigarren platerak"]
             else:
-                return "Azkenburukoak"
+                return ["Azkenburukoak"]
         else:
             print("Invalid choice! Please enter 1, 2, or 3.")
 
@@ -225,3 +247,4 @@ def ask_for_recipes_by_order(recipe_df):
                 view_recipes_by_category(recipe_df, "Order", "Azkenburukoak")
         else:
             print("Invalid choice! Please enter 1, 2, or 3.")
+
