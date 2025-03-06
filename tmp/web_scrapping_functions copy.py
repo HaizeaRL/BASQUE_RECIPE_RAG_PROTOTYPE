@@ -32,6 +32,7 @@ def scrap_recipes_titles_and_url(sub_soup, base_url):
                         recipes_list.append(recipe_dict)
     return recipes_list
 
+
 def scrap_all_recipies(url, base_url):
     """
     Function that applies web scraping to find all basque recipies from url and retrieve recipes per
@@ -94,6 +95,7 @@ def scrap_recipes_titles(sub_soup):
                         recipes_list.append(recipe_title)
     return recipes_list
 
+
 def scrap_recipes_by_category_list(url, base_url , category_list): 
     # Fetch the main page
     response = requests.get(url)
@@ -119,7 +121,6 @@ def scrap_recipes_by_category_list(url, base_url , category_list):
 
     return response_dictionary
 
-
 def find_category_by_recipe (dictionary , recipe_title):
     for key in dictionary.keys():
         for recipe in dictionary.get(key):       
@@ -139,7 +140,7 @@ def recipes_dict_to_df(recipes, techniques_dict, order_dict ):
                 
                 # todo add url
                 recipes_tab.append({"Ingredient": ingredient, "Order":dish_order,
-                                    "Technique":technique, "Origin": None, "Title":recipe_title,
+                                    "Technique":technique,  "Title":recipe_title,
                                     "Url": url})
     
     # convert table to df
@@ -152,17 +153,10 @@ def group_titles_with_ingredients(df):
                         "Ingredient": list, 
                         "Order": lambda x: sorted(set(x.dropna())),  # Unique sorted list without NaN
                         "Technique": lambda x: sorted(set(x.dropna())),  # Unique sorted list without NaN
-                        "Origin": lambda x: sorted(set(x.dropna())),
                         "Url": list
                     }))
     return grouped_df
 
-def count_empty_dish_order(df):
-    no_dish_order = []   
-    for index, row in df.iterrows():
-        if not row["Order"]:
-            no_dish_order.append(row["Title"])
-    return no_dish_order, len(no_dish_order)
 
 def complete_dish_order(df, conf):
     for index, row in df.iterrows():
@@ -178,17 +172,20 @@ def complete_dish_order(df, conf):
             if any(term in row['Title'] for term in ["Guakamole"]):
                 row["Order"] = [conf["DISH_ORDER_CATEGORIES"][0]]  # "Lehen platerak"
             # correct: Eperrak txokolate saltsan
-            elif any(term in row['Title'] for term in ["Eperrak txokolate saltsan"]):
+            elif any(term in row['Title'] for term in ["saltsan"]):
                 row["Order"] = [conf["DISH_ORDER_CATEGORIES"][1]]  # "Bigarren platerak"                  
             row["Order"] = [conf["DISH_ORDER_CATEGORIES"][2]] # "Azkenburukoak"
         elif dish_order and any(ing in ["Barazkia"] for ing in ingredient):
             # correct: Barazki eta txekor azpizun erregosia
             if any(term in row['Title'] for term in ["erregosi"]):
                 row["Order"] = [conf["DISH_ORDER_CATEGORIES"][1]]  # "Bigarren platerak"  
-        if any(term.lower() in row['Title'].lower() for term in conf["FIRST_ORDER_TERMS"]):
-            # correct wrongly classified
-            row["Order"] = [conf["DISH_ORDER_CATEGORIES"][0]]  # "Lehen platerak"
     return df
+
+def view_recipes_by_category (recipe_df, field, category):
+    print(category.upper())
+    for index, row in recipe_df.iterrows():    
+        if  row[field]  ==   category:
+            print(row["Title"])
 
 def ask_for_dish_menu_order(recipe, conf):
     #["1. Lehen platera", "2. Bigarren platera", "3. Azkenburukoa"]
@@ -219,39 +216,51 @@ def complete_dish_order_by_user(recipe_df, no_order_list, conf):
     for index, row in recipe_df.iterrows():
         if row['Title'] in no_order_list:
             row["Order"] = ask_for_dish_menu_order(row['Title'], conf)
-    return recipe_df
 
-def complete_dish_order_by_synomims_and_user(df, conf):
-    df1 = complete_dish_order(df, conf)
-    # check if dish order is not complete yet
-    no_order, without_order = count_empty_dish_order(df1)
-    
-    if without_order != 0:
-        print(f"There are {without_order} recipes without dish order.")
-        print("Lets complete asking to user.")
-        # ASK USER TO COMPLETE THOSE RECIPES WITHOUT DISH ORDER
-        df2 = complete_dish_order_by_user(df1, no_order, conf)         
-        # check if dish order is complete 
-        no_order, without_order = count_empty_dish_order(df2)
-        if without_order == 0:
-            print("There is no recipes without dish order")
-        return df2  # Ensure df2 is returned if modified
-    
-    return df1  # If no modification was needed, return df1
+def ask_for_recipes_by_order(recipe_df, conf):
 
+    no_order = complete_dish_order(recipe_df)
+    if len(no_order) == 0:
+        print("\nAll recipes has dish order")
+
+    #["1. Lehen platera", "2. Bigarren platera", "3. Azkenburukoa"]
+    options = [str(idx + 1) +". "+ item for idx, item in enumerate(conf["DISH_ORDER_CATEGORIES"])]
+    end_char = "q"
+
+    while True:
+        print(f"\nWhich recipes you want to see? ")
+        for option in options:
+            print(option)
+        print(f"Enter '{end_char}' to quit.")
+
+        choice = input("Select an option (1-3) or 'q' to quit: ").strip()
+
+        if choice == end_char:
+            break
+        elif choice in ["1", "2", "3"]:
+            if int(choice) == 1:
+                view_recipes_by_category(recipe_df, "Order", conf["DISH_ORDER_CATEGORIES"][0]) # "Lehen platerak"
+            elif int(choice) == 2:
+                view_recipes_by_category(recipe_df, "Order", conf["DISH_ORDER_CATEGORIES"][1]) # "Bigarren platerak"
+            else:
+                view_recipes_by_category(recipe_df, "Order", conf["DISH_ORDER_CATEGORIES"][2]) # "Azkenburukoak"
+        else:
+            print("Invalid choice! Please enter 1, 2, or 3.")
+
+def count_empty_dish_order(df):
+    no_dish_order = []   
+    for index, row in df.iterrows():
+        if not row["Order"]:
+            no_dish_order.append(row["Title"])
+    return no_dish_order, len(no_dish_order)
+    
 def count_empty_techniques(df):   
     no_tech = []   
     for index, row in df.iterrows():
         if not row["Technique"]:
             no_tech.append(row["Title"])
     return no_tech, len(no_tech)
-
-def count_empty_tech_and_origin(df):   
-    no_tech_org = []   
-    for index, row in df.iterrows():
-        if not row["Technique"] and not row["Origin"]:
-            no_tech_org.append(row["Title"])
-    return no_tech_org, len(no_tech_org)
+        
 
 def complete_tech_by_synonims(df, conf):   
     # complete techniques column as much as possible
@@ -287,35 +296,18 @@ def complete_tech_by_synonims(df, conf):
              row['Technique'] = ["Hotza"] 
     return df
 
-def complete_origin(df, conf):   
-    # complete origin columns as much as possible
-    for index, row in df.iterrows():
-        org = row['Origin']  
-        if not org and any(term.lower() in row['Title'].lower() for term in conf["ORIGIN_ITALY"]):
-            row['Origin'] = ["Italia"]
-        elif not org and any(term.lower() in row['Title'].lower() for term in conf["ORIGIN_ASIA"]):
-            row['Origin'] = ["Asia"]
-        elif not org and any(term.lower() in row['Title'].lower() for term in conf["ORIGIN_FRANCE"]):
-            row['Origin'] = ["Frantzia"]
-        elif not org and any(term.lower() in row['Title'].lower() for term in conf["ORIGIN_EUROPE"]):
-            row['Origin'] = ["Europa"]
-        elif not org and any(term.lower() in row['Title'].lower() for term in conf["ORIGIN_MEXIKO"]):
-            row['Origin'] = ["Mexiko"]
-        elif not org and any(term.lower() in row['Title'].lower() for term in conf["ORIGIN_AFRICA"]):
-            row['Origin'] = ["Afrika"]
-        elif not org and any(term.lower() in row['Title'].lower() for term in conf["ORIGIN_SPAIN"]):
-             row['Origin'] = ["Espainia"]
-        elif not org and any(term.lower() in row['Title'].lower() for term in conf["ORIGIN_BASQUE"]):
-             row['Origin'] = ["Bertakoa"]
-      
-    return df
-
-def get_recipes_by_category(df, category_list, category):
-    for item in category_list:
-        print(f"\nRecipes of: {item.upper()}")
-        # select recipes of corresponding ord_item
-        recipe_list = df[df[category].apply(lambda x: item in x)]["Title"].tolist()
-        # print them
-        for recipe in recipe_list:
-            print("- ", recipe)
-        input()
+def complete_dish_order(df, conf):
+    df1 = complete_dish_order(df, conf)
+    # check if dish order is not complete yet
+    no_order, without_order = count_empty_dish_order(df1)
+    
+    if without_order != 0:
+        # ASK USER TO COMPLETE THOSE RECIPES WITHOUT DISH ORDER
+        df2 = complete_dish_order_by_user(df1, no_order, conf)  
+        # check if dish order is complete 
+        no_order, without_order = count_empty_dish_order(df2)
+        if without_order == 0:
+            print("There is no recipes without dish order")
+        return df2  # Ensure df2 is returned if modified
+    
+    return df1  # If no modification was needed, return df1

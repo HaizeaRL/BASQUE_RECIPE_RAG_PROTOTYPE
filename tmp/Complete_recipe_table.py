@@ -188,87 +188,83 @@ def complete_dish_order_by_user(recipe_df):
     for index, row in recipe_df.iterrows():
         if row['Title'] in no_order:
             row["Order"] = ask_for_dish_menu_order(row['Title'])
+            
 
+def count_empty_dish_order(df):
+    no_dish_order = []   
+    for index, row in df.iterrows():
+        if not row["Order"]:
+            no_dish_order.append(row["Title"])
+    return no_dish_order, len(no_dish_order)
+    
+def count_empty_techniques(df):   
+    no_tech = []   
+    for index, row in df.iterrows():
+        if not row["Technique"]:
+            no_tech.append(row["Title"])
+    return not_tech, len(no_tech)
+        
 
-no_tech = []
-for index, row in recipe_df_grouped.iterrows():
-    tech = row['Technique']
-    ingredient = row['Ingredient']
-    if not tech and any(term.lower() in row['Title'].lower() 
-                        for term in ["galdarraztatu", "egosi","uretan", "eskalfatu","budina","papillote", "lurrunetan"]):
-        row['Technique'] = ["Egosi"]
-    elif not tech and any(term.lower() in row['Title'].lower() 
-                          for term in ["frijitu", "arrautzaztatua","arrautzeztatua", "tortilla", 
-                                       "nahaskia", "kroketa","salteatu"]):
-        row['Technique'] = ["Frijitu"]
-    elif not tech and any(term.lower() in row['Title'].lower() 
-                          for term in ["ozpin", "olio", "eskabetxean", "entsalada", "gatzetan", "marinatua",
-                                       "tartar","tar-tar", "raf"]):
-                          
-        row['Technique'] = ["Entsalada"]
-    elif not tech and any(term.lower() in row['Title'].lower() 
-                          for term in ["plantxa", "parrila","zartagin","burruntzia","brotxetak","parrillan"]):
-        row['Technique'] = ["Plantxan"] 
-    elif not tech and any(term.lower() in row['Title'].lower() 
-                          for term in ["labe", "cake", "coulant", "gaileta", "tarta", "pastel", 
-                                       "bizkotxo", "opil"]):  
-        row['Technique'] = ["Labekatu"]
-    elif not tech and any(term.lower() in row['Title'].lower() for term in ["carpaccio"]):  
-        row['Technique'] = ["Carpaccio"]
-    elif not tech and any(term.lower() in row['Title'].lower() for term in ["sueztitu", "goxatu"]):  
-       row['Technique'] = ["Sueztitu"]
-    elif not tech and any(term.lower() in row['Title'].lower() for term in ["konfitatu"]):  
-       row['Technique'] = ["Konfitatu"]
-    elif not tech and any(term.lower() in row['Title'].lower() for term in ["krema", "pure"]):  
-       row['Technique'] = ["Kremak"]
-    elif not tech and any(term.lower() in row['Title'].lower() for term in ["bainu"]):  
-        row['Technique'] = ["Marian"]   
-    elif not tech and any(term.lower() in row['Title'].lower() for term in ["gisatu"]):  
-         row['Technique'] = ["Erregosi"]
-    elif not tech and any(term.lower() in row['Title'].lower()
-                              for term in ["bete", "enpanada", "enpanadilla"]):
-         row['Technique'] = ["Betea"]  
-    elif not tech and any(term.lower() in row['Title'].lower()
-                              for term in ["izozki", "maionesa", "marmelada", "mazedonia", "irasagar",
-                                           "pintxoa"]):
-          row['Technique'] = ["Hotza"]   
-    elif not tech and any(term.lower() in row['Title'].lower()
-                              for term in ["salda"]):
-          row['Technique'] = ["Zopak"]   
-    elif not tech and any(term.lower() in row['Title'].lower() 
-                              for term in ["lasagna","risotoa","risottoa", "boloniar",
-                                           "carbonara","tagliatel","pasta","kaneloi", 
-                                           "ragout", "mozzarella","pesto", "tiramisu"]):
-        row['Technique'] = ["Italiarra"]
-    elif not tech and any(term.lower() in row['Title'].lower() 
-                          for term in ["basmati","curry", "hindu", "txina", "asiar", "sushi",
-                                       "hiru gutiziko arroza","basa arroza", "sashimia"]):
-        row['Technique'] = ["Asiarra"]
-    elif not tech and any(term.lower() in row['Title'].lower() 
-                          for term in ["frantzia", "krep","roquefort", "tatin","mollet",
-                                        "ganatxea","kanape", "panatxe","mousse"]):
-        row['Technique'] = ["Frantziarra"]
-    elif not tech and any(term.lower() in row['Title'].lower() for term in ["tinga","guakamole"]):
-        row['Technique'] = ["Mexikarra"]
-    elif not tech and any(term.lower() in row['Title'].lower() for term in ["fouti"]):
-        row['Technique'] = ["Afrikarra"]
-    elif not tech and any(term.lower() in row['Title'].lower() for term in ["moussaka", "estrudel", "oporto","brandada"]):
-        row['Technique'] = ["Europarra"]
-    elif not tech and any(term.lower() in row['Title'].lower() 
-                          for term in ["andaluzia", "valentzia", "errioxa", "galizia",
-                                       "fideua", "koka", "morroi","flamenka",
-                                       "garbantzuak tripakiekin","patata tortila",
-                                       "ganbak baratxuritan", "bijiliako Txitxirioak","boilur"]):
-         row['Technique'] = ["Espainiarra"]
-    elif not tech and any(term.lower() in row['Title'].lower() 
-                          for term in ["tolosa","nafarroa", "tutera", "beasain", "idiazabal", "ibarra",
-                                       "baserri", "betiko", "pikillo", "onddo", "perretxiko", "piperrada",
-                                       "marmitako", "hegaluze", "ttoro", "tinta", "txipiroi", "txibi",
-                                       "menestra", "kokotxa", "kokote", "koxkera","konpota", "sagardo",
-                                       "txakolin", "pil-pil", "saltsa berdean", "albondigak",
-                                       "txilindron", "saltsan","ardo","natilak","bizkai","marinel"]):
-         row['Technique'] = ["Bertakoak"]
-    elif not tech:
-        no_tech.append(row["Title"])
+def complete_tech_by_synonims(df, conf):   
+    # complete techniques column as much as possible
+    for index, row in df.iterrows():
+        tech = row['Technique']
+        if not tech and any(term.lower() in row['Title'].lower() for term in conf["CARPACCIO_TECH_SUBCATEGORIES"]):  
+            row['Technique'] = ["Carpaccio"]
+        elif not tech and any(term.lower() in row['Title'].lower() for term in conf["EGOSI_TECH_SUBCATEGORIES"]):
+            row['Technique'] = ["Egosi"]
+        elif not tech and any(term.lower() in row['Title'].lower() for term in conf["ENTSALADA_TECH_SUBCATEGORIES"]):                              
+            row['Technique'] = ["Entsalada"]
+        elif not tech and any(term.lower() in row['Title'].lower() for term in conf["ERREGOSI_TECH_SUBCATEGORIES"]):  
+             row['Technique'] = ["Erregosi"]
+        elif not tech and any(term.lower() in row['Title'].lower() for term in conf["FRIJITU_TECH_SUBCATEGORIES"]):
+            row['Technique'] = ["Frijitu"]
+        elif not tech and any(term.lower() in row['Title'].lower() for term in conf["KONFITATU_TECH_SUBCATEGORIES"]):  
+            row['Technique'] = ["Konfitatu"]
+        elif not tech and any(term.lower() in row['Title'].lower() for term in conf["KREMAK_TECH_SUBCATEGORIES"]):  
+           row['Technique'] = ["Kremak"]
+        elif not tech and any(term.lower() in row['Title'].lower() for term in conf["LABEKATU_TECH_SUBCATEGORIES"]):  
+            row['Technique'] = ["Labekatu"]
+        elif not tech and any(term.lower() in row['Title'].lower() for term in conf["MARIAN_TECH_SUBCATEGORIES"]):  
+            row['Technique'] = ["Marian"]   
+        elif not tech and any(term.lower() in row['Title'].lower() for term in conf["PLANTXAN_TECH_SUBCATEGORIES"]):
+            row['Technique'] = ["Plantxan"] 
+        elif not tech and any(term.lower() in row['Title'].lower() for term in conf["SUEZTITU_TECH_SUBCATEGORIES"]):  
+             row['Technique'] = ["Sueztitu"]
+        elif not tech and any(term.lower() in row['Title'].lower() for term in conf["ZOPAK_TECH_SUBCATEGORIES"]):
+              row['Technique'] = ["Zopak"]   
+        elif not tech and any(term.lower() in row['Title'].lower() for term in conf["BETEA_TECH_SUBCATEGORIES"]):
+             row['Technique'] = ["Betea"]  
+        elif not tech and any(term.lower() in row['Title'].lower() for term in conf["HOTZA_TECH_SUBCATEGORIES"]):
+             row['Technique'] = ["Hotza"] 
+    return df
+        
+
+   
+    
+
+def complete_origin(df, conf):   
+    # complete origin columns as much as possible
+    for index, row in df.iterrows():
+        org = row['Origin']  
+        if not org and any(term.lower() in row['Title'].lower() for term in conf["ORIGIN_ITALY"]):
+            row['Origin'] = ["Italia"]
+        elif not org and any(term.lower() in row['Title'].lower() for term in conf["ORIGIN_ASIA"]):
+            row['Origin'] = ["Asia"]
+        elif not org and any(term.lower() in row['Title'].lower() for term in conf["ORIGIN_FRANCE"]):
+            row['Origin'] = ["Europa"]
+        elif not org and any(term.lower() in row['Title'].lower() for term in conf["ORIGIN_EUROPE"]):
+            row['Origin'] = ["Europa"]
+        elif not org and any(term.lower() in row['Title'].lower() for term in conf["ORIGIN_MEXIKO"]):
+            row['Origin'] = ["Mexiko"]
+        elif not org and any(term.lower() in row['Title'].lower() for term in conf["ORIGIN_AFRICA"]):
+            row['Origin'] = ["Afrika"]
+        elif not org and any(term.lower() in row['Title'].lower() for term in conf["ORIGIN_SPAIN"]):
+             row['Origin'] = ["Espainia"]
+        elif not org and any(term.lower() in row['Title'].lower() for term in conf["ORIGIN_BASQUE"]):
+             row['Origin'] = ["Bertako"]
+      
+    return df
+   
     
    
