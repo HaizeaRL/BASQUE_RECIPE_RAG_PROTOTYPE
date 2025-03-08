@@ -1,18 +1,21 @@
-# Use the official Python 3.7 image from Docker Hub
+# Usa la imagen oficial de Python 3.7
 FROM python:3.7
 
-# Set the working directory inside the container
+# Establece el directorio de trabajo dentro del contenedor
 WORKDIR /usr/local/app
 
-# Copy the requirements.txt file into the container
+# Copia los archivos necesarios
 COPY requirements.txt .
+COPY config.yaml .
+COPY src/ /usr/local/app/src/
+COPY modules/ /usr/local/app/modules/
+COPY data/ /usr/local/app/data/
 
-# Install the required packages from requirements.txt
+# Instala las dependencias
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the entire project into the container
-COPY . .
+# Ejecutar el script desde src
+RUN python /usr/local/app/src/download_spacy_model.py
 
-
-# Set the default command to start a bash shell
+# Comando por defecto
 CMD ["/bin/bash"]

@@ -1,7 +1,14 @@
 BASE_URL: "https://eu.wikibooks.org/wiki/"
 URL_COMPLEMENT: "Sukaldaritza_liburua/Azala"
 DATA_PATH: "data"
-RECIPES_FILE_NAME:  "recipes.csv"
+SPACY_MODEL_URL: "https://github.com/explosion/spacy-models/releases/download/es_core_news_md-3.7.0/es_core_news_md-3.7.0-py3-none-any.whl"
+SPACY_MODEL: "es_core_news_md-3.7.0-py3-none-any.whl"
+SIMILARITY_THRESHOLD: 0.9
+REPORT_SECONDS: 120
+SIMILAR_RECIPES_FILE_NAME: "similar.csv"
+SIMILAR_NEW_FILE_NAME: "similar_checked.csv"
+FILES_ENCODING: utf-8
+RECIPES_FILE_NAME: "recipes.csv"
 CATEGORY_PREFIX: "Kategoria:"
 TECHNIQUES_CATEGORIES:
   - "Carpaccio"
@@ -37,6 +44,8 @@ FIRST_ORDER_TERMS:
   - "lasagna"
   - "kroketa"
   - "zopa"
+  - "budin"
+  - "salda"
 INGREDIENTS_FIRST_DISH_ORDER:
   - "Arroza"
   - "Pasta"

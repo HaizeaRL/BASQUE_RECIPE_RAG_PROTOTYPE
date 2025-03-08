@@ -8,13 +8,11 @@ from pathlib import Path
 # Add the parent directory (where modules is located) to the Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from modules import web_scrapping_functions as wsf
+from modules import recipe_web_scrapping_functions as wsf
 
 # read config file
 root_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 conf = yaml.safe_load(Path(os.path.join(root_path,"config.yaml")).read_text())
-
-
 
 # WEB SCRAP: obtain ingredients and recipe list per ingredients with its url
 base_url = conf["BASE_URL"]
@@ -52,7 +50,11 @@ for index, row in recipe_df_grouped.iterrows():
     recipe_df_grouped.at[index, 'Title'] = (
         row['Title'].replace('"', '').replace('“', '').replace(',', '').replace('-',' ').replace("'",'').replace('.jpg','').strip()
     )
-print("\tRECIPES TITLES CORRECTED (without commas and weird characters).")
+
+# MAINTAIN CAPITALIZED ONLY THE FIRST WORD & NUMERIZED RECIPES JOINED
+for index, row in recipe_df_grouped.iterrows():
+    recipe_df_grouped.at[index, 'Title'] = wsf.correct_text(row['Title'])
+print("\tRECIPES TITLES CORRECTED.")
 
 
 # COMPLETE DATA: ADD DISH_ORDER TO EMPTY RECIPES BY LOGIC & AND ASKING TO THE USER
@@ -66,8 +68,10 @@ if without_tech !=0:
     print(f"\tThere are {without_tech} recipes without cook technique. Let's try to complete with synonims...")
     recipe_df_new = wsf.complete_tech_by_synonims(recipe_df_new, conf)
     no_tech1, without_tech1 = wsf.count_empty_techniques(recipe_df_new)
-    if without_tech1 !=0:
+    if without_tech1 !=0: 
         print(f"\tAfter corrected with synonims are {without_tech1} recipes without cook technique.")
+        for recipe in no_tech1:
+            print("- ", recipe)
 
 print("CHECKING IF RECIPES CAN BE CLASSIFIED BY ORIGINS...")
 recipe_df_new = wsf.complete_origin(recipe_df_new, conf)
@@ -75,20 +79,20 @@ no_tech_orig, without_tech_orig = wsf.count_empty_tech_and_origin(recipe_df_new)
 if without_tech !=0:
     print(f"\tThere are {without_tech_orig} recipes without cook technique and origin.")   
 
-print("CHECK RECIPES BY DISH_ORDER")
+'''print("CHECK RECIPES BY DISH_ORDER")
 ord = conf["DISH_ORDER_CATEGORIES"]
 wsf.get_recipes_by_category(recipe_df_new, ord, "Order")
-print("---")
+print("---")'''
 
 print("CHECK RECIPES BY TECHNIQUE")
 tech = conf["TECHNIQUES_CATEGORIES"] + ["Betea", "Hotza"]
 wsf.get_recipes_by_category(recipe_df_new, tech, "Technique")
 print("---")
 
-print("CHECK RECIPES BY ORIGIN")
+'''print("CHECK RECIPES BY ORIGIN")
 orig = ["Italia", "Asia","Frantzia", "Europa","Mexiko", "Afrika", "Espainia","Bertakoa"]
 wsf.get_recipes_by_category(recipe_df_new, orig, "Origin")
-print("---")
+print("---")'''
 
 # SAVE RECIPES TABLE UNTIL NOW.  Ensure the 'data' folder exists
 data_folder = os.path.join(root_path, conf["DATA_PATH"])

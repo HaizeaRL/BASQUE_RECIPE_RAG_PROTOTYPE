@@ -178,9 +178,10 @@ def complete_dish_order(df, conf):
             if any(term in row['Title'] for term in ["Guakamole"]):
                 row["Order"] = [conf["DISH_ORDER_CATEGORIES"][0]]  # "Lehen platerak"
             # correct: Eperrak txokolate saltsan
-            elif any(term in row['Title'] for term in ["Eperrak txokolate saltsan"]):
-                row["Order"] = [conf["DISH_ORDER_CATEGORIES"][1]]  # "Bigarren platerak"                  
-            row["Order"] = [conf["DISH_ORDER_CATEGORIES"][2]] # "Azkenburukoak"
+            elif any(term in row['Title'] for term in ["Eperrak"]):
+                row["Order"] = [conf["DISH_ORDER_CATEGORIES"][1]]  # "Bigarren platerak"  
+            else:             
+                row["Order"] = [conf["DISH_ORDER_CATEGORIES"][2]] # "Azkenburukoak"
         elif dish_order and any(ing in ["Barazkia"] for ing in ingredient):
             # correct: Barazki eta txekor azpizun erregosia
             if any(term in row['Title'] for term in ["erregosi"]):
@@ -257,11 +258,15 @@ def complete_tech_by_synonims(df, conf):
     # complete techniques column as much as possible
     for index, row in df.iterrows():
         tech = row['Technique']
+        # correct wrongly classified salads removing actual value       
         if not tech and any(term.lower() in row['Title'].lower() for term in conf["CARPACCIO_TECH_SUBCATEGORIES"]):  
             row['Technique'] = ["Carpaccio"]
         elif not tech and any(term.lower() in row['Title'].lower() for term in conf["EGOSI_TECH_SUBCATEGORIES"]):
             row['Technique'] = ["Egosi"]
         elif not tech and any(term.lower() in row['Title'].lower() for term in conf["ENTSALADA_TECH_SUBCATEGORIES"]):                              
+            '''if any(term.lower() in row['Title'].lower() for term in ["legatz"]):
+                row['Technique'] =[]
+            else: '''      
             row['Technique'] = ["Entsalada"]
         elif not tech and any(term.lower() in row['Title'].lower() for term in conf["ERREGOSI_TECH_SUBCATEGORIES"]):  
              row['Technique'] = ["Erregosi"]
@@ -319,3 +324,30 @@ def get_recipes_by_category(df, category_list, category):
         for recipe in recipe_list:
             print("- ", recipe)
         input()
+
+
+def correct_capitalization(text):
+    # Split the text into words
+    words = text.split()
+    
+    # Make the first word capitalized and the rest in lowercase
+    words = [words[0].capitalize()] + [word.lower() for word in words[1:]]
+    
+    # Join the words back into a single string
+    return words
+
+def correct_text(text):
+
+    # remove special characters
+    text = text.replace('"', '').replace('“', '').replace(',', '').replace('-',' ').replace("'",'').replace('.jpg','').strip()
+
+    # correct capitalization
+    words = correct_capitalization(text)
+    
+    # correct numerization
+    if words[len(words) - 1].isdigit():  
+        words[len(words) - 2] = words[len(words) - 2]+words[len(words) - 1]
+        words.pop()
+    
+    # Join the words back into a single string
+    return ' '.join(words)
