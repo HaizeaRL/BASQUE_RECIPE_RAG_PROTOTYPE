@@ -1,234 +1,57 @@
+# web scrapping info
 BASE_URL: "https://eu.wikibooks.org/wiki/"
 URL_COMPLEMENT: "Sukaldaritza_liburua/Azala"
+CATEGORY_PREFIX: "Kategoria:"
+TECHNIQUES_CATEGORIES: ["Carpaccio", "Egosi", "Entsalada", "Erre", "Erregosi", "Frijitu", "Ketu", "Konfitatu", "Kremak", "Labekatu", "Marian", "Plantxan", "Sueztitu", "Zopak"]
+DISH_ORDER_CATEGORIES: ["Lehen platerak", "Bigarren platerak", "Azkenburukoak"]
+
+# file folders paths & names
 DATA_PATH: "data"
-SPACY_MODEL_URL: "https://github.com/explosion/spacy-models/releases/download/es_core_news_md-3.7.0/es_core_news_md-3.7.0-py3-none-any.whl"
-SPACY_MODEL: "es_core_news_md-3.7.0-py3-none-any.whl"
-SIMILARITY_THRESHOLD: 0.9
-REPORT_SECONDS: 120
+INGREDIENTS_FILE_NAME: "ingredients.csv"
+RECIPES_FILE_NAME_TMP: "recipe_tmp.csv"
 SIMILAR_RECIPES_FILE_NAME: "similar.csv"
 SIMILAR_NEW_FILE_NAME: "similar_checked.csv"
+RECIPES_COMPLETED: "recipe_complete_by_user.csv"
+SUBGROUP_TERMS_FILE_NAME: "subgroups.csv"
+SUBGROUP_NEW_FILE_NAME: "subgroups_checked.csv"
 FILES_ENCODING: utf-8
-RECIPES_FILE_NAME: "recipes.csv"
-CATEGORY_PREFIX: "Kategoria:"
-TECHNIQUES_CATEGORIES:
-  - "Carpaccio"
-  - "Egosi"
-  - "Entsalada"
-  - "Erre"
-  - "Erregosi"
-  - "Frijitu"
-  - "Ketu"
-  - "Konfitatu"
-  - "Kremak"
-  - "Labekatu"
-  - "Marian"
-  - "Plantxan"
-  - "Sueztitu"
-  - "Zopak"
-DISH_ORDER_CATEGORIES:
-  - "Lehen platerak"
-  - "Bigarren platerak"
-  - "Azkenburukoak"
-FIRST_ORDER_TERMS:
-  - "ozpin"
-  - "entsalada"
-  - "sashimi"
-  - "carpaccio"
-  - "nahaski"
-  - "maionesa"
-  - "tartar"
-  - "tar-tar"
-  - "pintxo"
-  - "eskabetxean"
-  - "kaneloi"
-  - "lasagna"
-  - "kroketa"
-  - "zopa"
-  - "budin"
-  - "salda"
-INGREDIENTS_FIRST_DISH_ORDER:
-  - "Arroza"
-  - "Pasta"
-  - "Lekaleak"
-  - "Barazkia"
-INGREDIENTS_SECOND_DISH_ORDER:
-  - "Arraina"
-  - "Haragia"
-  - "Barraskiloak"
-  - "Itsaskia"
-INGREDIENTS_THIRD_DISH_ORDER:
-  - "Esnekiak"
-  - "Fruta"
-  - "Txokolatea"
-CARPACCIO_TECH_SUBCATEGORIES:
-  - carpaccio
-EGOSI_TECH_SUBCATEGORIES:
-  - "galdarraztatu"
-  - "egosi"
-  - "uretan"
-  - "eskalfatu"
-  - "budina"
-  - "papillote"
-  - "lurrunetan"
-ENTSALADA_TECH_SUBCATEGORIES:
-  - "ozpin"   
-  - "olio"
-  - "eskabetxean"
-  - "entsalada"
-  - "gatz"
-  - "marinatu"
-  - "tartar"
-  - "tar-tar"
-  - "raf"
-ERREGOSI_TECH_SUBCATEGORIES:
-  - "gisatu"
-FRIJITU_TECH_SUBCATEGORIES:
-  - "frijitu"
-  - "arrautzaztatua"
-  - "arrautzeztatua"
-  - "tortilla"
-  - "nahaskia"
-  - "kroketa"
-  - "salteatu"
-KONFITATU_TECH_SUBCATEGORIES:
-  - "konfitatu"
-KREMAK_TECH_SUBCATEGORIES:
-  - "krema"
-  - "pure"
-LABEKATU_TECH_SUBCATEGORIES:
-  - "labe"
-  - "cake"
-  - "coulant"
-  - "gaileta"
-  - "tarta"
-  - "pastel"
-  - "bizkotxo"
-  - "opil"
-MARIAN_TECH_SUBCATEGORIES:
-  - "bainu"
-PLANTXAN_TECH_SUBCATEGORIES:
-  - "plantxa"
-  - "parrila"
-  - "parrilla"
-  - "zartagin"
-  - "burruntzia"
-  - "brotxetak"
-SUEZTITU_TECH_SUBCATEGORIES:
-  - "sueztitu"
-  - "goxatu"
-ZOPAK_TECH_SUBCATEGORIES:
-  - "salda"
-BETEA_TECH_SUBCATEGORIES:
-  - "bete"
-  - "enpanada"
-  - "enpanadilla"
-HOTZA_TECH_SUBCATEGORIES:
-  - "izozki"
-  - "maionesa"
-  - "marmelada"
-  - "mazedonia"
-  - "irasagar"
-  - "pintxoa"
-ORIGIN_ITALY:
-  - "lasagna"
-  - "risotoa"
-  - "risottoa"
-  - "boloniar"
-  - "carbonara"
-  - "tagliatel"
-  - "pasta"
-  - "kaneloi"
-  - "ragout"
-  - "mozzarella"
-  - "pesto"
-  - "tiramisu"
-ORIGIN_ASIA:
-  - "basmati"
-  - "curry"
-  - "hindu"
-  - "txina"
-  - "asiar"
-  - "sushi"
-  - "hiru gutiziko arroza"
-  - "basa arroza"
-  - "sashimi"
-ORIGIN_FRANCE:
-  - "frantzia"
-  - "krep"
-  - "roquefort"
-  - "tatin"
-  - "mollet"
-  - "ganatxea"
-  - "kanape"
-  - "panatxe"
-  - "mousse"
-ORIGIN_EUROPE:
-  - "moussaka"
-  - "estrudel"
-  - "oporto"
-  - "brandada"
-ORIGIN_MEXIKO:
-  - "tinga"
-  - "guakamole"
-  - "Arto irin tortillak"
-ORIGIN_AFRICA:
-  - "fouti"
-ORIGIN_SPAIN:
-  - "andaluzia"
-  - "valentzia"
-  - "errioxa"
-  - "galizia"
-  - "fideua"
-  - "koka"
-  - "morroi"
-  - "flamenka"
-  - "garbantzuak tripakiekin"
-  - "patata tortila"
-  - "ganbak baratxuritan"
-  - "bijiliako txitxirioak"
-  - "boilur"
-  - "saltsan"
-  - "paella"
-  - "urdaiazpiko"
-ORIGIN_BASQUE:
-  - "tolosa"
-  - "nafarroa"
-  - "tutera"
-  - "beasain"
-  - "idiazabal"
-  - "ibarra"
-  - "baserri"
-  - "betiko"
-  - "pikillo"
-  - "piperrada"
-  - "onddo"
-  - "perretxiko"
-  - "marmitako"
-  - "hegaluze"
-  - "ttoro"
-  - "tinta"
-  - "txipiroi"
-  - "txibi"
-  - "kokotxa"
-  - "kokote"
-  - "koxkera"
-  - "menestra"
-  - "konpota"
-  - "sagardo"
-  - "ardo"
-  - "txakolin"
-  - "albondiga"
-  - "marinel"
-  - "bizkai"
-  - "pil-pil"
-  - "pil pil"
-  - "pelaio"
-  - "txilindron"
-  - "saltsa berdean" 
-  - "natilak"   
-  - "odolki"    
-  - "abakando"   
-  - "baratxuri" 
-  - "txirlekin" 
-  - "zapo" 
-  - "txitxirio"                  
+RECIPES_LAST_FILE_NAME: "recipes.csv"
+
+# recipe similarities parameters for stanza
+NLP_LIBRARY: stanza
+STANZA_LANG: eu
+STANZA_PROCESSORS: tokenize,lemma,pos,depparse
+SIMILARITY_THRESHOLD: 0.6
+REPORT_SECONDS: 120
+
+# data grouping and preprocessing terms
+UNWANTED_WORDS: ["eta", "edo", "eran", "egiteko", "ohiko", "erara", "erara2"]
+FIRST_ORDER_TERMS: ["ozpin", "entsalada", "sashimi", "carpaccio", "nahaski", "maionesa", "tartar", "tar-tar", "pintxo", "eskabetxean", "kaneloi", "lasagna", "kroketa", "zopa", "budin", "salda"]
+# dish order terms
+INGREDIENTS_FIRST_DISH_ORDER: ["Arroza", "Pasta", "Lekaleak","Barazkia"]
+INGREDIENTS_SECOND_DISH_ORDER: ["Arraina", "Haragia", "Barraskiloak","Itsaskia"]
+INGREDIENTS_THIRD_DISH_ORDER: ["Esnekiak", "Fruta", "Txokolatea"]
+# cook technique  terms
+CARPACCIO_TECH_SUBCATEGORIES: ["carpaccio"]
+EGOSI_TECH_SUBCATEGORIES: ["galdarraztatu", "egosi", "uretan","eskalfatu", "budina","papillote","lurrunetan"]
+ENTSALADA_TECH_SUBCATEGORIES: ["ozpin", "olio", "eskabetxean", "entsalada", "gatz", "marinatu", "tartar", "tar-tar", "raf"]
+ERREGOSI_TECH_SUBCATEGORIES: ["gisatu"]
+FRIJITU_TECH_SUBCATEGORIES: ["frijitu", "arrautzaztatua", "arrautzeztatua", "tortilla", "nahaskia", "kroketa", "salteatu"]
+KONFITATU_TECH_SUBCATEGORIES: ["konfitatu"]
+KREMAK_TECH_SUBCATEGORIES: ["krema", "pure"]
+LABEKATU_TECH_SUBCATEGORIES: ["labe", "cake", "coulant", "gaileta", "tarta", "pastel", "bizkotxo", "opil"]
+MARIAN_TECH_SUBCATEGORIES: ["bainu"]
+PLANTXAN_TECH_SUBCATEGORIES: ["plantxa", "parrila", "parrilla", "zartagin", "burruntzia", "brotxetak"]
+SUEZTITU_TECH_SUBCATEGORIES: ["sueztitu", "goxatu"]
+ZOPAK_TECH_SUBCATEGORIES: ["salda"]
+BETEA_TECH_SUBCATEGORIES: ["bete", "enpanada","enpanadilla"]
+HOTZA_TECH_SUBCATEGORIES: ["izozki", "maionesa", "marmelada", "mazedonia", "irasagar", "pintxoa"]
+# origin terms
+ORIGIN_ITALY:  ["lasagna", "risotoa", "risottoa", "boloniar", "carbonara", "tagliatel", "pasta", "kaneloi", "ragout", "mozzarella", "pesto", "tiramisu"]
+ORIGIN_ASIA: ["basmati", "curry", "hindu", "txina", "asiar", "sushi", "hiru gutiziko arroza", "basa arroza", "sashimi"]
+ORIGIN_FRANCE: ["frantzia", "krep", "roquefort", "tatin", "mollet", "ganatxea", "kanape", "panatxe", "mousse"]
+ORIGIN_EUROPE: ["moussaka", "estrudel","oporto","brandada"]
+ORIGIN_MEXIKO: ["tinga", "guakamole","Arto irin tortillak"]
+ORIGIN_AFRICA: ["fouti"]
+ORIGIN_SPAIN: ["andaluzia", "valentzia", "errioxa", "galizia", "fideua", "koka", "morroi", "flamenka", "garbantzuak tripakiekin", "patata tortila", "ganbak baratxuritan", "bijiliako txitxirioak", "boilur", "saltsan", "paella", "urdaiazpiko"]
+ORIGIN_BASQUE: ["tolosa", "nafarroa", "tutera", "beasain", "idiazabal", "ibarra", "baserri", "betiko", "pikillo", "piperrada", "onddo", "perretxiko", "marmitako", "hegaluze", "ttoro", "tinta", "txipiroi", "txibi", "kokotxa", "kokote", "koxkera", "menestra", "konpota", "sagardo", "ardo", "txakolin", "albondiga", "marinel", "bizkai", "pil-pil", "pil pil", "pelaio", "txilindron", "saltsa berdean", "natilak", "odolki", "abakando", "baratxuri", "txirlekin", "zapo", "txitxirio"]

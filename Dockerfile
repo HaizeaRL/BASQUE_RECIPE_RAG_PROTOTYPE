@@ -5,17 +5,10 @@ FROM python:3.7
 WORKDIR /usr/local/app
 
 # Copia los archivos necesarios
-COPY requirements.txt .
-COPY config.yaml .
-COPY src/ /usr/local/app/src/
-COPY modules/ /usr/local/app/modules/
-COPY data/ /usr/local/app/data/
+COPY . .
 
 # Instala las dependencias
 RUN pip install --no-cache-dir -r requirements.txt
-
-# Ejecutar el script desde src
-RUN python /usr/local/app/src/download_spacy_model.py
 
 # Comando por defecto
 CMD ["/bin/bash"]
