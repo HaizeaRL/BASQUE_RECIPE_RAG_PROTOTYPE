@@ -5,53 +5,195 @@ CATEGORY_PREFIX: "Kategoria:"
 TECHNIQUES_CATEGORIES: ["Carpaccio", "Egosi", "Entsalada", "Erre", "Erregosi", "Frijitu", "Ketu", "Konfitatu", "Kremak", "Labekatu", "Marian", "Plantxan", "Sueztitu", "Zopak"]
 DISH_ORDER_CATEGORIES: ["Lehen platerak", "Bigarren platerak", "Azkenburukoak"]
 
-# file folders paths & names
+# file paths & encoding
+TEMPORAL_DATA_PATH: "data_tmp"
 DATA_PATH: "data"
-INGREDIENTS_FILE_NAME: "ingredients.csv"
-RECIPES_FILE_NAME_TMP: "recipe_tmp.csv"
-SIMILAR_RECIPES_FILE_NAME: "similar.csv"
-SIMILAR_NEW_FILE_NAME: "similar_checked.csv"
-RECIPES_COMPLETED: "recipe_complete_by_user.csv"
-SUBGROUP_TERMS_FILE_NAME: "subgroups.csv"
-SUBGROUP_NEW_FILE_NAME: "subgroups_checked.csv"
 FILES_ENCODING: utf-8
-RECIPES_LAST_FILE_NAME: "recipes.csv"
+RECIPES_FILE_NAME: "recipes.csv"
 
-# recipe similarities parameters for stanza
-NLP_LIBRARY: stanza
-STANZA_LANG: eu
-STANZA_PROCESSORS: tokenize,lemma,pos,depparse
-SIMILARITY_THRESHOLD: 0.6
-REPORT_SECONDS: 120
+# words to replace
+DICT_TO_CHANGE:
+  guakamoleta: guakamolea
+  antxua: antxoa
+  bakailo: bakailao
+  galeperra: galeper
+  parrilla: parrila
+  tortilla: tortila
+  enpanadilla: enpanadila
+  tar-tarra: tartarra
+  garbantzuak: txitxirioak
+  txanpinoi: txanpiñoi
+  txanpiak: txanpiñoiak
+  tagliateliak: tagliatelleak
+  babarruna: baba
+  babarrun: baba
+  aa: a
+  risotoa: risottoa  
+  itsas_zapo: zapo 
+  popietak: xerrak
+  arrautzeztatu: arrautzaztatu
+  albondigak: haragi_bolak
+ 
 
-# data grouping and preprocessing terms
-UNWANTED_WORDS: ["eta", "edo", "eran", "egiteko", "ohiko", "erara", "erara2"]
-FIRST_ORDER_TERMS: ["ozpin", "entsalada", "sashimi", "carpaccio", "nahaski", "maionesa", "tartar", "tar-tar", "pintxo", "eskabetxean", "kaneloi", "lasagna", "kroketa", "zopa", "budin", "salda"]
-# dish order terms
+# dish_order terms
+FIRST_DISH_ORDER_TERMS: ["ozpin", "entsalada", "sashimi", "carpaccio", "nahaski", "maionesa", "tartar",  "pintxo", "eskabetxean", "kaneloi", "lasagna", "kroketa", "zopa", "budin", "salda"]
 INGREDIENTS_FIRST_DISH_ORDER: ["Arroza", "Pasta", "Lekaleak","Barazkia"]
 INGREDIENTS_SECOND_DISH_ORDER: ["Arraina", "Haragia", "Barraskiloak","Itsaskia"]
 INGREDIENTS_THIRD_DISH_ORDER: ["Esnekiak", "Fruta", "Txokolatea"]
-# cook technique  terms
-CARPACCIO_TECH_SUBCATEGORIES: ["carpaccio"]
-EGOSI_TECH_SUBCATEGORIES: ["galdarraztatu", "egosi", "uretan","eskalfatu", "budina","papillote","lurrunetan"]
-ENTSALADA_TECH_SUBCATEGORIES: ["ozpin", "olio", "eskabetxean", "entsalada", "gatz", "marinatu", "tartar", "tar-tar", "raf"]
-ERREGOSI_TECH_SUBCATEGORIES: ["gisatu"]
-FRIJITU_TECH_SUBCATEGORIES: ["frijitu", "arrautzaztatua", "arrautzeztatua", "tortilla", "nahaskia", "kroketa", "salteatu"]
-KONFITATU_TECH_SUBCATEGORIES: ["konfitatu"]
-KREMAK_TECH_SUBCATEGORIES: ["krema", "pure"]
-LABEKATU_TECH_SUBCATEGORIES: ["labe", "cake", "coulant", "gaileta", "tarta", "pastel", "bizkotxo", "opil"]
-MARIAN_TECH_SUBCATEGORIES: ["bainu"]
-PLANTXAN_TECH_SUBCATEGORIES: ["plantxa", "parrila", "parrilla", "zartagin", "burruntzia", "brotxetak"]
-SUEZTITU_TECH_SUBCATEGORIES: ["sueztitu", "goxatu"]
-ZOPAK_TECH_SUBCATEGORIES: ["salda"]
-BETEA_TECH_SUBCATEGORIES: ["bete", "enpanada","enpanadilla"]
-HOTZA_TECH_SUBCATEGORIES: ["izozki", "maionesa", "marmelada", "mazedonia", "irasagar", "pintxoa"]
+
+# default cook technique terms
+CARPACCIO_TECH_TERMS: ["carpaccio"]
+EGOSI_TECH_TERMS: ["galdarraztatu", "egosi", "uretan","eskalfatu", "budina","papillote","lurrunetan"]
+ENTSALADA_TECH_TERMS: ["ozpin", "olio", "eskabetxe", "entsalada", "gatz", "marinatu", "tartar", "raf"]
+ERREGOSI_TECH_TERMS: ["gisatu","ragout"]
+FRIJITU_TECH_TERMS: ["frijitu", "arrautzaztatua", "tortila", "nahaskia", "kroketa", "salteatu", "kruxpeta"]
+KONFITATU_TECH_TERMS: ["konfitatu"]
+KREMAK_TECH_TERMS: ["krema", "pure"]
+LABEKATU_TECH_TERMS: ["labe", "labea", "cake", "coulant", "gaileta", "tarta", "pastel", "bizkotxo", "opil", "koka", "lasagna", "kaneloi","moussaka"]
+MARIAN_TECH_TERMS: ["bainu", "panatxe"]
+PLANTXAN_TECH_TERMS: ["plantxa", "parrila", "zartagin", "burruntzia", "brotxetak"]
+SUEZTITU_TECH_TERMS: ["sueztitu", "goxatu"]
+ZOPAK_TECH_TERMS: ["salda", "zopa"]
+BETEA_TECH_TERMS: ["bete", "enpanada", "enpanadila"]
+HOTZA_TECH_TERMS: ["izozki", "maionesa", "marmelada", "mazedonia", "irasagar", "pintxo", "gazpatxo", "sashimi", "guakamole"]
+
 # origin terms
-ORIGIN_ITALY:  ["lasagna", "risotoa", "risottoa", "boloniar", "carbonara", "tagliatel", "pasta", "kaneloi", "ragout", "mozzarella", "pesto", "tiramisu"]
-ORIGIN_ASIA: ["basmati", "curry", "hindu", "txina", "asiar", "sushi", "hiru gutiziko arroza", "basa arroza", "sashimi"]
-ORIGIN_FRANCE: ["frantzia", "krep", "roquefort", "tatin", "mollet", "ganatxea", "kanape", "panatxe", "mousse"]
-ORIGIN_EUROPE: ["moussaka", "estrudel","oporto","brandada"]
-ORIGIN_MEXIKO: ["tinga", "guakamole","Arto irin tortillak"]
-ORIGIN_AFRICA: ["fouti"]
-ORIGIN_SPAIN: ["andaluzia", "valentzia", "errioxa", "galizia", "fideua", "koka", "morroi", "flamenka", "garbantzuak tripakiekin", "patata tortila", "ganbak baratxuritan", "bijiliako txitxirioak", "boilur", "saltsan", "paella", "urdaiazpiko"]
-ORIGIN_BASQUE: ["tolosa", "nafarroa", "tutera", "beasain", "idiazabal", "ibarra", "baserri", "betiko", "pikillo", "piperrada", "onddo", "perretxiko", "marmitako", "hegaluze", "ttoro", "tinta", "txipiroi", "txibi", "kokotxa", "kokote", "koxkera", "menestra", "konpota", "sagardo", "ardo", "txakolin", "albondiga", "marinel", "bizkai", "pil-pil", "pil pil", "pelaio", "txilindron", "saltsa berdean", "natilak", "odolki", "abakando", "baratxuri", "txirlekin", "zapo", "txitxirio"]
+ORIGIN_CATEGORIES: ["Italia", "Asia", "Frantzia", "Europa", "Mexiko", "Afrika", "Espainia", "Bertakoa"]
+ORIGIN_ITALIA:  ["lasagna", "risotoa", "boloniar", "carbonara", "tagliatellea", "pasta", "kaneloi", "ragout", "mozzarella", "pesto", "tiramisu"]
+ORIGIN_ASIA: ["basmati", "curry", "hindu", "txina", "asiar", "sushi", "hiru_gutizi", "basa_arroza", "sashimi"]
+ORIGIN_FRANTZIA: ["frantzia", "krep", "roquefort", "tatin", "mollet", "ganatxea", "kanape", "panatxe", "mousse"]
+ORIGIN_EUROPA: ["moussaka", "estrudel","oporto","brandada"]
+ORIGIN_MEXIKO: ["tinga", "guakamole","arto_irin"]
+ORIGIN_AFRIKA: ["fouti"]
+ORIGIN_ESPAINIA: ["andaluzia", "valentzia", "errioxa", "galizia", "fideua", "koka", "morroi", "flamenka", "txitxirioak tripakiekin", "patata tortila", "ganbak baratxuritan", "bijiliako txitxirioak", "boilur", "paella", "urdaiazpiko"]
+ORIGIN_BERTAKOA: ["tolosa", "nafarroa", "tutera", "beasain", "idiazabal", "kantauri", "ibarra", "baserri", "betiko", "pikillo", "piperrada", "onddo", "perretxiko", "marmitako", "hegaluze", "hegalabur", "ttoro", "tinta", "txipiroi", "txibi", "kokotxa", "kokote", "koxkera", "menestra", "konpota", "sagardo", "ardo", "txakolin", "albondiga", "marinel", "bizkaitar", "pil-pil", "pelaio", "txilindron", "saltsa_berdean", "natilak", "odolki", "abakando", "baratxuri", "txirlekin", "zapo", "txitxirio"]
+
+# join terms
+DICT_TO_JOIN:
+  ahuntz_gazta: ahuntz-gazta
+  arroz_odolki: arroz-odolki
+  arrozezko_odolki: arroz-odolki
+  arrautza_mollet_eran: mollet-arrautza
+  arrain_zopa: arrain-zopa
+  arroz_oso: arroz-oso
+  atun_mendrezka: atun-mendrezka
+  arroz_txuri: arroz-zuri
+  arroz_zuri: arroz-zuri
+  arroz_esne: arroz-esne  
+  arto_irin: arto-irin
+  bakailao_kokotx: bakailao-kokotx
+  bakailao_masail: bakailao-masail
+  behi_mutur: behi-mutur
+  basmati_arroza: basmati-arroza
+  baso_fruitu: basa-fruitu
+  basa_arroz: basa-arroz
+  baba_zuri: baba-zuri
+  baratxuri_zopa: baratxuri-zopa
+  barbarin_arraintxoak: barbarinak
+  itsas_paella: itsaski-paella
+  frantziar_leka: frantziar-leka
+  galiziar_haragi: galiziar-haragi
+  gazta_izozki: gazta-izozki
+  gazta_krema: gazta-krema
+  gazta_urdin: gazta-urdin  
+  gazta_tarta: gazta-tarta
+  galeper_arrautz: galeper-arrautz
+  gari_zainzuri: gari-zainzuri
+  haragi_xehatua: haragi-xehatua
+  haragi_bola: haragi-bola
+  haragia_tartar_eran: haragi_tartarra
+  itsas_zapo: itsas-zapo
+  legatz_kokotx: legatz-kokotx
+  legatz_kokotea: legatz-kokotea
+  marrubi_izozki: marrubi-izozki
+  marrubi_tarta: marrubi-tarta
+  pikillo_piper: pikillo-piper  
+  nafarroako_pikillo_piper: nafarroako-pikillo-piper
+  nafarroako_zainzuri: nafarroako-zainzuri
+  neguko_boilur_beltzen: boilur-beltz
+  orburu_txips-ak: orburu-txipsak
+  piper_morro: piper-morro
+  pasta_fresko: pasta-fresko
+  pasta_boloniar_erara: pasta_boloniarra
+  patata_berri: patata-berri
+  patatak_errioxar_erara2: patatak_errioxar_erara
+  raf_tomate: raf-tomate
+  roquefort_gazta: roquefort-gazta
+  saltsa_berdean: saltsa-berdean
+  sagar_tarta: sagar-tarta
+  sagar_tatin: sagar-tatin
+  tagliatelle_freskoak: tagliatelleak
+  tolosako_babak: tolosako-babak
+  txekor_azpizun: txekor-azpizun
+  txekor_masail: txekor-masail
+  txekor_mutur: txekor-mutur
+  txerri_mutur: txerri-mutur
+  txerri_hanka: txerri-hanka
+  txerri_azpizun: txerri-azpizun
+  txerri-iberiar_sekretoa: txerri-iberiar-sekretoa
+  txerri_iberiar: txerri-iberiar
+  txerri_masail: txerri-masail
+  txerri_iberiarraren_presa: txerri-presa-iberiarraren
+  txerri_solomo: txerri-solomo
+  txokolate_izozki: txokolate-izozki
+  txokolate_tarta: txokolate-tarta
+  ttoro_zopa: ttoro-zopa
+  tuterako_orburu: tuterako-orburu
+  tuterako_kukulu: tuterako-kukulu
+  txipiroi_begi_handiak: txipiroi-begi-handiak
+  txirla_handiak: txirla-handiak
+  txokolate_zuri: txokolate-zuri
+  ijito_besoa: ijito-besoa
+  euskal_pastela: euskal-pastela
+  zainzuri_freskoak: zainzuriak
+  olio_ozpin: ozpin-olio
+  papillote_eran: papillotean
+  arkume_izterra: arkume-izterra
+  oilasko_izterra: oilasko-izterra
+  baratxuri_fresko: baratxuri-fresko
+  piper_fresko: piper-fresko
+  baserriko_ogi_tosta: baserriko-ogi-tosta
+  esne_gaina: esne-gaina
+  garaiko_barazki: garaiko-barazki
+  garaiko_ilar: garaiko-ilar
+  haragi_betegaia: haragi-betegaia
+  piper_bete: piper-bete
+  piper_gorri: piper-gorri
+  piper_berde: piper-berde
+  ibarrako_piper: ibarrako-piper
+  hiru_gutizi: hiru-gutizi
+  kantauriko_antxoa: kantauriko-antxoa
+  kuia_txiki: kuia-txiki
+  leka_fresko: leka-fresko
+  mermelada: marmelada
+  brik_orri: brik-orri
+  ogi_opil: ogi-opil
+  onddo_berri: onddo-berri
+  beasaingo_odolki: beasaingo-odolki
+  paella_valentziarra: paella-valentziarra
+  patata_tortila: patata-tortila
+  pesto_saltsa: pesto-saltsa
+  tabbuleh_entsalada: tabbuleh-entsalada
+  cherry_tomate: cherry-tomate
+  haragizko_tinga: haragizko-tinga
+  brie_gazta: brie-gazta
+  txanpiñoi_txapel: txanpiñoi-txapel
+  idiazabalgo_gazta: idiazabalgo-gazta
+  bizkaitar_saltsa: bizkaitar-saltsa
+  txekor_tripaki: txekor-tripaki
+  bizkaiko_saltsa: bizkaitar-saltsa
+  gernikako_piper: gernikako-piper
+  bere_tintan: tintan
+  txokolatezko_boilur: txokolatezko-boilur
+  ziza_hori:  ziza-hori
+
+# OTHER TERMS TO AVOID EXTRACTING INGREDIENTS
+UNWANTED_OTHER_TERMS: 
+  ["epel","itsaso", "hotz", "bero","kirris","risotto", "bizkaitar_erara","errioxa", "frijitzeko","askotariko", "paella", "gozo","kurrusk", "beti", "ohiko","etxeko", "berezi", "arin", "udaberri", "udako", "bete", 
+   "eta", "edo", "krep", "kiribil", "biribil", "ravioli", "tako", "habi", "ontzi", "txalupa", "egin", "egiteko", "erara", "eran",
+   "beltz", "tinta", "txilindron", "kutixi", "pasea", "saltsa", "alioli", "brandada","menestra", "tenpura", "dado",
+   "andaluzi", "konpota", "koxkera", "marinel", "hindu", "flamenka","hiru-gutizi", "fouti","japonia", "ijito",  "txina", "pelaio", "pil", "shushi", "ingeles", "bijili", "caprese", "cesar", "carbonara", "boloniarra",
+   "ore", "gelatina", "marmelada", "kanape","lurrin", "xerra","estrudela", "orri", "sueztitze", "tiramisu","pizza", "zartagi", "ganatxe", "moussea", "muselin","bonboi", "kopa"]
+
+# SUFFIXES TO REMOVE FROM INGREDIENTS
+SUFFIXES: ["ak", "rekin", "ekin","tan","z"]
