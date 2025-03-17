@@ -1,0 +1,543 @@
+ingredient_group,recipe,recipe_new,order,technique,url
+arraina,Antxoa arrautzaztatua,antxoa_arrautzaztatua,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Antxoa_arrautzaztatua
+arraina,Antxoa baratxuritan frijitua,antxoa_baratxuritan_frijitua,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Antxoa_baratxuritan_frijitua
+arraina,Antxoa betea,antxoa_betea,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Antxoa_betea
+arraina,Antxoa frijituak,antxoa_frijituak,bigarren platerak,frijitu,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Antxoa_frijituak
+arraina,Antxoa kremaz beterikoa,antxoa_kremaz_beterikoa,,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Antxoa_kremaz_beterikoa
+arraina,Antxoa marinatu entsalada,antxoa_marinatu_entsalada,,entsalada,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Antxoa_marinatu_entsalada
+arraina,Antxoa ozpinetan,antxoa_ozpinetan,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Antxoa_ozpinetan
+arraina,Antxoa papillote eran,antxoa_papillote_eran,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Antxoa_papillote_eran
+arraina,Antxoak tipulin eta baratxuri freskoekin,antxoak_tipulin_eta_baratxuri_freskoekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Antxoak_tipulin_eta_baratxuri_freskoekin
+arraina,Antxua arrautzeztatua,antxoa_arrautzaztatua,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Antxua_arrautzeztatua
+arraina,Antxua baratxuritan frijitua,antxoa_baratxuritan_frijitua,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Antxua_baratxuritan_frijitua
+arraina,Antxua betea,antxoa_betea,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Antxua_betea
+arraina,Antxua ozpinetan,antxoa_ozpinetan,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Antxua_ozpinetan
+arraina,Antxua papillote eran,antxoa_papillote_eran,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Antxua_papillote_eran
+arraina,Arrain budina,arrain_budina,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arrain_budina
+arraina,Arrain salda,arrain_salda,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arrain_salda
+arraina,Arrain zopa,arrain_zopa,,zopak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arrain_zopa
+arraina,Atun mendrezka plantxan tomate eta otarrainxkekin,atun_mendrezka_plantxan_tomate_eta_otarrainxkekin,bigarren platerak,plantxan,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Atun_mendrezka_plantxan_tomate_eta_otarrainxkekin
+arraina,Atungorri carpaccioa,atungorri_carpaccioa,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Atungorri_carpaccioa
+arraina,Atungorri sashimia,atungorri_sashimia,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Atungorri_sashimia
+arraina,Bakailao brandada piperrekin eta ziazerbekin,bakailao_brandada_piperrekin_eta_ziazerbekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailao_brandada_piperrekin_eta_ziazerbekin
+arraina,"Bakailao carpaccioa, ziza eta pinaziekin",bakailao_carpaccioa_ziza_eta_pinaziekin,bigarren platerak,carpaccio,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailao_carpaccioa,_ziza_eta_pinaziekin"
+arraina,Bakailao edo legatz kroketak,bakailao_edo_legatz_kroketak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailao_edo_legatz_kroketak
+arraina,Bakailao entsalada,bakailao_entsalada,,entsalada,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailao_entsalada
+arraina,Bakailao eta piper erre entsalada epela,bakailao_eta_piper_erre_entsalada_epela,lehen platerak,entsalada,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailao_eta_piper_erre_entsalada_epela
+arraina,Bakailao frijitua,bakailao_frijitua,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailao_frijitua
+arraina,Bakailao kokotxak gari zainzuri eta piper freskoekin,bakailao_kokotxak_gari_zainzuri_eta_piper_freskoekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailao_kokotxak_gari_zainzuri_eta_piper_freskoekin
+arraina,Bakailao kokotxak saltsa berdean,bakailao_kokotxak_saltsa_berdean,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailao_kokotxak_saltsa_berdean
+arraina,Bakailao konfitatua piperrekin,bakailao_konfitatua_piperrekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailao_konfitatua_piperrekin
+arraina,"Bakailao konfitatua, basmati arrozarekin eta ziazerbekin",bakailao_konfitatua_basmati_arrozarekin_eta_ziazerbekin,bigarren platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailao_konfitatua,_basmati_arrozarekin_eta_ziazerbekin"
+arraina,Bakailao masailak saltsa berdean patatekin,bakailao_masailak_saltsa_berdean_patatekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailao_masailak_saltsa_berdean_patatekin
+arraina,Bakailao nahaskia,bakailao_nahaskia,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailao_nahaskia
+arraina,Bakailao tortilla,bakailao_tortila,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailao_tortilla
+arraina,Bakailaoa bizkaitar erara,bakailaoa_bizkaitar_erara,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailaoa_bizkaitar_erara
+arraina,Bakailaoa frijitua piper saltsa eta alioli gainerrea,bakailaoa_frijitua_piper_saltsa_eta_alioli_gainerrea,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailaoa_frijitua_piper_saltsa_eta_alioli_gainerrea
+arraina,Bakailaoa pil-pil erara,bakailaoa_pil-pil_erara,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailaoa_pil-pil_erara
+arraina,Bakailaoaren brandada,bakailaoaren_brandada,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailaoaren_brandada
+arraina,Bakailo piper beteak,bakailao_piper_beteak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailo_piper_beteak
+arraina,Barbarin frijituak,barbarin_frijituak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barbarin_frijituak
+arraina,Berdela eskabetxean,berdela_eskabetxean,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Berdela_eskabetxean
+arraina,Berdela labean piperradarekin,berdela_labean_piperradarekin,bigarren platerak,labekatu,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Berdela_labean_piperradarekin
+arraina,Bisigua labean,bisigua_labean,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bisigua_labean
+arraina,Bizkaitar saltsa,bizkaitar_saltsa,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bizkaitar_saltsa
+arraina,Erreboiloa basmati arrozarekin eta lekekin,erreboiloa_basmati_arrozarekin_eta_lekekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Erreboiloa_basmati_arrozarekin_eta_lekekin
+arraina,Ganbak baratxuritan,ganbak_baratxuritan,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Ganbak_baratxuritan
+arraina,Ganbak plantxan edo parrilan,ganbak_plantxan_edo_parrilan,,plantxan,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Ganbak_plantxan_edo_parrilan
+arraina,Ganbak plantxan edo zartaginean,ganbak_plantxan_edo_zartaginean,,plantxan,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Ganbak_plantxan_edo_zartaginean
+arraina,Hegalaburra papillote eran,hegalaburra_papillote_eran,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hegalaburra_papillote_eran
+arraina,Hegaluze edo arrain betegaia,hegaluze_edo_arrain_betegaia,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hegaluze_edo_arrain_betegaia
+arraina,Hegaluze edo hegalabur salda,hegaluze_edo_hegalabur_salda,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hegaluze_edo_hegalabur_salda
+arraina,Hegaluze edo hegalaburra ontziratua,hegaluze_edo_hegalaburra_ontziratua,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hegaluze_edo_hegalaburra_ontziratua
+arraina,Hegaluze edo hegalaburra tipularekin,hegaluze_edo_hegalaburra_tipularekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hegaluze_edo_hegalaburra_tipularekin
+arraina,Hegaluze edo hegalaburra tomatearekin,hegaluze_edo_hegalaburra_tomatearekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hegaluze_edo_hegalaburra_tomatearekin
+arraina,Hegaluze enpanada,hegaluze_enpanada,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hegaluze_enpanada
+arraina,Hegaluze enpanadilla,hegaluze_enpanadila,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hegaluze_enpanadilla
+arraina,"Hegaluze entsalada, otarrainxka eta piper gorriz eginiko tar-tarrarekin",hegaluze_entsalada_otarrainxka_eta_piper_gorriz_eginiko_tartarrarekin,lehen platerak,entsalada,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hegaluze_entsalada,_otarrainxka_eta_piper_gorriz_eginiko_tar-tarrarekin"
+arraina,Hegaluze eta Ibarrako piper pintxoa,hegaluze_eta_ibarrako_piper_pintxoa,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hegaluze_eta_Ibarrako_piper_pintxoa
+arraina,Hegaluze tartarra,hegaluze_tartarra,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hegaluze_tartarra
+arraina,"Hegaluze, ahuakate eta piper tartarra",hegaluze_ahuakate_eta_piper_tartarra,bigarren platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hegaluze,_ahuakate_eta_piper_tartarra"
+arraina,"Hegaluzea Asiako erara, udaberriko entsaladan",hegaluzea_asiako_erara_udaberriko_entsaladan,bigarren platerak,entsalada,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hegaluzea_Asiako_erara,_udaberriko_entsaladan"
+arraina,Hegaluzea tomate konpotarekin,hegaluzea_tomate_konpotarekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hegaluzea_tomate_konpotarekin
+arraina,Itsas zapoa,itsas_zapoa,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Itsas_zapoa
+arraina,Itsas zapoa koxkera erara,itsas_zapoa_koxkera_erara,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Itsas_zapoa_koxkera_erara
+arraina,Itsas zapoa saltsa berdean txirlekin,itsas_zapoa_saltsa_berdean_txirlekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Itsas_zapoa_saltsa_berdean_txirlekin
+arraina,Itsaskiak sagardoarekin,itsaskiak_sagardoarekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Itsaskiak_sagardoarekin
+arraina,Itsasoa eta sagardoa,itsasoa_eta_sagardoa,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Itsasoa_eta_sagardoa
+arraina,Izokin kanape edo pintxoa,izokin_kanape_edo_pintxoa,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Izokin_kanape_edo_pintxoa
+arraina,Izokin kremaz beteriko tartaletak,izokin_kremaz_beteriko_tartaletak,,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Izokin_kremaz_beteriko_tartaletak
+arraina,Izokin marinatua,izokin_marinatua,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Izokin_marinatua
+arraina,Kokotxak leka eta tomate konpotarekin,kokotxak_leka_eta_tomate_konpotarekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Kokotxak_leka_eta_tomate_konpotarekin
+arraina,Legatz arrautzaztatua,legatz_arrautzaztatua,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Legatz_arrautzaztatua
+arraina,Legatz betea,legatz_betea,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Legatz_betea
+arraina,Legatz kokotea labean,legatz_kokotea_labean,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Legatz_kokotea_labean
+arraina,Legatz kokotxak arrautzaztatuak,legatz_kokotxak_arrautzaztatuak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Legatz_kokotxak_arrautzaztatuak
+arraina,"Legatz xerrak plantxan, barazki eta baratxuri freskoekin",legatz_xerrak_plantxan_barazki_eta_baratxuri_freskoekin,bigarren platerak,plantxan,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Legatz_xerrak_plantxan,_barazki_eta_baratxuri_freskoekin"
+arraina,"Legatza barazkiekin, papillote erara",legatza_barazkiekin_papillote_erara,bigarren platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Legatza_barazkiekin,_papillote_erara"
+arraina,Legatza kokotea,legatza_kokotea,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Legatza_kokotea
+arraina,Legatza otarrainxka saldarekin eta txirlekin,legatza_otarrainxka_saldarekin_eta_txirlekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Legatza_otarrainxka_saldarekin_eta_txirlekin
+arraina,"Legatza plantxan, barazkiekin",legatza_plantxan_barazkiekin,bigarren platerak,plantxan,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Legatza_plantxan,_barazkiekin"
+arraina,"Legatza plantxan, kuia txikiarekin eta pipermorroekin",legatza_plantxan_kuia_txikiarekin_eta_pipermorroekin,bigarren platerak,plantxan,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Legatza_plantxan,_kuia_txikiarekin_eta_pipermorroekin"
+arraina,Legatza saltsa berdean txirla eta kokotxekin,legatza_saltsa_berdean_txirla_eta_kokotxekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Legatza_saltsa_berdean_txirla_eta_kokotxekin
+arraina,Lupia labean,lupia_labean,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Lupia_labean
+arraina,"Lupia, sagardo eta itsaski lurrinekin",lupia_sagardo_eta_itsaski_lurrinekin,,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Lupia,_sagardo_eta_itsaski_lurrinekin"
+arraina,Marmitakoa 2,marmitakoa2,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Marmitakoa_2
+arraina,Mendrezka errea,mendrezka_errea,,erre,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Mendrezka_errea
+arraina,Perloi egosia patatekin,perloi_egosia_patatekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Perloi_egosia_patatekin
+arraina,Tipula eta piper sueztitzea,tipula_eta_piper_sueztitzea,,sueztitu,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Tipula_eta_piper_sueztitzea
+arraina,Ttoro zopa,ttoro_zopa,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Ttoro_zopa
+arraina,Txitxardin entsalada,txitxardin_entsalada,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txitxardin_entsalada
+arraina,Txitxardinak betiko eran,txitxardinak_betiko_eran,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txitxardinak_betiko_eran
+arraina,Txitxarroa eskabetxean,txitxarroa_eskabetxean,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txitxarroa_eskabetxean
+arraina,Txitxarroa labean,txitxarroa_labean,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txitxarroa_labean
+arraina,Txitxarroa piperrada eta patata purearekin,txitxarroa_piperrada_eta_patata_purearekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txitxarroa_piperrada_eta_patata_purearekin
+arraina,"Txitxarroa plantxan piper erre, tipula eta gari zainzuriekin",txitxarroa_plantxan_piper_erre_tipula_eta_gari_zainzuriekin,bigarren platerak,plantxan,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txitxarroa_plantxan_piper_erre,_tipula_eta_gari_zainzuriekin"
+arraina,Urraburua gatzetan,urraburua_gatzetan,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Urraburua_gatzetan
+arraina,"Zapo, kuia txiki eta txanpiñoi brotxetak",zapo_kuia_txiki_eta_txanpiñoi_brotxetak,bigarren platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Zapo,_kuia_txiki_eta_txanpi%C3%B1oi_brotxetak"
+arrautza,Ananaz beteriko krepeak,ananaz_beteriko_krepeak,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Ananaz_beteriko_krepeak
+arrautza,Arrautza budina,arrautza_budina,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arrautza_budina
+arrautza,Arrautza egosia,arrautza_egosia,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arrautza_egosia
+arrautza,Arrautza frijitua,arrautza_frijitua,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arrautza_frijitua
+arrautza,Arrautza galdarraztatua,arrautza_galdarraztatua,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arrautza_galdarraztatua
+arrautza,Arrautza habia,arrautza_habia,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arrautza_habia
+arrautza,Arrautza mollet eran,arrautza_mollet_eran,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arrautza_mollet_eran
+arrautza,"Arrautza, uretan pasea",arrautza_uretan_pasea,,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arrautza,_uretan_pasea"
+arrautza,Arrautzak kardu eta kutixiekin,arrautzak_kardu_eta_kutixiekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arrautzak_kardu_eta_kutixiekin
+arrautza,Arrautzarekin labean eginiko gazta tarta,arrautzarekin_labean_eginiko_gazta_tarta,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arrautzarekin_labean_eginiko_gazta_tarta
+arrautza,"Arroz odolkia, piper eta galeper arrautzekin",arroz_odolkia_piper_eta_galeper_arrautzekin,lehen platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroz_odolkia,_piper_eta_galeper_arrautzekin"
+arrautza,Arto irin tortillak,arto_irin_tortilak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arto_irin_tortillak
+arrautza,Bakailao tortilla,bakailao_tortila,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailao_tortilla
+arrautza,Baratxuri zopa 2,baratxuri_zopa2,lehen platerak,zopak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Baratxuri_zopa_2
+arrautza,Baratxuri zopa bakailaoarekin,baratxuri_zopa_bakailaoarekin,lehen platerak,zopak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Baratxuri_zopa_bakailaoarekin
+arrautza,Barazki eta txekor azpizun erregosia,barazki_eta_txekor_azpizun_erregosia,lehen platerak,erregosi,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_eta_txekor_azpizun_erregosia
+arrautza,Barazki krepeak,barazki_krepeak,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_krepeak
+arrautza,Barazki menestra 2,barazki_menestra2,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_menestra_2
+arrautza,Barazki tortilla,barazki_tortila,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_tortilla
+arrautza,Esne frijituak,esne_frijituak,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Esne_frijituak
+arrautza,Etxeko bizkotxoa marrubiekin eta esne gainarekin,etxeko_bizkotxoa_marrubiekin_eta_esne_gainarekin,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Etxeko_bizkotxoa_marrubiekin_eta_esne_gainarekin
+arrautza,Etxeko gailetak kremaz beteak,etxeko_gailetak_kremaz_beteak,azkenburukoak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Etxeko_gailetak_kremaz_beteak
+arrautza,Flamenka eran eginiko arrautzak,flamenka_eran_eginiko_arrautzak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Flamenka_eran_eginiko_arrautzak
+arrautza,Galeper arrautza pintxoa,galeper_arrautza_pintxoa,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Galeper_arrautza_pintxoa
+arrautza,Galeperra arrautza egosia,galeper_arrautza_egosia,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Galeperra_arrautza_egosia
+arrautza,Kafe budina,kafe_budina,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Kafe_budina
+arrautza,"Kardua, urdaiazpiko eta arrautza eskalfatuarekin",kardua_urdaiazpiko_eta_arrautza_eskalfatuarekin,lehen platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Kardua,_urdaiazpiko_eta_arrautza_eskalfatuarekin"
+arrautza,Krema ingelesa,krema_ingelesa,azkenburukoak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Krema_ingelesa
+arrautza,Krema opila,krema_opila,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Krema_opila
+arrautza,Kremaz beteriko krepeak,kremaz_beteriko_krepeak,azkenburukoak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Kremaz_beteriko_krepeak
+arrautza,Marrubi eta kremazko hostopilak,marrubi_eta_kremazko_hostopilak,azkenburukoak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Marrubi_eta_kremazko_hostopilak
+arrautza,Marrubi tarta 2,marrubi_tarta2,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Marrubi_tarta_2
+arrautza,Natilak,natilak,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Natilak
+arrautza,Neguko boilur beltzen nahaskia,neguko_boilur_beltzen_nahaskia,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Neguko_boilur_beltzen_nahaskia
+arrautza,Ogi opilak,ogi_opilak,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Ogi_opilak
+arrautza,Oilasko eta arrautza kroketak,oilasko_eta_arrautza_kroketak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Oilasko_eta_arrautza_kroketak
+arrautza,Oilasko kroketak,oilasko_kroketak,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Oilasko_kroketak
+arrautza,Onddo berria gorringoarekin,onddo_berria_gorringoarekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Onddo_berria_gorringoarekin
+arrautza,Ontzian eginiko arrautza,ontzian_eginiko_arrautza,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Ontzian_eginiko_arrautza
+arrautza,"Orburua, arroz odolkia eta arrautza gorringoa plantxan",orburua_arroz_odolkia_eta_arrautza_gorringoa_plantxan,lehen platerak,plantxan,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Orburua,_arroz_odolkia_eta_arrautza_gorringoa_plantxan"
+arrautza,Orburuak urdaiazpiko eta arrautza galdarraztatuekin,orburuak_urdaiazpiko_eta_arrautza_galdarraztatuekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Orburuak_urdaiazpiko_eta_arrautza_galdarraztatuekin
+arrautza,Otarrainxkak ziza kremarekin eta arrautzekin,otarrainxkak_ziza_kremarekin_eta_arrautzekin,bigarren platerak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Otarrainxkak_ziza_kremarekin_eta_arrautzekin
+arrautza,Pasta freskoa 2,pasta_freskoa2,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Pasta_freskoa_2
+arrautza,Patata tortila,patata_tortila,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Patata_tortila
+arrautza,Patata tortilla,patata_tortila,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Patata_tortilla
+arrautza,Petit-suisseak krema eta txokolate beroarekin,petit-suisseak_krema_eta_txokolate_beroarekin,azkenburukoak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Petit-suisseak_krema_eta_txokolate_beroarekin
+arrautza,Prantxikaren bizkotxoa,prantxikaren_bizkotxoa,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Prantxikaren_bizkotxoa
+arrautza,Sagar tarta 2,sagar_tarta2,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Sagar_tarta_2
+arrautza,Tiramisu,tiramisu,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Tiramisu
+arrautza,Tiramisu moussea arroz esne kremarekin,tiramisu_moussea_arroz_esne_kremarekin,azkenburukoak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Tiramisu_moussea_arroz_esne_kremarekin
+arrautza,Trufazko txokolate tarta,trufazko_txokolate_tarta,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Trufazko_txokolate_tarta
+arrautza,Txekor muturrak bizkaitar saltsan,txekor_muturrak_bizkaitar_saltsan,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txekor_muturrak_bizkaitar_saltsan
+arrautza,Txokolate gailetak,txokolate_gailetak,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolate_gailetak
+arrautza,Txokolatezko bizkotxo eta marrubi kopa,txokolatezko_bizkotxo_eta_marrubi_kopa,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolatezko_bizkotxo_eta_marrubi_kopa
+arrautza,Txokolatezko boilur tarta,txokolatezko_boilur_tarta,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolatezko_boilur_tarta
+arrautza,Txokolatezko krepeak,txokolatezko_krepeak,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolatezko_krepeak
+arrautza,Udaberri edo ziza hori nahaskia,udaberri_edo_ziza_hori_nahaskia,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Udaberri_edo_ziza_hori_nahaskia
+arrautza,Zainzuri freskoak udaberriko olio ozpinarekin,zainzuri_freskoak_udaberriko_olio_ozpinarekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Zainzuri_freskoak_udaberriko_olio_ozpinarekin
+arrautza,"Zainzuri frijituak, ziazerba kremarekin",zainzuri_frijituak_ziazerba_kremarekin,lehen platerak,frijitu,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Zainzuri_frijituak,_ziazerba_kremarekin"
+arrautza,“ Tomate nahaskia,tomate_nahaskia,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/%E2%80%9C_Tomate_nahaskia
+arroza,Arroz beltza,arroz_beltza,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroz_beltza
+arroza,Arroz entsalada,arroz_entsalada,,entsalada,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroz_entsalada
+arroza,Arroz esnea,arroz_esnea,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroz_esnea
+arroza,Arroz esnea 2,arroz_esnea2,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroz_esnea_2
+arroza,Arroz hindua,arroz_hindua,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroz_hindua
+arroza,"Arroz odolkia, piper eta galeper arrautzekin",arroz_odolkia_piper_eta_galeper_arrautzekin,lehen platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroz_odolkia,_piper_eta_galeper_arrautzekin"
+arroza,Arroz osoa barazki salteatuekin,arroz_osoa_barazki_salteatuekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroz_osoa_barazki_salteatuekin
+arroza,Arroz osoa barazkiekin,arroz_osoa_barazkiekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroz_osoa_barazkiekin
+arroza,Arroz txuria,arroz_txuria,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroz_txuria
+arroza,Arroz zopa,arroz_zopa,,zopak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroz_zopa
+arroza,Arroz zuri egosia,arroz_zuri_egosia,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroz_zuri_egosia
+arroza,Arroz zuria txirlekin,arroz_zuria_txirlekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroz_zuria_txirlekin
+arroza,Arroz-odolki kruxpetak,arroz-odolki_kruxpetak,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroz-odolki_kruxpetak
+arroza,Arroza abakandoarekin,arroza_abakandoarekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroza_abakandoarekin
+arroza,Arroza barazkiekin,arroza_barazkiekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroza_barazkiekin
+arroza,Arroza japoniar eran egosia,arroza_japoniar_eran_egosia,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroza_japoniar_eran_egosia
+arroza,Arroza oilasko eta curryarekin,arroza_oilasko_eta_curryarekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroza_oilasko_eta_curryarekin
+arroza,Arroza oilaskoarekin,arroza_oilaskoarekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroza_oilaskoarekin
+arroza,Arroza Txibiekin,arroza_txibiekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroza_Txibiekin
+arroza,Arroza txipiroiekin,arroza_txipiroiekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroza_txipiroiekin
+arroza,Arroza Txipiroiekin,arroza_txipiroiekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroza_Txipiroiekin
+arroza,Arrozezko odolki kruxpetak piper kremarekin,arrozezko_odolki_kruxpetak_piper_kremarekin,lehen platerak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arrozezko_odolki_kruxpetak_piper_kremarekin
+arroza,Askotariko paella,askotariko_paella,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Askotariko_paella
+arroza,"Bakailao konfitatua, basmati arrozarekin eta ziazerbekin",bakailao_konfitatua_basmati_arrozarekin_eta_ziazerbekin,bigarren platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailao_konfitatua,_basmati_arrozarekin_eta_ziazerbekin"
+arroza,Barazki eta otarrainxka risottoa,barazki_eta_otarrainxka_risottoa,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_eta_otarrainxka_risottoa
+arroza,Barazki eta txipiroi risotoa,barazki_eta_txipiroi_risottoa,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_eta_txipiroi_risotoa
+arroza,Barazki eta txipiroi risottoa,barazki_eta_txipiroi_risottoa,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_eta_txipiroi_risottoa
+arroza,Barazki eta zapo risotoa,barazki_eta_zapo_risottoa,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_eta_zapo_risotoa
+arroza,Basa arroza barazkiekin,basa_arroza_barazkiekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Basa_arroza_barazkiekin
+arroza,"Basa arroza, arroz zuriarekin",basa_arroza_arroz_zuriarekin,,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Basa_arroza,_arroz_zuriarekin"
+arroza,Basmati arroza entsaladan,basmati_arroza_entsaladan,lehen platerak,entsalada,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Basmati_arroza_entsaladan
+arroza,Erreboiloa basmati arrozarekin eta lekekin,erreboiloa_basmati_arrozarekin_eta_lekekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Erreboiloa_basmati_arrozarekin_eta_lekekin
+arroza,Fouti arroza,fouti_arroza,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Fouti_arroza
+arroza,Hiru gutiziko arroza,hiru_gutiziko_arroza,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hiru_gutiziko_arroza
+arroza,Itsas paella,itsas_paella,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Itsas_paella
+arroza,Itsaski paella,itsaski_paella,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Itsaski_paella
+arroza,Lurrunetan eginiko arroza,lurrunetan_eginiko_arroza,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Lurrunetan_eginiko_arroza
+arroza,"Orburua, arroz odolkia eta arrautza gorringoa plantxan",orburua_arroz_odolkia_eta_arrautza_gorringoa_plantxan,lehen platerak,plantxan,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Orburua,_arroz_odolkia_eta_arrautza_gorringoa_plantxan"
+arroza,Paella Valentziarra,paella_valentziarra,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Paella_Valentziarra
+arroza,Sushi egiteko ozpina,sushi_egiteko_ozpina,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Sushi_egiteko_ozpina
+arroza,Tiramisu moussea arroz esne kremarekin,tiramisu_moussea_arroz_esne_kremarekin,azkenburukoak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Tiramisu_moussea_arroz_esne_kremarekin
+arroza,"Txanpinoi txapelak plantxan, arroz odolkiarekin",txanpiñoi_txapelak_plantxan_arroz_odolkiarekin,lehen platerak,plantxan,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txanpinoi_txapelak_plantxan,_arroz_odolkiarekin"
+arroza,Txekor masailak onddoekin eta arrozarekin,txekor_masailak_onddoekin_eta_arrozarekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txekor_masailak_onddoekin_eta_arrozarekin
+barazkia,Ahuntz gazta entsalada,ahuntz_gazta_entsalada,,entsalada,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Ahuntz_gazta_entsalada
+barazkia,Arkume izterra labean barazkiekin,arkume_izterra_labean_barazkiekin,bigarren platerak,labekatu,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arkume_izterra_labean_barazkiekin
+barazkia,Arroz entsalada,arroz_entsalada,,entsalada,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroz_entsalada
+barazkia,Azenario purea,azenario_purea,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Azenario_purea
+barazkia,"Bakailao konfitatua, basmati arrozarekin eta ziazerbekin",bakailao_konfitatua_basmati_arrozarekin_eta_ziazerbekin,bigarren platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailao_konfitatua,_basmati_arrozarekin_eta_ziazerbekin"
+barazkia,Barazki betegaia,barazki_betegaia,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_betegaia
+barazkia,Barazki budina,barazki_budina,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_budina
+barazkia,Barazki estrudela,barazki_estrudela,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_estrudela
+barazkia,Barazki eta otarrainxka risottoa,barazki_eta_otarrainxka_risottoa,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_eta_otarrainxka_risottoa
+barazkia,Barazki eta txekor azpizun erregosia,barazki_eta_txekor_azpizun_erregosia,lehen platerak,erregosi,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_eta_txekor_azpizun_erregosia
+barazkia,Barazki eta txipiroi entsalada,barazki_eta_txipiroi_entsalada,lehen platerak,entsalada,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_eta_txipiroi_entsalada
+barazkia,Barazki eta txipiroi risotoa,barazki_eta_txipiroi_risottoa,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_eta_txipiroi_risotoa
+barazkia,Barazki eta txipiroi risottoa,barazki_eta_txipiroi_risottoa,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_eta_txipiroi_risottoa
+barazkia,Barazki eta zapo risotoa,barazki_eta_zapo_risottoa,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_eta_zapo_risotoa
+barazkia,Barazki koka,barazki_koka,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_koka
+barazkia,Barazki krepeak,barazki_krepeak,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_krepeak
+barazkia,Barazki lasagna,barazki_lasagna,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_lasagna
+barazkia,Barazki menestra,barazki_menestra,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_menestra
+barazkia,Barazki menestra 2,barazki_menestra2,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_menestra_2
+barazkia,Barazki moussaka,barazki_moussaka,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_moussaka
+barazkia,Barazki panatxea,barazki_panatxea,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_panatxea
+barazkia,Barazki purea,barazki_purea,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_purea
+barazkia,Barazki salda,barazki_salda,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_salda
+barazkia,Barazki salteatua,barazki_salteatua,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_salteatua
+barazkia,Barazki saltsa,barazki_saltsa,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_saltsa
+barazkia,Barazki tortilla,barazki_tortila,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_tortilla
+barazkia,Barazkia tenpuran frijitua,barazkia_tenpuran_frijitua,,frijitu,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazkia_tenpuran_frijitua
+barazkia,Barazkiak dadotean sueztituak,barazkiak_dadotean_sueztituak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazkiak_dadotean_sueztituak
+barazkia,Bruselazak borraja eta urdaiazpikoarekin,bruselazak_borraja_eta_urdaiazpikoarekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bruselazak_borraja_eta_urdaiazpikoarekin
+barazkia,Caprese entsalada,caprese_entsalada,,entsalada,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Caprese_entsalada
+barazkia,Cesar entsalada,cesar_entsalada,,entsalada,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Cesar_entsalada
+barazkia,Erreboiloa basmati arrozarekin eta lekekin,erreboiloa_basmati_arrozarekin_eta_lekekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Erreboiloa_basmati_arrozarekin_eta_lekekin
+barazkia,Erremolatxa egosia,erremolatxa_egosia,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Erremolatxa_egosia
+barazkia,Fideua barazki eta muskuiluekin,fideua_barazki_eta_muskuiluekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Fideua_barazki_eta_muskuiluekin
+barazkia,Fideua otarrainxka eta barazkiekin,fideua_otarrainxka_eta_barazkiekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Fideua_otarrainxka_eta_barazkiekin
+barazkia,"Fideua, barazki eta otarrainxkekin",fideua_barazki_eta_otarrainxkekin,lehen platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Fideua,_barazki_eta_otarrainxkekin"
+barazkia,Frantziar lekak perretxiko eta otarrainxkekin,frantziar_lekak_perretxiko_eta_otarrainxkekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Frantziar_lekak_perretxiko_eta_otarrainxkekin
+barazkia,Frijitzeko orea,frijitzeko_orea,,frijitu,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Frijitzeko_orea
+barazkia,Garaiko barazki burruntzia,garaiko_barazki_burruntzia,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Garaiko_barazki_burruntzia
+barazkia,"Hegaluze entsalada, otarrainxka eta piper gorriz eginiko tar-tarrarekin",hegaluze_entsalada_otarrainxka_eta_piper_gorriz_eginiko_tartarrarekin,lehen platerak,entsalada,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hegaluze_entsalada,_otarrainxka_eta_piper_gorriz_eginiko_tar-tarrarekin"
+barazkia,"Hegaluze, ahuakate eta piper tartarra",hegaluze_ahuakate_eta_piper_tartarra,bigarren platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hegaluze,_ahuakate_eta_piper_tartarra"
+barazkia,"Hegaluzea Asiako erara, udaberriko entsaladan",hegaluzea_asiako_erara_udaberriko_entsaladan,bigarren platerak,entsalada,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hegaluzea_Asiako_erara,_udaberriko_entsaladan"
+barazkia,Hostopil koka,hostopil_koka,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hostopil_koka
+barazkia,Hostopila odolki eta barazkiz beteta,hostopila_odolki_eta_barazkiz_beteta,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hostopila_odolki_eta_barazkiz_beteta
+barazkia,"Kardua, urdaiazpiko eta arrautza eskalfatuarekin",kardua_urdaiazpiko_eta_arrautza_eskalfatuarekin,lehen platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Kardua,_urdaiazpiko_eta_arrautza_eskalfatuarekin"
+barazkia,"Legatz xerrak plantxan, barazki eta baratxuri freskoekin",legatz_xerrak_plantxan_barazki_eta_baratxuri_freskoekin,bigarren platerak,plantxan,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Legatz_xerrak_plantxan,_barazki_eta_baratxuri_freskoekin"
+barazkia,"Legatza plantxan, barazkiekin",legatza_plantxan_barazkiekin,bigarren platerak,plantxan,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Legatza_plantxan,_barazkiekin"
+barazkia,"Legatza plantxan, kuia txikiarekin eta pipermorroekin",legatza_plantxan_kuia_txikiarekin_eta_pipermorroekin,bigarren platerak,plantxan,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Legatza_plantxan,_kuia_txikiarekin_eta_pipermorroekin"
+barazkia,Leka eta txanpiak otarrainxkekin,leka_eta_txanpiñoiak_otarrainxkekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Leka_eta_txanpiak_otarrainxkekin
+barazkia,Leka freskoak txipiroi eta tipula goxatuarekin,leka_freskoak_txipiroi_eta_tipula_goxatuarekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Leka_freskoak_txipiroi_eta_tipula_goxatuarekin
+barazkia,Odolkiz beteriko brik orriak babarrun kremarekin,odolkiz_beteriko_brik_orriak_baba_kremarekin,lehen platerak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Odolkiz_beteriko_brik_orriak_babarrun_kremarekin
+barazkia,Olagarro entsalada epela,olagarro_entsalada_epela,lehen platerak,entsalada,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Olagarro_entsalada_epela
+barazkia,Otarrainxkaz eta barazkiz beteriko kirriskatsuak,otarrainxkaz_eta_barazkiz_beteriko_kirriskatsuak,lehen platerak,frijitu,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Otarrainxkaz_eta_barazkiz_beteriko_kirriskatsuak
+barazkia,Perrexil olio saltsa,perrexil_olio_saltsa,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Perrexil_olio_saltsa
+barazkia,Pesto saltsa,pesto_saltsa,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Pesto_saltsa
+barazkia,Tabbuleh entsalada,tabbuleh_entsalada,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Tabbuleh_entsalada
+barazkia,Tagliatelle freskoak barazki eta curryarekin,tagliatelle_freskoak_barazki_eta_curryarekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Tagliatelle_freskoak_barazki_eta_curryarekin
+barazkia,Tuterako kukuluak brie gazta eta txipiroiekin,tuterako_kukuluak_brie_gazta_eta_txipiroiekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Tuterako_kukuluak_brie_gazta_eta_txipiroiekin
+barazkia,Txekor azpizuna txanpiñoi eta curryarekin,txekor_azpizuna_txanpiñoi_eta_curryarekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txekor_azpizuna_txanpi%C3%B1oi_eta_curryarekin
+barazkia,"Txekor tripaki eta muturrak, Bizkaiko saltsan",txekor_tripaki_eta_muturrak_bizkaiko_saltsan,bigarren platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txekor_tripaki_eta_muturrak,_Bizkaiko_saltsan"
+barazkia,Txipiroiak plantxan tipula goxatu eta letxugarekin,txipiroiak_plantxan_tipula_goxatu_eta_letxugarekin,lehen platerak,plantxan,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txipiroiak_plantxan_tipula_goxatu_eta_letxugarekin
+barazkia,"Txitxarroa plantxan piper erre, tipula eta gari zainzuriekin",txitxarroa_plantxan_piper_erre_tipula_eta_gari_zainzuriekin,bigarren platerak,plantxan,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txitxarroa_plantxan_piper_erre,_tipula_eta_gari_zainzuriekin"
+barazkia,Udaberriko txinatar biribilkiak,udaberriko_txinatar_biribilkiak,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Udaberriko_txinatar_biribilkiak
+barazkia,Udako entsalada,udako_entsalada,lehen platerak,entsalada,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Udako_entsalada
+barraskiloak,Barraskilo salteatuak,barraskilo_salteatuak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barraskilo_salteatuak
+barraskiloak,Barraskiloak bizkaitar erara,barraskiloak_bizkaitar_erara,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barraskiloak_bizkaitar_erara
+barraskiloak,Barraskiloak parrillan,barraskiloak_parrilan,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barraskiloak_parrillan
+esnekiak,Arroz esnea 2,arroz_esnea2,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroz_esnea_2
+esnekiak,Esne frijitua,esne_frijitua,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Esne_frijitua
+esnekiak,Esne frijituak,esne_frijituak,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Esne_frijituak
+esnekiak,Gazta eta urdai egosi frijituak,gazta_eta_urdai_egosi_frijituak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Gazta_eta_urdai_egosi_frijituak
+esnekiak,Gazta izozkia,gazta_izozkia,azkenburukoak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Gazta_izozkia
+esnekiak,Gazta krema,gazta_krema,,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Gazta_krema
+esnekiak,Gazta kroketak,gazta_kroketak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Gazta_kroketak
+esnekiak,Gazta tarta labean,gazta_tarta_labean,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Gazta_tarta_labean
+esnekiak,Gazta tarta mugurdi mermeladarekin,gazta_tarta_mugurdi_mermeladarekin,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Gazta_tarta_mugurdi_mermeladarekin
+esnekiak,Gazta urdin kanape edo pintxoa,gazta_urdin_kanape_edo_pintxoa,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Gazta_urdin_kanape_edo_pintxoa
+esnekiak,Gazta urdin krema kanapea,gazta_urdin_krema_kanapea,,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Gazta_urdin_krema_kanapea
+esnekiak,Gaztaz beteriko ravioliak txanpiñoi eta txirla kremarekin,gaztaz_beteriko_ravioliak_txanpiñoi_eta_txirla_kremarekin,lehen platerak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Gaztaz_beteriko_ravioliak_txanpi%C3%B1oi_eta_txirla_kremarekin
+fruta,Ananaz beteriko krepeak,ananaz_beteriko_krepeak,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Ananaz_beteriko_krepeak
+fruta,Baso fruituen saltsa,baso_fruituen_saltsa,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Baso_fruituen_saltsa
+fruta,Etxeko bizkotxoa marrubiekin eta esne gainarekin,etxeko_bizkotxoa_marrubiekin_eta_esne_gainarekin,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Etxeko_bizkotxoa_marrubiekin_eta_esne_gainarekin
+fruta,Fruta gelatina bainua,fruta_gelatina_bainua,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Fruta_gelatina_bainua
+fruta,Fruta mazedonia,fruta_mazedonia,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Fruta_mazedonia
+fruta,Fruta moussea,fruta_moussea,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Fruta_moussea
+fruta,Guakamole txalupa otarrainxkekin,guakamole_txalupa_otarrainxkekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Guakamole_txalupa_otarrainxkekin
+fruta,Guakamolea,guakamolea,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Guakamolea
+fruta,Guakamoleta,guakamolea,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Guakamoleta
+fruta,Irasagarra 2,irasagarra2,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Irasagarra_2
+fruta,Marrubi eta kremazko hostopilak,marrubi_eta_kremazko_hostopilak,azkenburukoak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Marrubi_eta_kremazko_hostopilak
+fruta,Marrubi gelatina,marrubi_gelatina,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Marrubi_gelatina
+fruta,Marrubi izozkia,marrubi_izozkia,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Marrubi_izozkia
+fruta,Marrubi marmelada,marrubi_marmelada,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Marrubi_marmelada
+fruta,Marrubi tarta,marrubi_tarta,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Marrubi_tarta
+fruta,Marrubi tarta 2,marrubi_tarta2,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Marrubi_tarta_2
+fruta,Marrubiak esne-gain krema eta almendrekin,marrubiak_esne-gain_krema_eta_almendrekin,azkenburukoak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Marrubiak_esne-gain_krema_eta_almendrekin
+fruta,"Porru entsalada, guakamole eta izokin ketuarekin",porru_entsalada_guakamole_eta_izokin_ketuarekin,lehen platerak,entsalada,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Porru_entsalada,_guakamole_eta_izokin_ketuarekin"
+fruta,Sagar tarta 2,sagar_tarta2,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Sagar_tarta_2
+fruta,Sagar tatin gozoa,sagar_tatin_gozoa,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Sagar_tatin_gozoa
+fruta,Udare purea,udare_purea,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Udare_purea
+fruta,Udarea ardotan,udarea_ardotan,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Udarea_ardotan
+fruta,Udareak urazukretan,udareak_urazukretan,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Udareak_urazukretan
+haragia,Albondigak tomate saltsan,haragi_bolak_tomate_saltsan,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Albondigak_tomate_saltsan
+haragia,"Arroz odolkia, piper eta galeper arrautzekin",arroz_odolkia_piper_eta_galeper_arrautzekin,lehen platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroz_odolkia,_piper_eta_galeper_arrautzekin"
+haragia,Arrozezko odolki kruxpetak piper kremarekin,arrozezko_odolki_kruxpetak_piper_kremarekin,lehen platerak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arrozezko_odolki_kruxpetak_piper_kremarekin
+haragia,Azpizuna plantxan,azpizuna_plantxan,,plantxan,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Azpizuna_plantxan
+haragia,Bexamelaz eginiko haragi betegaia,bexamelaz_eginiko_haragi_betegaia,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bexamelaz_eginiko_haragi_betegaia
+haragia,Biribilkia saltsan,biribilkia_saltsan,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Biribilkia_saltsan
+haragia,Bruselazak borraja eta urdaiazpikoarekin,bruselazak_borraja_eta_urdaiazpikoarekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bruselazak_borraja_eta_urdaiazpikoarekin
+haragia,Galiziar haragi enpanada,galiziar_haragi_enpanada,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Galiziar_haragi_enpanada
+haragia,Haragi betegaia,haragi_betegaia,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Haragi_betegaia
+haragia,Haragi bolak barazki saltsan,haragi_bolak_barazki_saltsan,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Haragi_bolak_barazki_saltsan
+haragia,Haragi bolak tomate saltsan,haragi_bolak_tomate_saltsan,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Haragi_bolak_tomate_saltsan
+haragia,Haragi carpaccioa,haragi_carpaccioa,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Haragi_carpaccioa
+haragia,Haragi egosiz eta txanpinoiz beteriko piperrak,haragi_egosiz_eta_txanpiñoiz_beteriko_piperrak,bigarren platerak,egosi,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Haragi_egosiz_eta_txanpinoiz_beteriko_piperrak
+haragia,Haragi enpanada,haragi_enpanada,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Haragi_enpanada
+haragia,Haragi enpanadilla,haragi_enpanadila,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Haragi_enpanadilla
+haragia,Haragi gisatua,haragi_gisatua,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Haragi_gisatua
+haragia,Haragi kaneloiak,haragi_kaneloiak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Haragi_kaneloiak
+haragia,Haragi kroketak,haragi_kroketak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Haragi_kroketak
+haragia,Haragi lasagna,haragi_lasagna,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Haragi_lasagna
+haragia,Haragi ragouta,haragi_ragouta,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Haragi_ragouta
+haragia,Haragia tartar eran,haragia_tartar_eran,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Haragia_tartar_eran
+haragia,Haragizko piper beteak,haragizko_piper_beteak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Haragizko_piper_beteak
+haragia,Takoen betegai edo haragizko tinga,takoen_betegai_edo_haragizko_tinga,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Takoen_betegai_edo_haragizko_tinga
+haragia,"Tomate, mozzarella, barrengorri eta urdaiazpiko pizza",tomate_mozzarella_barrengorri_eta_urdaiazpiko_pizza,bigarren platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Tomate,_mozzarella,_barrengorri_eta_urdaiazpiko_pizza"
+haragia,"Tripaki, behi mutur, edo txerri hanka egosiak",tripaki_behi_mutur_edo_txerri_hanka_egosiak,,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Tripaki,_behi_mutur,_edo_txerri_hanka_egosiak"
+haragia,"Txanpinoi txapelak plantxan, arroz odolkiarekin",txanpiñoi_txapelak_plantxan_arroz_odolkiarekin,lehen platerak,plantxan,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txanpinoi_txapelak_plantxan,_arroz_odolkiarekin"
+haragia,Txerri iberiar Sekretoa parrilan Gernikako piperrekin,txerri_iberiar_sekretoa_parrilan_gernikako_piperrekin,,plantxan,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txerri_iberiar_Sekretoa_parrilan_Gernikako_piperrekin
+haragia,Txerri iberiarraren presa carpaccioa.jpg,txerri_iberiarraren_presa_carpaccioa,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txerri_iberiarraren_presa_carpaccioa.jpg
+itsaskia,Abakando errea,abakando_errea,,erre,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Abakando_errea
+itsaskia,Arroza abakandoarekin,arroza_abakandoarekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroza_abakandoarekin
+itsaskia,Arroza Txibiekin,arroza_txibiekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroza_Txibiekin
+itsaskia,Arroza Txipiroiekin,arroza_txipiroiekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroza_Txipiroiekin
+itsaskia,Barazki eta txipiroi entsalada,barazki_eta_txipiroi_entsalada,lehen platerak,entsalada,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_eta_txipiroi_entsalada
+itsaskia,Barazki eta txipiroi risotoa,barazki_eta_txipiroi_risottoa,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_eta_txipiroi_risotoa
+itsaskia,Barazki eta txipiroi risottoa,barazki_eta_txipiroi_risottoa,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_eta_txipiroi_risottoa
+itsaskia,Buia maionesarekin,buia_maionesarekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Buia_maionesarekin
+itsaskia,Fideua txibiekin,fideua_txibiekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Fideua_txibiekin
+itsaskia,Ganbak baratxuritan,ganbak_baratxuritan,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Ganbak_baratxuritan
+itsaskia,Ganbak plantxan edo parrilan,ganbak_plantxan_edo_parrilan,,plantxan,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Ganbak_plantxan_edo_parrilan
+itsaskia,Ganbak plantxan edo zartaginean,ganbak_plantxan_edo_zartaginean,,plantxan,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Ganbak_plantxan_edo_zartaginean
+itsaskia,Ganbaz beteriko txipiroi frijitua,ganbaz_beteriko_txipiroi_frijitua,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Ganbaz_beteriko_txipiroi_frijitua
+itsaskia,Itsas paella,itsas_paella,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Itsas_paella
+itsaskia,Itsaski krema,itsaski_krema,,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Itsaski_krema
+itsaskia,Itsaski paella,itsaski_paella,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Itsaski_paella
+itsaskia,Izkira egosiak,izkira_egosiak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Izkira_egosiak
+itsaskia,Lanperna egosiak,lanperna_egosiak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Lanperna_egosiak
+itsaskia,Legatza saltsa berdean txirla eta kokotxekin,legatza_saltsa_berdean_txirla_eta_kokotxekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Legatza_saltsa_berdean_txirla_eta_kokotxekin
+itsaskia,Mihi-arrain popietak ganbekin txakolin saltsan,mihi-arrain_xerrak_ganbekin_txakolin_saltsan,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Mihi-arrain_popietak_ganbekin_txakolin_saltsan
+itsaskia,Muskuilu goxatuak,muskuilu_goxatuak,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Muskuilu_goxatuak
+itsaskia,Muskuilu krema,muskuilu_krema,,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Muskuilu_krema
+itsaskia,Otarrainxka egosiak,otarrainxka_egosiak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Otarrainxka_egosiak
+itsaskia,Otarrainxka eta onddo milorria,otarrainxka_eta_onddo_milorria,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Otarrainxka_eta_onddo_milorria
+itsaskia,Otarrainxka plantxan edo zartaginean,otarrainxka_plantxan_edo_zartaginean,,plantxan,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Otarrainxka_plantxan_edo_zartaginean
+itsaskia,Otarrainxkak ziza kremarekin eta arrautzekin,otarrainxkak_ziza_kremarekin_eta_arrautzekin,bigarren platerak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Otarrainxkak_ziza_kremarekin_eta_arrautzekin
+itsaskia,Otarrainxkaz eta barazkiz beteriko kirriskatsuak,otarrainxkaz_eta_barazkiz_beteriko_kirriskatsuak,lehen platerak,frijitu,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Otarrainxkaz_eta_barazkiz_beteriko_kirriskatsuak
+itsaskia,Raf tomatea txipiekin,raf_tomatea_txipiekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Raf_tomatea_txipiekin
+itsaskia,Tagliatelleak otarrainxka eta txirlekin,tagliatelleak_otarrainxka_eta_txirlekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Tagliatelleak_otarrainxka_eta_txirlekin
+itsaskia,Txibi frijituak,txibi_frijituak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txibi_frijituak
+itsaskia,Txipiroi begi handiak bere tintan,txipiroi_begi_handiak_bere_tintan,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txipiroi_begi_handiak_bere_tintan
+itsaskia,Txipiroi frijituak,txipiroi_frijituak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txipiroi_frijituak
+itsaskia,Txipiroi tinta saltsa,txipiroi_tinta_saltsa,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txipiroi_tinta_saltsa
+itsaskia,Txipiroiak bere tintan,txipiroiak_bere_tintan,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txipiroiak_bere_tintan
+itsaskia,Txipiroiak Pelaio erara,txipiroiak_pelaio_erara,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txipiroiak_Pelaio_erara
+itsaskia,Txipiroiak pelaio erara,txipiroiak_pelaio_erara,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txipiroiak_pelaio_erara
+itsaskia,Txipiroiak plantxan,txipiroiak_plantxan,,plantxan,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txipiroiak_plantxan
+itsaskia,Txipiroiak plantxan tipula goxatu eta letxugarekin,txipiroiak_plantxan_tipula_goxatu_eta_letxugarekin,lehen platerak,plantxan,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txipiroiak_plantxan_tipula_goxatu_eta_letxugarekin
+itsaskia,Txirla handiak plantxan,txirla_handiak_plantxan,,plantxan,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txirla_handiak_plantxan
+itsaskia,Txirlak marinel erara,txirlak_marinel_erara,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txirlak_marinel_erara
+itsaskia,Txirlak saltsa berdean,txirlak_saltsa_berdean,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txirlak_saltsa_berdean
+itsaskia,Txirlak zartagian,txirlak_zartagian,,plantxan,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txirlak_zartagian
+lekaleak,Baba egosia,baba_egosia,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Baba_egosia
+lekaleak,Babak ilarrekin,babak_ilarrekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Babak_ilarrekin
+lekaleak,Babak urdaiazpikoarekin,babak_urdaiazpikoarekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Babak_urdaiazpikoarekin
+lekaleak,Babarrun zuriak,baba_zuriak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Babarrun_zuriak
+lekaleak,Bijiliako Txitxirioak,bijiliako_txitxirioak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bijiliako_Txitxirioak
+lekaleak,Frantziar lekak perretxiko eta otarrainxkekin,frantziar_lekak_perretxiko_eta_otarrainxkekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Frantziar_lekak_perretxiko_eta_otarrainxkekin
+lekaleak,"Garaiko ilarrak, patata, ziazerba eta txirlekin",garaiko_ilarrak_patata_ziazerba_eta_txirlekin,bigarren platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Garaiko_ilarrak,_patata,_ziazerba_eta_txirlekin"
+lekaleak,Garbantzuak tripakiekin,txitxirioak_tripakiekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Garbantzuak_tripakiekin
+lekaleak,Ilar budina,ilar_budina,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Ilar_budina
+lekaleak,Ilar egosia,ilar_egosia,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Ilar_egosia
+lekaleak,Ilar krema,ilar_krema,,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Ilar_krema
+lekaleak,Ilarrak urdaiazpikoarekin,ilarrak_urdaiazpikoarekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Ilarrak_urdaiazpikoarekin
+lekaleak,Kokotxak leka eta tomate konpotarekin,kokotxak_leka_eta_tomate_konpotarekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Kokotxak_leka_eta_tomate_konpotarekin
+lekaleak,Leka eta txanpiak otarrainxkekin,leka_eta_txanpiñoiak_otarrainxkekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Leka_eta_txanpiak_otarrainxkekin
+lekaleak,Leka freskoak txipiroi eta tipula goxatuarekin,leka_freskoak_txipiroi_eta_tipula_goxatuarekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Leka_freskoak_txipiroi_eta_tipula_goxatuarekin
+lekaleak,Tolosako babarrunak,tolosako_babak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Tolosako_babarrunak
+lekaleak,Txitxirioak,txitxirioak,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txitxirioak
+oliba olioa,Alberjinia beteak haragi xehatuarekin,alberjinia_beteak_haragi_xehatuarekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Alberjinia_beteak_haragi_xehatuarekin
+oliba olioa,Andaluziako gazpatxoa,andaluziako_gazpatxoa,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Andaluziako_gazpatxoa
+oliba olioa,Antxoa frijituak,antxoa_frijituak,bigarren platerak,frijitu,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Antxoa_frijituak
+oliba olioa,Antxoak tipulin eta baratxuri freskoekin,antxoak_tipulin_eta_baratxuri_freskoekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Antxoak_tipulin_eta_baratxuri_freskoekin
+oliba olioa,Arkume izterra labean barazkiekin,arkume_izterra_labean_barazkiekin,bigarren platerak,labekatu,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arkume_izterra_labean_barazkiekin
+oliba olioa,Arkumea txilindronean,arkumea_txilindronean,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arkumea_txilindronean
+oliba olioa,Arrautzak kardu eta kutixiekin,arrautzak_kardu_eta_kutixiekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arrautzak_kardu_eta_kutixiekin
+oliba olioa,Arroza txipiroiekin,arroza_txipiroiekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Arroza_txipiroiekin
+oliba olioa,Atun mendrezka plantxan tomate eta otarrainxkekin,atun_mendrezka_plantxan_tomate_eta_otarrainxkekin,bigarren platerak,plantxan,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Atun_mendrezka_plantxan_tomate_eta_otarrainxkekin
+oliba olioa,Bakailao brandada piperrekin eta ziazerbekin,bakailao_brandada_piperrekin_eta_ziazerbekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailao_brandada_piperrekin_eta_ziazerbekin
+oliba olioa,"Bakailao carpaccioa, ziza eta pinaziekin",bakailao_carpaccioa_ziza_eta_pinaziekin,bigarren platerak,carpaccio,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailao_carpaccioa,_ziza_eta_pinaziekin"
+oliba olioa,Bakailao eta piper erre entsalada epela,bakailao_eta_piper_erre_entsalada_epela,lehen platerak,entsalada,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailao_eta_piper_erre_entsalada_epela
+oliba olioa,Bakailao kokotxak gari zainzuri eta piper freskoekin,bakailao_kokotxak_gari_zainzuri_eta_piper_freskoekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailao_kokotxak_gari_zainzuri_eta_piper_freskoekin
+oliba olioa,"Bakailao konfitatua, basmati arrozarekin eta ziazerbekin",bakailao_konfitatua_basmati_arrozarekin_eta_ziazerbekin,bigarren platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Bakailao_konfitatua,_basmati_arrozarekin_eta_ziazerbekin"
+oliba olioa,Barazki eta otarrainxka risottoa,barazki_eta_otarrainxka_risottoa,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_eta_otarrainxka_risottoa
+oliba olioa,Barazki eta txipiroi entsalada,barazki_eta_txipiroi_entsalada,lehen platerak,entsalada,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_eta_txipiroi_entsalada
+oliba olioa,Barazki eta txipiroi risotoa,barazki_eta_txipiroi_risottoa,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_eta_txipiroi_risotoa
+oliba olioa,Barazki eta txipiroi risottoa,barazki_eta_txipiroi_risottoa,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_eta_txipiroi_risottoa
+oliba olioa,Barazki eta zapo risotoa,barazki_eta_zapo_risottoa,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_eta_zapo_risotoa
+oliba olioa,Barazki krepeak,barazki_krepeak,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_krepeak
+oliba olioa,Barazki menestra 2,barazki_menestra2,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barazki_menestra_2
+oliba olioa,Barbarin arraintxoak plantxan ziazerba eta otarrainxkekin,barbarin_arraintxoak_plantxan_ziazerba_eta_otarrainxkekin,bigarren platerak,plantxan,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Barbarin_arraintxoak_plantxan_ziazerba_eta_otarrainxkekin
+oliba olioa,Baserriko ogi tosta berezia,baserriko_ogi_tosta_berezia,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Baserriko_ogi_tosta_berezia
+oliba olioa,Basmati arroza entsaladan,basmati_arroza_entsaladan,lehen platerak,entsalada,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Basmati_arroza_entsaladan
+oliba olioa,Basurdea saltsan,basurdea_saltsan,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Basurdea_saltsan
+oliba olioa,Eperrak saltsan,eperrak_saltsan,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Eperrak_saltsan
+oliba olioa,Erreboiloa basmati arrozarekin eta lekekin,erreboiloa_basmati_arrozarekin_eta_lekekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Erreboiloa_basmati_arrozarekin_eta_lekekin
+oliba olioa,Fideua barazki eta muskuiluekin,fideua_barazki_eta_muskuiluekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Fideua_barazki_eta_muskuiluekin
+oliba olioa,Fideua otarrainxka eta barazkiekin,fideua_otarrainxka_eta_barazkiekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Fideua_otarrainxka_eta_barazkiekin
+oliba olioa,"Fideua, barazki eta otarrainxkekin",fideua_barazki_eta_otarrainxkekin,lehen platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Fideua,_barazki_eta_otarrainxkekin"
+oliba olioa,Frantziar lekak perretxiko eta otarrainxkekin,frantziar_lekak_perretxiko_eta_otarrainxkekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Frantziar_lekak_perretxiko_eta_otarrainxkekin
+oliba olioa,Garaiko barazki burruntzia,garaiko_barazki_burruntzia,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Garaiko_barazki_burruntzia
+oliba olioa,Garbantzuak tripakiekin,txitxirioak_tripakiekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Garbantzuak_tripakiekin
+oliba olioa,"Gari zainzuriak plantxan, txipiroiekin",gari_zainzuriak_plantxan_txipiroiekin,lehen platerak,plantxan,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Gari_zainzuriak_plantxan,_txipiroiekin"
+oliba olioa,Guakamole txalupa otarrainxkekin,guakamole_txalupa_otarrainxkekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Guakamole_txalupa_otarrainxkekin
+oliba olioa,Haragi egosiz eta txanpinoiz beteriko piperrak,haragi_egosiz_eta_txanpiñoiz_beteriko_piperrak,bigarren platerak,egosi,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Haragi_egosiz_eta_txanpinoiz_beteriko_piperrak
+oliba olioa,"Hegaluze entsalada, otarrainxka eta piper gorriz eginiko tar-tarrarekin",hegaluze_entsalada_otarrainxka_eta_piper_gorriz_eginiko_tartarrarekin,lehen platerak,entsalada,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hegaluze_entsalada,_otarrainxka_eta_piper_gorriz_eginiko_tar-tarrarekin"
+oliba olioa,"Hegaluze, ahuakate eta piper tartarra",hegaluze_ahuakate_eta_piper_tartarra,bigarren platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hegaluze,_ahuakate_eta_piper_tartarra"
+oliba olioa,"Hegaluzea Asiako erara, udaberriko entsaladan",hegaluzea_asiako_erara_udaberriko_entsaladan,bigarren platerak,entsalada,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hegaluzea_Asiako_erara,_udaberriko_entsaladan"
+oliba olioa,Hostopil koka,hostopil_koka,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hostopil_koka
+oliba olioa,Itsas paella,itsas_paella,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Itsas_paella
+oliba olioa,Kalabazin txalupak otarrainxka eta ziazerbaz beteak,kalabazin_txalupak_otarrainxka_eta_ziazerbaz_beteak,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Kalabazin_txalupak_otarrainxka_eta_ziazerbaz_beteak
+oliba olioa,Kokotxak leka eta tomate konpotarekin,kokotxak_leka_eta_tomate_konpotarekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Kokotxak_leka_eta_tomate_konpotarekin
+oliba olioa,Kuia krema otarrainxkekin,kuia_krema_otarrainxkekin,lehen platerak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Kuia_krema_otarrainxkekin
+oliba olioa,"Kuia txikiz eginiko milorria, bakailaoz betea",kuia_txikiz_eginiko_milorria_bakailaoz_betea,lehen platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Kuia_txikiz_eginiko_milorria,_bakailaoz_betea"
+oliba olioa,"Kuia, tomate eta Kantauriko antxoa lasagna",kuia_tomate_eta_kantauriko_antxoa_lasagna,lehen platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Kuia,_tomate_eta_Kantauriko_antxoa_lasagna"
+oliba olioa,"Legatza barazkiekin, papillote erara",legatza_barazkiekin_papillote_erara,bigarren platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Legatza_barazkiekin,_papillote_erara"
+oliba olioa,Legatza otarrainxka saldarekin eta txirlekin,legatza_otarrainxka_saldarekin_eta_txirlekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Legatza_otarrainxka_saldarekin_eta_txirlekin
+oliba olioa,"Legatza plantxan, barazkiekin",legatza_plantxan_barazkiekin,bigarren platerak,plantxan,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Legatza_plantxan,_barazkiekin"
+oliba olioa,"Legatza plantxan, kuia txikiarekin eta pipermorroekin",legatza_plantxan_kuia_txikiarekin_eta_pipermorroekin,bigarren platerak,plantxan,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Legatza_plantxan,_kuia_txikiarekin_eta_pipermorroekin"
+oliba olioa,Leka eta txanpiak otarrainxkekin,leka_eta_txanpiñoiak_otarrainxkekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Leka_eta_txanpiak_otarrainxkekin
+oliba olioa,Leka freskoak txipiroi eta tipula goxatuarekin,leka_freskoak_txipiroi_eta_tipula_goxatuarekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Leka_freskoak_txipiroi_eta_tipula_goxatuarekin
+oliba olioa,Nafarroako pikillo piperrak bakailaoz beteak,nafarroako_pikillo_piperrak_bakailaoz_beteak,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Nafarroako_pikillo_piperrak_bakailaoz_beteak
+oliba olioa,Nafarroako zainzuriak bakailao kokotxekin,nafarroako_zainzuriak_bakailao_kokotxekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Nafarroako_zainzuriak_bakailao_kokotxekin
+oliba olioa,Nafarroako zainzuriak onddoz beteak,nafarroako_zainzuriak_onddoz_beteak,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Nafarroako_zainzuriak_onddoz_beteak
+oliba olioa,Odolki kurruskatsuak pikillo piperrekin eta azarekin,odolki_kurruskatsuak_pikillo_piperrekin_eta_azarekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Odolki_kurruskatsuak_pikillo_piperrekin_eta_azarekin
+oliba olioa,Odolkiz beteriko brik orriak babarrun kremarekin,odolkiz_beteriko_brik_orriak_baba_kremarekin,lehen platerak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Odolkiz_beteriko_brik_orriak_babarrun_kremarekin
+oliba olioa,Oilagorrak saltsan,oilagorrak_saltsan,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Oilagorrak_saltsan
+oliba olioa,Oilasko izterrak txanpinoi krema eta curryarekin,oilasko_izterrak_txanpiñoi_krema_eta_curryarekin,bigarren platerak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Oilasko_izterrak_txanpinoi_krema_eta_curryarekin
+oliba olioa,Onddo 'carpaccio'a,onddo_carpaccioa,lehen platerak,carpaccio,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Onddo_%27carpaccio%27a
+oliba olioa,Onddoak papillote erara,onddoak_papillote_erara,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Onddoak_papillote_erara
+oliba olioa,"Onddoz beteriko kiribil kurruskatsua, kuia kremarekin",onddoz_beteriko_kiribil_kurruskatsua_kuia_kremarekin,lehen platerak,kremak,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Onddoz_beteriko_kiribil_kurruskatsua,_kuia_kremarekin"
+oliba olioa,Orburu 'txips'-ak eta orburu egosiak,orburu_txips-ak_eta_orburu_egosiak,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Orburu_%27txips%27-ak_eta_orburu_egosiak
+oliba olioa,"Orburu pintxoa urdaiazpiko, tomate eta piperrekin",orburu_pintxoa_urdaiazpiko_tomate_eta_piperrekin,lehen platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Orburu_pintxoa_urdaiazpiko,_tomate_eta_piperrekin"
+oliba olioa,"Orburua, arroz odolkia eta arrautza gorringoa plantxan",orburua_arroz_odolkia_eta_arrautza_gorringoa_plantxan,lehen platerak,plantxan,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Orburua,_arroz_odolkia_eta_arrautza_gorringoa_plantxan"
+oliba olioa,"Orburuak entsaladan, raf tomateekin",orburuak_entsaladan_raf_tomateekin,lehen platerak,entsalada,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Orburuak_entsaladan,_raf_tomateekin"
+oliba olioa,Orburuak urdaiazpiko eta arrautza galdarraztatuekin,orburuak_urdaiazpiko_eta_arrautza_galdarraztatuekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Orburuak_urdaiazpiko_eta_arrautza_galdarraztatuekin
+oliba olioa,Orburuak urdaiazpikoarekin eta Beasaingo odolkiarekin,orburuak_urdaiazpikoarekin_eta_beasaingo_odolkiarekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Orburuak_urdaiazpikoarekin_eta_Beasaingo_odolkiarekin
+oliba olioa,"Orburuak, urdaiazpiko, ziazerba eta Beasaingo odolkiarekin",orburuak_urdaiazpiko_ziazerba_eta_beasaingo_odolkiarekin,lehen platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Orburuak,_urdaiazpiko,_ziazerba_eta_Beasaingo_odolkiarekin"
+oliba olioa,Otarrainxka eta onddo milorria,otarrainxka_eta_onddo_milorria,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Otarrainxka_eta_onddo_milorria
+oliba olioa,Otarrainxkak ziza kremarekin eta arrautzekin,otarrainxkak_ziza_kremarekin_eta_arrautzekin,bigarren platerak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Otarrainxkak_ziza_kremarekin_eta_arrautzekin
+oliba olioa,Pasta freskoa 2,pasta_freskoa2,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Pasta_freskoa_2
+oliba olioa,"Patata berri, zainzuri eta izokin ketu entsalada",patata_berri_zainzuri_eta_izokin_ketu_entsalada,lehen platerak,entsalada,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Patata_berri,_zainzuri_eta_izokin_ketu_entsalada"
+oliba olioa,Patatak errioxar erara 2,patatak_errioxar_erara2,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Patatak_errioxar_erara_2
+oliba olioa,Pikillo piperrak odolkiz beteak,pikillo_piperrak_odolkiz_beteak,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Pikillo_piperrak_odolkiz_beteak
+oliba olioa,Piper eta atun entsalada,piper_eta_atun_entsalada,lehen platerak,entsalada,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Piper_eta_atun_entsalada
+oliba olioa,Piper morro erreak plantxan bakailao kokotxekin,piper_morro_erreak_plantxan_bakailao_kokotxekin,lehen platerak,erre,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Piper_morro_erreak_plantxan_bakailao_kokotxekin
+oliba olioa,"Porru entsalada, guakamole eta izokin ketuarekin",porru_entsalada_guakamole_eta_izokin_ketuarekin,lehen platerak,entsalada,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Porru_entsalada,_guakamole_eta_izokin_ketuarekin"
+oliba olioa,Porru eta otarrainxka entsalada,porru_eta_otarrainxka_entsalada,lehen platerak,entsalada,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Porru_eta_otarrainxka_entsalada
+oliba olioa,Raf tomatea ahuntz gaztarekin,raf_tomatea_ahuntz_gaztarekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Raf_tomatea_ahuntz_gaztarekin
+oliba olioa,Raf tomatea txipiekin,raf_tomatea_txipiekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Raf_tomatea_txipiekin
+oliba olioa,"Raf tomateen entsalada, bakailaoarekin eta barazkiekin",raf_tomateen_entsalada_bakailaoarekin_eta_barazkiekin,lehen platerak,entsalada,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Raf_tomateen_entsalada,_bakailaoarekin_eta_barazkiekin"
+oliba olioa,Tagliateliak antxoa eta cherry tomateekin,tagliatelleak_antxoa_eta_cherry_tomateekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Tagliateliak_antxoa_eta_cherry_tomateekin
+oliba olioa,Tagliatelle freskoak barazki eta curryarekin,tagliatelle_freskoak_barazki_eta_curryarekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Tagliatelle_freskoak_barazki_eta_curryarekin
+oliba olioa,Tagliatelleak otarrainxka eta txirlekin,tagliatelleak_otarrainxka_eta_txirlekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Tagliatelleak_otarrainxka_eta_txirlekin
+oliba olioa,Tomate entsalada bakailaoarekin,tomate_entsalada_bakailaoarekin,lehen platerak,entsalada,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Tomate_entsalada_bakailaoarekin
+oliba olioa,Tomate entsalada gula eta leka freskoekin,tomate_entsalada_gula_eta_leka_freskoekin,lehen platerak,entsalada,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Tomate_entsalada_gula_eta_leka_freskoekin
+oliba olioa,Tuterako kukuluak brie gazta eta txipiroiekin,tuterako_kukuluak_brie_gazta_eta_txipiroiekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Tuterako_kukuluak_brie_gazta_eta_txipiroiekin
+oliba olioa,"Tuterako orburuak txerri solomo, kalabazin eta curryarekin",tuterako_orburuak_txerri_solomo_kalabazin_eta_curryarekin,lehen platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Tuterako_orburuak_txerri_solomo,_kalabazin_eta_curryarekin"
+oliba olioa,Txanpinoi txapelak orburu eta ziazerbaz beteak,txanpiñoi_txapelak_orburu_eta_ziazerbaz_beteak,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txanpinoi_txapelak_orburu_eta_ziazerbaz_beteak
+oliba olioa,"Txanpinoi txapelak plantxan, arroz odolkiarekin",txanpiñoi_txapelak_plantxan_arroz_odolkiarekin,lehen platerak,plantxan,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txanpinoi_txapelak_plantxan,_arroz_odolkiarekin"
+oliba olioa,"Txanpinoi txapelak plantxan, onddo kremarekin",txanpiñoi_txapelak_plantxan_onddo_kremarekin,lehen platerak,kremak,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txanpinoi_txapelak_plantxan,_onddo_kremarekin"
+oliba olioa,Txekor azpizuna asiar erara,txekor_azpizuna_asiar_erara,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txekor_azpizuna_asiar_erara
+oliba olioa,Txekor azpizuna orburuekin eta Idiazabalgo gaztaren saltsarekin,txekor_azpizuna_orburuekin_eta_idiazabalgo_gaztaren_saltsarekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txekor_azpizuna_orburuekin_eta_Idiazabalgo_gaztaren_saltsarekin
+oliba olioa,Txekor azpizuna txanpiñoi eta curryarekin,txekor_azpizuna_txanpiñoi_eta_curryarekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txekor_azpizuna_txanpi%C3%B1oi_eta_curryarekin
+oliba olioa,Txekor masailak onddoekin eta arrozarekin,txekor_masailak_onddoekin_eta_arrozarekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txekor_masailak_onddoekin_eta_arrozarekin
+oliba olioa,Txekor masailak saltsan,txekor_masailak_saltsan,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txekor_masailak_saltsan
+oliba olioa,"Txekor tripaki eta muturrak, Bizkaiko saltsan",txekor_tripaki_eta_muturrak_bizkaiko_saltsan,bigarren platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txekor_tripaki_eta_muturrak,_Bizkaiko_saltsan"
+oliba olioa,Txerri azpizuna onddoz beteta eta Roquefort saltsarekin,txerri_azpizuna_onddoz_beteta_eta_roquefort_saltsarekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txerri_azpizuna_onddoz_beteta_eta_Roquefort_saltsarekin
+oliba olioa,"Txerri azpizuna, txanpinoi eta Roquefort gaztarekin",txerri_azpizuna_txanpiñoi_eta_roquefort_gaztarekin,bigarren platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txerri_azpizuna,_txanpinoi_eta_Roquefort_gaztarekin"
+oliba olioa,Txerri masailak saltsan,txerri_masailak_saltsan,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txerri_masailak_saltsan
+oliba olioa,Txipiroiak Pelaio erara,txipiroiak_pelaio_erara,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txipiroiak_Pelaio_erara
+oliba olioa,Txipiroiak plantxan tipula goxatu eta letxugarekin,txipiroiak_plantxan_tipula_goxatu_eta_letxugarekin,lehen platerak,plantxan,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txipiroiak_plantxan_tipula_goxatu_eta_letxugarekin
+oliba olioa,Txitxarroa piperrada eta patata purearekin,txitxarroa_piperrada_eta_patata_purearekin,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txitxarroa_piperrada_eta_patata_purearekin
+oliba olioa,"Txitxarroa plantxan piper erre, tipula eta gari zainzuriekin",txitxarroa_plantxan_piper_erre_tipula_eta_gari_zainzuriekin,bigarren platerak,plantxan,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txitxarroa_plantxan_piper_erre,_tipula_eta_gari_zainzuriekin"
+oliba olioa,Udaberriko txinatar biribilkiak,udaberriko_txinatar_biribilkiak,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Udaberriko_txinatar_biribilkiak
+oliba olioa,Udako entsalada,udako_entsalada,lehen platerak,entsalada,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Udako_entsalada
+oliba olioa,Untxia eta txanpiñoiak oporto erara,untxia_eta_txanpiñoiak_oporto_erara,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Untxia_eta_txanpi%C3%B1oiak_oporto_erara
+oliba olioa,Usoak saltsan,usoak_saltsan,bigarren platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Usoak_saltsan
+oliba olioa,Zainzuri freskoak udaberriko olio ozpinarekin,zainzuri_freskoak_udaberriko_olio_ozpinarekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Zainzuri_freskoak_udaberriko_olio_ozpinarekin
+oliba olioa,"Zainzuri frijituak, ziazerba kremarekin",zainzuri_frijituak_ziazerba_kremarekin,lehen platerak,frijitu,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Zainzuri_frijituak,_ziazerba_kremarekin"
+oliba olioa,Zainzuriak barazki ozpin-olioarekin,zainzuriak_barazki_ozpin-olioarekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Zainzuriak_barazki_ozpin-olioarekin
+oliba olioa,"Zapo, kuia txiki eta txanpiñoi brotxetak",zapo_kuia_txiki_eta_txanpiñoi_brotxetak,bigarren platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Zapo,_kuia_txiki_eta_txanpi%C3%B1oi_brotxetak"
+pasta,Fideua otarrainxka eta barazkiekin,fideua_otarrainxka_eta_barazkiekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Fideua_otarrainxka_eta_barazkiekin
+pasta,"Fideua, barazki eta otarrainxkekin",fideua_barazki_eta_otarrainxkekin,lehen platerak,,"https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Fideua,_barazki_eta_otarrainxkekin"
+pasta,Gaztaz beteriko ravioliak txanpiñoi eta txirla kremarekin,gaztaz_beteriko_ravioliak_txanpiñoi_eta_txirla_kremarekin,lehen platerak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Gaztaz_beteriko_ravioliak_txanpi%C3%B1oi_eta_txirla_kremarekin
+pasta,Pasta barazkiekin,pasta_barazkiekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Pasta_barazkiekin
+pasta,Pasta boloniar erara,pasta_boloniar_erara,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Pasta_boloniar_erara
+pasta,Pasta carbonara,pasta_carbonara,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Pasta_carbonara
+pasta,Pasta entsalada,pasta_entsalada,,entsalada,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Pasta_entsalada
+pasta,Pasta freskoa,pasta_freskoa,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Pasta_freskoa
+pasta,Pasta freskoa 2,pasta_freskoa2,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Pasta_freskoa_2
+pasta,Pasta perretxikoekin,pasta_perretxikoekin,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Pasta_perretxikoekin
+pasta,Tagliateliak antxoa eta cherry tomateekin,tagliatelleak_antxoa_eta_cherry_tomateekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Tagliateliak_antxoa_eta_cherry_tomateekin
+pasta,Tagliatelleak otarrainxka eta txirlekin,tagliatelleak_otarrainxka_eta_txirlekin,lehen platerak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Tagliatelleak_otarrainxka_eta_txirlekin
+txokolatea,Eperrak txokolate saltsan,eperrak_txokolate_saltsan,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Eperrak_txokolate_saltsan
+txokolatea,Gaileta-tarta eta txokolate zurizko kremarekin,gaileta-tarta_eta_txokolate_zurizko_kremarekin,,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Gaileta-tarta_eta_txokolate_zurizko_kremarekin
+txokolatea,Gianduja krema,gianduja_krema,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Gianduja_krema
+txokolatea,Hur eta txokolate opila,hur_eta_txokolate_opila,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Hur_eta_txokolate_opila
+txokolatea,Petit-suisseak krema eta txokolate beroarekin,petit-suisseak_krema_eta_txokolate_beroarekin,azkenburukoak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Petit-suisseak_krema_eta_txokolate_beroarekin
+txokolatea,Trufazko txokolate tarta,trufazko_txokolate_tarta,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Trufazko_txokolate_tarta
+txokolatea,Txokolate bainua,txokolate_bainua,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolate_bainua
+txokolatea,Txokolate biskuit izozkia,txokolate_biskuit_izozkia,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolate_biskuit_izozkia
+txokolatea,Txokolate cakea,txokolate_cakea,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolate_cakea
+txokolatea,Txokolate coulanta,txokolate_coulanta,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolate_coulanta
+txokolatea,Txokolate gailetak,txokolate_gailetak,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolate_gailetak
+txokolatea,Txokolate ganatxea,txokolate_ganatxea,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolate_ganatxea
+txokolatea,Txokolate izozkia,txokolate_izozkia,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolate_izozkia
+txokolatea,Txokolate krema,txokolate_krema,,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolate_krema
+txokolatea,Txokolate moussea,txokolate_moussea,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolate_moussea
+txokolatea,Txokolate muselina,txokolate_muselina,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolate_muselina
+txokolatea,Txokolate tarta,txokolate_tarta,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolate_tarta
+txokolatea,Txokolate trufa,txokolate_trufa,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolate_trufa
+txokolatea,Txokolate trufa bonboia,txokolate_trufa_bonboia,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolate_trufa_bonboia
+txokolatea,Txokolate trufa bonboiak,txokolate_trufa_bonboiak,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolate_trufa_bonboiak
+txokolatea,Txokolate trufa krema,txokolate_trufa_krema,azkenburukoak,kremak,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolate_trufa_krema
+txokolatea,Txokolate zuriaren moussea,txokolate_zuriaren_moussea,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolate_zuriaren_moussea
+txokolatea,Txokolatezko bizkotxo eta marrubi kopa,txokolatezko_bizkotxo_eta_marrubi_kopa,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolatezko_bizkotxo_eta_marrubi_kopa
+txokolatea,Txokolatezko boilur tarta,txokolatezko_boilur_tarta,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolatezko_boilur_tarta
+txokolatea,Txokolatezko boilurrak,txokolatezko_boilurrak,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolatezko_boilurrak
+txokolatea,Txokolatezko Euskal pastela,txokolatezko_euskal_pastela,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolatezko_Euskal_pastela
+txokolatea,Txokolatezko ijito besoa,txokolatezko_ijito_besoa,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolatezko_ijito_besoa
+txokolatea,Txokolatezko krepeak,txokolatezko_krepeak,azkenburukoak,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolatezko_krepeak
+txokolatea,Txokolatezko pastelak egiteko ohiko bizkotxo arina,txokolatezko_pastelak_egiteko_ohiko_bizkotxo_arina,,,https://eu.wikibooks.org/wiki/Sukaldaritza_liburua/Errezetak/Txokolatezko_pastelak_egiteko_ohiko_bizkotxo_arina
