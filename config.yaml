@@ -5,6 +5,11 @@ CATEGORY_PREFIX: "Kategoria:"
 TECHNIQUES_CATEGORIES: ["Carpaccio", "Egosi", "Entsalada", "Erre", "Erregosi", "Frijitu", "Ketu", "Konfitatu", "Kremak", "Labekatu", "Marian", "Plantxan", "Sueztitu", "Zopak"]
 DISH_ORDER_CATEGORIES: ["Lehen platerak", "Bigarren platerak", "Azkenburukoak"]
 
+# database info
+DATABASE_NAME: "recipes.db"
+INGREDIENT_CATEGORIES_FILENAME: "ingredients_categories.xlsx"
+
+
 # file paths & encoding
 TEMPORAL_DATA_PATH: "data_tmp"
 DATA_PATH: "data"
