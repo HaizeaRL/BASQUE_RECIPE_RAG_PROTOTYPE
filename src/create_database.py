@@ -39,9 +39,9 @@ dbf.save_list_in_db(db_path, "dish_order", dish_order_l)
 techniques_l = sorted([item for item in recipe_df["technique"].unique().tolist() if pd.notna(item)])
 dbf.save_list_in_db(db_path, "cook_technique", techniques_l)
 
-# originate
-originate_l = sorted([item for item in recipe_df["origin"].unique().tolist() if pd.notna(item)])
-dbf.save_list_in_db(db_path, "originate", originate_l)
+# localization
+localization_l = sorted([item for item in recipe_df["origin"].unique().tolist() if pd.notna(item)])
+dbf.save_list_in_db(db_path, "localization", localization_l)
 
 # ingredient 
 excel_file_path = os.path.join(data_folder,conf["INGREDIENT_CATEGORIES_FILENAME"])
@@ -61,7 +61,7 @@ dbf.save_recipe_ingredient(db_path, recipe_df)
 dbf.show_table_data(db_path, "ingredient_category")
 dbf.show_table_data(db_path, "dish_order")
 dbf.show_table_data(db_path, "cook_technique")
-dbf.show_table_data(db_path, "originate")
+dbf.show_table_data(db_path, "localization")
 dbf.show_table_data(db_path, "ingredient", True) # limit result to 10
 dbf.show_table_data(db_path, "recipe", True) # limit result to 10 
 dbf.show_table_data(db_path, "recipe_ingredient_category", True) # limit result to 10 

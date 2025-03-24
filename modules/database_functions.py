@@ -46,26 +46,26 @@ def create_db(db_path):
         );
     ''')
 
-    # Create recipe origin table
+    # Create recipe localization table
     cursor.execute('''
-        CREATE TABLE originate (
-            originate_id INTEGER PRIMARY KEY AUTOINCREMENT,
-            originate TEXT NOT NULL UNIQUE
+        CREATE TABLE localization (
+            localization_id INTEGER PRIMARY KEY AUTOINCREMENT,
+            localization TEXT NOT NULL UNIQUE
         );
     ''')
 
-    # Create recipe - dish-order, cook-technique , originate table, & url
+    # Create recipe - dish-order, cook-technique , localization table, & url
     cursor.execute('''
         CREATE TABLE recipe (
             recipe_id INTEGER PRIMARY KEY AUTOINCREMENT,
             recipe TEXT NOT NULL UNIQUE,
             dish_order_id INTEGER,
             cook_technique_id INTEGER,
-            originate_id INTEGER,
+            localization_id INTEGER,
             url TEXT NOT NULL,
             FOREIGN KEY (dish_order_id) REFERENCES dish_order(dish_order_id) ON DELETE SET NULL,
             FOREIGN KEY (cook_technique_id) REFERENCES cook_technique(cook_technique_id) ON DELETE SET NULL,
-            FOREIGN KEY (originate_id) REFERENCES originate(originate_id) ON DELETE SET NULL
+            FOREIGN KEY (localization_id) REFERENCES localization(localization_id) ON DELETE SET NULL
         );
     ''')
 
@@ -210,17 +210,17 @@ def save_recipe(db_path, df):
             res = cursor.fetchone()
             cook_technique_id = res[0] if res else None
             
-        # get originate_id
-        originate_id = None
+        # get localization_id
+        localization_id = None
         if row["origin"] is not None:
-            select_query = "SELECT originate_id FROM originate WHERE originate = ?"
+            select_query = "SELECT localization_id FROM localization WHERE localization = ?"
             cursor.execute(select_query, (row["origin"],))
             res = cursor.fetchone()
-            originate_id = res[0] if res else None
+            localization_id = res[0] if res else None
 
         # create insert query
-        insert_query = "INSERT OR IGNORE INTO recipe (recipe, dish_order_id, cook_technique_id, originate_id, url) VALUES (?, ?, ?, ?, ?)"
-        cursor.execute(insert_query, (recipe, dish_order_id, cook_technique_id, originate_id, url))
+        insert_query = "INSERT OR IGNORE INTO recipe (recipe, dish_order_id, cook_technique_id, localization_id, url) VALUES (?, ?, ?, ?, ?)"
+        cursor.execute(insert_query, (recipe, dish_order_id, cook_technique_id, localization_id, url))
 
     # commit and close
     conn.commit()

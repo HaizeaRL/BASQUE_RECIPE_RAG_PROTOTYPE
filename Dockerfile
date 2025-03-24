@@ -30,5 +30,8 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 EXPOSE 11434
 EXPOSE 8888
 
+# Set the default command to start a bash shell
+#CMD ["/bin/bash"]
+
 # Ejecuta supervisord para manejar ambos procesos
 CMD ["supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
