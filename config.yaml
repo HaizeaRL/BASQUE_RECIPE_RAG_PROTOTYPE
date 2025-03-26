@@ -8,6 +8,7 @@ DISH_ORDER_CATEGORIES: ["Lehen platerak", "Bigarren platerak", "Azkenburukoak"]
 # database info
 DATABASE_NAME: "recipes.db"
 INGREDIENT_CATEGORIES_FILENAME: "ingredients_categories.xlsx"
+BRIDGE_TABLES: ["recipe_ingredient_category", "recipe_ingredient"]
 
 
 # file paths & encoding
