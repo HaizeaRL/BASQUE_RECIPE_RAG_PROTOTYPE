@@ -126,7 +126,7 @@ def get_submenu1_prompt():
 
     # define submenu behavior
     submenu1 = (
-        "Erabiltzaileari hainbat aukera zerrendatuko dizkiozu eta bat aukeratzeko aukera eskaini. Labur gehienez 100 hitzekin.\n"
+        "Erabiltzaileari hainbat aukera zerrendatu eta bat aukeratzeko eskatu. Laburra izan gehienez 100 hitzekin.\n"
         "Aukerak ondorengoak dira:\n 1- Informazio taulak kontsultatu.\n 2- Informazio taula errenkada kopurua kontsultatu.\n"
         "3- Taula kategoriako errezeta kopurua kontsultatu\n 4- Errezeta gehien dituzten osagai kategoriak kontsultatu (top3).\n" 
         "5- Errezeta gutxien dituzten osagai kategoriak kontsultatu (top3).\n·"
@@ -149,6 +149,7 @@ def get_welcome_menu_user_answer(answer_sim):
     return text
 
 def get_submenu1_answers(answer_sim):
+    text = None 
     if answer_sim  == 1:
         text = f"{answer_sim} aukera aukeratzen dut, emaidazu informazio-taula zerrenda."
     elif answer_sim  == 2:
@@ -159,4 +160,6 @@ def get_submenu1_answers(answer_sim):
        text = f"{answer_sim} aukera aukeratzen dut, zerrenda itzazu errezeta gehien dituzten 3 osagai-kategoriak."
     elif answer_sim  == 5:
        text = f"{answer_sim} aukera aukeratzen dut, zerrenda itzazu errezeta gutxien dituzten 3 osagai-kategoriak."
+    elif answer_sim  == 6:
+       text = f"{answer_sim} aukera aukeratzen dut, esaidazu osagai kategoriako zein osagai den gehien erabiltzen dena."
     return text
