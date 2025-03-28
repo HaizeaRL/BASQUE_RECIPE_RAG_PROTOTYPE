@@ -1,5 +1,7 @@
 import requests
 from langchain.prompts import PromptTemplate
+import json
+import re
 
 def format_text_array(text_array):
     """
@@ -163,3 +165,84 @@ def get_submenu1_answers(answer_sim):
     elif answer_sim  == 6:
        text = f"{answer_sim} aukera aukeratzen dut, esaidazu osagai kategoriako zein osagai den gehien erabiltzen dena."
     return text
+
+def get_analysis_prompt_behavior():
+
+    behave="""
+        Analyze the following user input: {user_input}
+
+        Your task is to determine if the input is requesting a specific recipe and extract relevant recipe information.
+        Return the analysis in a structured JSON format.
+
+        Requirements:
+        1. Identify if the input is requesting a recipe
+        2. Identify if the input is requesting to prepare some food
+        3. Extract recipe name if present
+        4. Extract food to prepare if present    
+        5. Deduce typical ingredients for the recipe
+        6. Categorize the ingredients
+
+        Return your analysis in this exact JSON structure:
+        {{
+            "concrete_recipe_ask": boolean,
+            "concrete_food_ask": boolean,
+            "recipe_name": copy recipe name as string or null,
+            "food_name": copy food name as string or null,
+            "ingredients": array of strings,
+            "ingredient_categories": array of strings
+        }}
+
+        Example input: "I want to prepare 'zurrukutuna'"
+        Example output:
+        {{
+            "concrete_recipe_ask": true,
+            "concrete_food_ask": false,
+            "recipe_name": "zurrukutuna",
+            "food_name": null,
+            "ingredients": ["salted cod", "garlic", "bread", "olive oil"],
+            "ingredient_categories": ["fish", "aromatics", "grains", "oils"]
+        }}
+
+        Example input: "I want to prepare cookies?"
+        Example output:
+        {{
+            "concrete_recipe_ask": false,
+            "concrete_food_ask": true,
+            "recipe_name": null,
+            "food_name": "cookie",
+            "ingredients": ["flour", "sugar ", "butter","eggs"],
+            "ingredient_categories": ["grains", null, "dairy", "eggs"]
+        }}
+
+        Example input: "What's the weather like today?"
+        Example output:
+        {{
+            "concrete_recipe_ask": false,
+            "concrete_food_ask": false,
+            "recipe_name": null,
+            "food_name": "null",
+            "ingredients": [],
+            "ingredient_categories": []
+        }}
+
+        Analyze this input and provide only JSON as response: {user_input}
+        """
+    return behave
+
+def extract_json_as_dict_from_response(response):
+    # The pattern to capture the JSON block
+    pattern = r"```json\n(.*?)\n```"
+    
+    # Search for the pattern in the response string
+    match = re.search(pattern, response, re.DOTALL)
+    
+    # If a match is found, return the extracted JSON as a dictionary
+    if match:
+        json_string = match.group(1).strip()
+        try:
+            # Parse the JSON string into a dictionary
+            json_dict = json.loads(json_string)
+            return json_dict  # Return as dictionary instead of string
+        except json.JSONDecodeError:
+            return None
+    return None

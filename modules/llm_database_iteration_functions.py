@@ -1,7 +1,6 @@
 from langchain_community.utilities import SQLDatabase
 from langchain_community.tools.sql_database.tool import QuerySQLDataBaseTool
 from langchain.chains import create_sql_query_chain
-from langchain.llms import Ollama
 import re
 import ast
 
@@ -73,6 +72,11 @@ def parse_sql_string(sql_string):
 
 def extract_sql_from_response(response):
     pattern = r"```sql\n(SELECT .*?);\n```"  # Captura solo la consulta SQL
+    match = re.search(pattern, response, re.DOTALL)
+    return match.group(1) if match else None
+
+def extract_sql_from_response2(response):
+    pattern = r"```\n(SELECT .*?);\n```"  # Captura solo la consulta SQL
     match = re.search(pattern, response, re.DOTALL)
     return match.group(1) if match else None
 
@@ -253,4 +257,96 @@ def get_most_used_ingredient_per_category(database_path, dest_lang):
 
             # create text and visualize result
             print(f"\t-'{cat}' osagai kategorian 'gehien' ageri den osagaia: '{ing}' da. Zehazki: {cnt} errezetatan agertzen da.")
-       
+    
+    
+def get_and_filter_recipe_by_term(db, llm,json_dict, term, dest_lang= "eu"):      
+    
+    # ask to generate sql
+    write_query = create_sql_query_chain(llm, db)
+    chain = write_query
+    question_text = f"Create an SQL query that retrieves the 'recipe' and 'url' columns from the recipe table, filtering recipes that contain the given {term} in the 'recipe' column. Ensure that no JOIN operations are used and apply the filter directly on the recipe table. Provide only the SQL query."
+    answer = chain.invoke({"question": question_text})
+
+    if answer:
+        # extract sql from answer
+        query = extract_sql_from_response(answer)
+        
+        # execute query
+        execute_query = QuerySQLDataBaseTool(db=db)
+        result = execute_query.invoke({'query': query})
+
+        if result:
+            # convert string to corresponding list form
+            data_list = ast.literal_eval(result)
+        
+            # visualize result
+            print("---\n<MODEL>:", lif.translate_text_with_Elia("Here are the proposals:", "en", dest_lang))
+            for i, item in enumerate(data_list, start=1):  # start numeration from 1
+    
+                # get each items element
+                recipe, url = item  
+                text_to_translate = f"-{i}. proposal: {recipe}\nThe preparation instructions are here: {url}."
+                print(lif.translate_text_with_Elia(text_to_translate, "en", dest_lang))
+        elif json_dict["ingredients"] is not None and len(json_dict["ingredients"]) != 0:
+
+            # print model message saying that we will try to find solution according to ingredients
+            list_ingredients_translated = [lif.translate_text_with_Elia(item, "en", dest_lang) for item in json_dict["ingredients"]]
+            
+            text_to_translate = f"""I don't have a specific recipe associated with '{term}' but that recipe uses {list_ingredients_translated} ingredients so I will try to suggest 5 recipes that can be made with these ingredients."""
+            print("---\n<MODEL>:", lif.translate_text_with_Elia(text_to_translate, "en", dest_lang))
+
+            # ask to generate sql
+            write_query = create_sql_query_chain(llm, db)
+            chain = write_query
+            question_text = f"""
+                    Create an SQL query that retrieves the 'recipe' and 'url' columns from the exact 'recipe' table,  
+                    Match using LEFT JOINS the 'recipe', 'recipe_ingredient', and 'ingredient' tables and    
+                    use given ingredient name list {list_ingredients_translated} to filter ingredients.
+                    Limit the results to 5 recipes.  
+                    Do not include any other JOINs or additional tables. Provide only the SQL query.
+                    """
+            answer = chain.invoke({"question": question_text})
+            print(answer)
+
+            if answer:
+                # extract sql from answer
+                query = extract_sql_from_response2(answer)
+                print(query)
+                
+                # execute query
+                execute_query = QuerySQLDataBaseTool(db=db)
+                result = execute_query.invoke({'query': query})
+
+                if result:
+                    # convert string to corresponding list form
+                    data_list = ast.literal_eval(result)
+                
+                    # visualize result
+                    for i, item in enumerate(data_list, start=1):  # start numeration from 1
+            
+                        # get each items element
+                        recipe, url = item  
+                        text_to_translate = f"-{i}. proposal: {recipe}\nThe preparation instructions are here: {url}."
+                        print(lif.translate_text_with_Elia(text_to_translate, "en", dest_lang))
+
+
+
+
+def process_json_dict_and_get_bbdd_result(json_dict, database_path , llm, dest_lang= "eu"):
+
+       # Get database
+    db = get_database(database_path)
+    
+    # database conection ctrl
+    if not db:
+        # print text in corresponding dest_lang language
+        text_to_translate = f"Could not connect to database. Revise past database url: {database_path}"
+        print(lif.translate_text_with_Elia(text_to_translate, "en", dest_lang))
+        return None  # Explicitly return None when database connection fails
+
+    
+    if json_dict["concrete_recipe_ask"] and json_dict["recipe_name"] is not None:        
+        get_and_filter_recipe_by_term(db, llm, json_dict, json_dict["recipe_name"], dest_lang)
+        
+    elif json_dict["concrete_food_ask"] and  json_dict["food_name"] is not None:
+        get_and_filter_recipe_by_term(db,llm, json_dict, json_dict["food_name"], dest_lang)
