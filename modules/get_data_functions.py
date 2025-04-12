@@ -82,14 +82,15 @@ def scrap_all_recipies(url, base_url):
 
 def scrap_recipes_titles(sub_soup):
     """
-    Function that scrapes recipe titles from a given HTML soup object by searching for specific elements
-    and matching titles. It returns a list of recipes that are present in the provided recipes list.
+    Function that extracts recipe titles from a BeautifulSoup object by locating <h3> tags with the text 'S',
+    navigating to the subsequent <ul> element, and collecting the titles of <a> tags within
+    that match a specific pattern in their title attribute.
 
     Parameters:
-        sub_soup (BeautifulSoup): A BeautifulSoup object representing the parsed HTML of the page to scrape.
-      
+        sub_soup (BeautifulSoup): Parsed HTML content of a webpage using BeautifulSoup.
+
     Returns:
-        list: A list of recipe titles found in the provided HTML that are also present in the input recipes list.
+        list: A list of extracted recipe titles found in the HTML.
     """
     recipes_list = []
 
@@ -112,17 +113,17 @@ def scrap_recipes_titles(sub_soup):
 
 def scrap_recipes_by_category_list(url, base_url , category_list): 
     """
-    Function that scrapes recipe titles categorized by specific categories from a web page.
-    It fetches the main page, extracts category-specific links, then scrapes recipe titles 
-    under each category and returns them in a dictionary.
+    Function that scrapes recipe titles grouped by specified categories from a web page.
+    It loads the main page, identifies category links based on the provided category list,
+    follows each link, and extracts the recipe titles under each category.
 
     Parameters:
         url (str): The URL of the main page to scrape.
-        base_url (str): The base URL to resolve relative links.
-        category_list (list): A list of categories to match and extract from the page.
+        base_url (str): The base URL used to resolve relative links.
+        category_list (list): A list of category titles to match and extract from the page.
 
     Returns:
-        dict: A dictionary where the keys are category names and the values are lists of matching recipe titles.
+        dict: A dictionary where each key is a category name and the corresponding value is a list of recipe titles found under that category.
     """
     # Fetch the main page
     response = requests.get(url)
@@ -149,14 +150,16 @@ def scrap_recipes_by_category_list(url, base_url , category_list):
 
 def find_category_by_recipe (dictionary , recipe_title):
     """
-    Finds the category (key) associated with a given recipe title in a dictionary.
+    Function that finds the category associated with a given recipe title in a dictionary.
+    It iterates through the dictionary where keys are categories and values are lists of recipes,
+    and returns the category that contains the specified recipe title.
 
     Parameters:
         dictionary (dict): A dictionary where keys are categories and values are lists of recipe titles.
         recipe_title (str): The title of the recipe to search for.
 
     Returns:
-        str: The category (key) associated with the given recipe title, or None if not found.
+        str: The category name that contains the recipe title, or None if the recipe is not found.
     """
     for key in dictionary.keys():
         for recipe in dictionary.get(key):       
@@ -164,6 +167,19 @@ def find_category_by_recipe (dictionary , recipe_title):
                 return key
 
 def recipes_dict_to_df(recipes_dict, techniques_dict, order_dict):
+    """
+    Function that converts a nested recipe dictionary into a pandas DataFrame, 
+    enriching each recipe entry with its associated technique and dish order categories.
+
+    Parameters:
+        recipes_dict (dict): A dictionary where keys are ingredient groups and values are lists of recipe dicts (with title-url pairs).
+        techniques_dict (dict): A dictionary mapping techniques to lists of recipe titles.
+        order_dict (dict): A dictionary mapping dish orders (e.g., appetizer, main) to lists of recipe titles.
+
+    Returns:
+        DataFrame: A pandas DataFrame containing columns for ingredient group, recipe title, 
+                   technique, dish order, and URL.
+    """
     recipes_tab=[]
 
     # Iterate over the categories and their corresponding recipes
@@ -194,18 +210,19 @@ def recipes_dict_to_df(recipes_dict, techniques_dict, order_dict):
 
 def correct_capitalization(text, action):
     """
-    Corrects the capitalization of the input text based on the specified action.
+    Function that corrects the capitalization of a given text string based on a specified action.
+    It can either convert all words to lowercase or capitalize the first word while lowering the rest.
 
     Parameters:
-        text (str): The input string that needs its capitalization corrected.
-        action (str): The action to perform on the text. Can be either:
+        text (str): The input string to be processed.
+        action (str): The capitalization rule to apply. Options are:
                       - "remove": Converts all words to lowercase.
-                      - "recover": Capitalizes the first word and converts the rest to lowercase.
+                      - "recover": Capitalizes the first word and converts the rest to lowercase, 
+                                   also replaces underscores with spaces.
 
     Returns:
-        str: The corrected text after applying the capitalization rule.
+        str: The text after applying the specified capitalization transformation.
     """
-    
     if action == "remove":
         # Split the text into words
         words = text.split()
@@ -226,18 +243,15 @@ def correct_capitalization(text, action):
 
 def correct_recipe_titles(text):
     """
-    Processes a given text string by:
-    
-    1. Removing unwanted characters (quotes, `.jpg`, extra spaces).
-    2. Correcting capitalization using `correct_capitalization(text)`.
-    3. Merging trailing numbers with the preceding word (e.g., "esnekia 2" → "esnekia2").
-    4. Returning the formatted string with words joined by underscores.
+    Function that processes and formats a recipe title string by applying a series of text corrections.
+    It removes unwanted characters, normalizes capitalization, merges trailing numbers with the previous word,
+    and returns the cleaned string with words joined by underscores.
 
-    input:
-        text (str): The input text to process.
+    Parameters:
+        text (str): The input text string representing a recipe title.
 
     Returns:
-        str: The formatted text with corrections applied.
+        str: The cleaned and formatted recipe title.
     """
     # remove unwanted characters
     text = text.replace('"', '').replace('“', '').replace("'",'').replace(",",'').replace('.jpg','').strip()
@@ -255,25 +269,16 @@ def correct_recipe_titles(text):
 
 def replace_words(df, col1, word_dict):
     """
-    Replaces occurrences of specific words in the 'recipe_new' column of a DataFrame based on a provided dictionary.
+    Function that replaces specific substrings in a given column of a DataFrame based on a provided dictionary.
+    It processes each row, splitting the text by underscores, replacing any matching substrings, and updates the column in place.
 
-    This function scans the 'recipe_new' column of the DataFrame and replaces words that match the keys in `word_dict` 
-    with their corresponding values. The replacements ensure that only full words are matched and modified, preventing 
-    partial substitutions within other words.
-
-    Input:
-        df (DataFrame): The DataFrame where word replacements should be applied.
-        col1 (str): Column to filter and change
-        word_dict (dict): A dictionary where keys represent words to find, and values are their replacements.
+    Parameters:
+        df (DataFrame): The DataFrame to process.
+        col1 (str): The name of the column to apply replacements on.
+        word_dict (dict): A dictionary where keys are substrings to replace and values are their replacements.
 
     Returns:
-        DataFrame: The modified DataFrame with a new column 'recipe_new2' containing the updated text.
-
-    Example:
-        word_dict = {"antxua": "antxoa", "bakailo": "bakailao"}
-        df = pd.DataFrame({"recipe_new": ["antxua_bakailo_saltsan"]})
-        replace_words(df, word_dict)  
-        # Output: DataFrame with 'recipe_new2' as 'antxoa_bakailao_saltsan'
+        DataFrame: The modified DataFrame with the updated values in the same column.
     """
 
     # Iterate over the rows of the DataFrame
@@ -303,18 +308,18 @@ def replace_words(df, col1, word_dict):
 
 def group_titles_with_ingredients(df):
     """
-    Function that groups a DataFrame by recipe titles and aggregates the associated ingredients, order, 
-    technique, origin, and recipe URLs. The function ensures that the values are unique and sorted within 
-    each group.
+    Function that groups a DataFrame by recipe titles and aggregates related fields such as ingredients, 
+    order, technique, and URLs. It ensures that the aggregated values are unique, concatenated, and cleaned, 
+    with the first available URL retained.
 
     Parameters:
-        df (DataFrame): A pandas DataFrame containing recipe data with columns such as 'recipe', 'ingredient_group', 
-        'order', 'technique'and 'recipe_url'.
+        df (DataFrame): A pandas DataFrame containing recipe data with columns like 'recipe_new', 
+                        'ingredient_group', 'order', 'technique', and 'url'.
 
     Returns:
-        DataFrame: A pandas DataFrame where each row represents a unique recipe with aggregated ingredients,
-        and URLs.
+        DataFrame: A new DataFrame where each row corresponds to a unique recipe title with aggregated values.
     """
+
     # Group by 'recipe' and aggregate:
     grouped_df = (df.groupby('recipe_new', as_index=False)
               .agg({
@@ -327,14 +332,15 @@ def group_titles_with_ingredients(df):
 
 def count_empty_dish_order(df):
     """
-    Counts the recipes that have no dish order specified in the DataFrame.
+    Function that counts and lists recipes in a DataFrame that do not have a specified dish order.
+    It checks for missing or empty values in the 'order' column and collects the corresponding recipe titles.
 
     Parameters:
-        df (DataFrame): A pandas DataFrame containing recipe data, with an 'order' column.
+        df (DataFrame): A pandas DataFrame containing recipe data with an 'order' column.
 
     Returns:
         tuple: A tuple where the first element is a list of recipe titles with no dish order,
-               and the second element is the count of recipes with no dish order.
+               and the second element is the total count of such recipes.
     """
     no_dish_order = []   
     for index, row in df.iterrows():
@@ -344,22 +350,22 @@ def count_empty_dish_order(df):
 
 def complete_dish_order(df, conf):
     """
-    Completes the 'order' column in the DataFrame based on the recipe's ingredient and title.
-    The function assigns a dish order category to recipes that do not have one, using predefined rules 
-    and the provided configuration.
+    Function that assigns a dish order category to recipes in a DataFrame that do not have one.
+    The function uses predefined ingredient-based rules and additional configuration to complete the 'order' column 
+    for recipes without a specified dish order.
 
     Parameters:
-        df (DataFrame): A pandas DataFrame containing recipe data with columns such as 'recipe', 
-                         'ingredient', and 'order'.
-        conf (dict): A dictionary containing configuration, including:
+        df (DataFrame): A pandas DataFrame containing recipe data with columns such as 'recipe', 'ingredient_group', and 'order'.
+        conf (dict): A dictionary containing configuration for dish order assignment, including:
             - "INGREDIENTS_FIRST_DISH_ORDER", "INGREDIENTS_SECOND_DISH_ORDER", and "INGREDIENTS_THIRD_DISH_ORDER" 
-              (lists of ingredients to categorize the dish order).
+              (lists of ingredients to categorize dish orders).
             - "DISH_ORDER_CATEGORIES" (list of categories for dish orders).
-            - "FIRST_ORDER_TERMS" (list of terms that help identify first-order dishes).
+            - "FIRST_ORDER_TERMS" (list of terms to identify first-order dishes).
 
     Returns:
-        DataFrame: The updated DataFrame with completed 'order' columns for all recipes.
+        DataFrame: The updated DataFrame with the 'order' column filled in for recipes that had no order previously.
     """
+
     for index, row in df.iterrows():
         ingredient = [ingredient.strip() for ingredient in row['ingredient_group'].split(',')]
         dish_order = row['order']
@@ -400,16 +406,16 @@ def complete_dish_order(df, conf):
 
 def ask_for_dish_menu_order(recipe, conf):
     """
-    Prompts the user to select the dish order category for a given recipe from a list of options.
-    The function displays a menu with categories and allows the user to choose one, or quit.
+    Function that prompts the user to select the dish order category for a given recipe from a list of options.
+    The function displays a menu with dish order categories and allows the user to select one or quit.
 
     Parameters:
         recipe (str): The name of the recipe for which the dish order is being determined.
-        conf (dict): A dictionary containing the configuration, specifically the list of dish order categories 
+        conf (dict): A dictionary containing configuration, specifically the list of dish order categories 
                      under the key "DISH_ORDER_CATEGORIES".
 
     Returns:
-        list: A list containing the selected dish order category.
+        str: The selected dish order category, converted to lowercase.
     """
     #["1. Lehen platerak", "2. Bigarren platerak", "3. Azkenburukoak"]
     options = [str(idx + 1) +". "+ item for idx, item in enumerate(conf["DISH_ORDER_CATEGORIES"])]
@@ -437,8 +443,8 @@ def ask_for_dish_menu_order(recipe, conf):
 
 def complete_dish_order_by_user(recipe_df, no_order_list, conf):
     """
-    Completes the 'order' column in the DataFrame by prompting the user to select the dish order category 
-    for recipes that do not have an order, based on the recipe titles in the 'no_order_list'.
+    Function that completes the 'order' column in the DataFrame by prompting the user to select the dish order 
+    category for recipes that do not have an order, based on the recipe titles in the 'no_order_list'.
 
     Parameters:
         recipe_df (DataFrame): A pandas DataFrame containing recipe data with columns such as 'recipe' and 'order'.
@@ -456,7 +462,7 @@ def complete_dish_order_by_user(recipe_df, no_order_list, conf):
 
 def count_empty_techniques(df):
     """
-    Counts the recipes that have no technique specified in the DataFrame.
+    Function that counts the recipes that have no technique specified in the DataFrame.
 
     Parameters:
         df (DataFrame): A pandas DataFrame containing recipe data with a 'technique' column.
@@ -464,7 +470,7 @@ def count_empty_techniques(df):
     Returns:
         tuple: A tuple where the first element is a list of recipe titles with no technique,
                and the second element is the count of recipes with no technique.
-    """   
+    """
     no_tech = []   
     for index, row in df.iterrows():
         if not row["technique"]:  
@@ -473,9 +479,9 @@ def count_empty_techniques(df):
 
 def complete_tech_by_synonims(df, conf):
     """
-    Completes the 'technique' column in the DataFrame by assigning appropriate techniques based on recipe names 
-    and predefined subcategories of techniques. The function checks the recipe name for terms that match specific 
-    technique subcategories and assigns the corresponding technique.
+    Function that completes the 'technique' column in the DataFrame by assigning appropriate techniques based on 
+    recipe names and predefined subcategories of techniques. The function checks the recipe name for terms that match 
+    specific technique subcategories and assigns the corresponding technique.
 
     Parameters:
         df (DataFrame): A pandas DataFrame containing recipe data, with columns such as 'recipe' and 'technique'.
@@ -486,7 +492,6 @@ def complete_tech_by_synonims(df, conf):
     Returns:
         DataFrame: The updated DataFrame with completed 'technique' columns for all recipes.
     """
-
     # complete techniques column as much as possible
     for index, row in df.iterrows():
         tech = row['technique']
@@ -536,9 +541,9 @@ def complete_tech_by_synonims(df, conf):
 
 def complete_origin(df1, conf):
     """
-    Completes the 'origin' column in the DataFrame by assigning the appropriate origin based on the recipe names 
-    and predefined origin categories. The function checks the recipe name for terms that match specific origin 
-    subcategories and assigns the corresponding origin.
+    Function that completes the 'origin' column in the DataFrame by assigning the appropriate origin based on 
+    the recipe names and predefined origin categories. The function checks the recipe name for terms that match 
+    specific origin subcategories and assigns the corresponding origin.
 
     Parameters:
         df1 (DataFrame): A pandas DataFrame containing recipe data, with columns such as 'recipe' and 'origin'.
@@ -548,6 +553,7 @@ def complete_origin(df1, conf):
     Returns:
         DataFrame: The updated DataFrame with completed 'origin' columns for all recipes.
     """
+
     df = df1.copy()
     df.loc[:, "origin"] = None
     for index, row in df.iterrows():
@@ -576,7 +582,7 @@ def complete_origin(df1, conf):
 
 def count_empty_tech_and_origin(df):
     """
-    Counts the recipes that have neither a technique nor an origin specified in the DataFrame.
+    Function that counts the recipes that have neither a technique nor an origin specified in the DataFrame.
 
     Parameters:
         df (DataFrame): A pandas DataFrame containing recipe data, with 'technique' and 'origin' columns.
@@ -584,7 +590,7 @@ def count_empty_tech_and_origin(df):
     Returns:
         tuple: A tuple where the first element is a list of recipe titles with neither technique nor origin,
                and the second element is the count of recipes with neither technique nor origin.
-    """   
+    """
     no_tech_org = []   
     for index, row in df.iterrows():
         if not row["technique"] and not row["origin"]:
@@ -593,25 +599,36 @@ def count_empty_tech_and_origin(df):
 
 def replace_recipe_words(df1, column, replace_dict):
     """
-    Replaces values in the specified column of a DataFrame
-    according to a given dictionary.
-    
-    :param df: Pandas DataFrame.
-    :param column: Name of the column to modify.
-    :param replace_dict: Dictionary with replacements.
-    :return: DataFrame with the modified column.
+    Function that replaces values in a specified column of a DataFrame based on a given dictionary of replacements.
+    The function applies the replacements using regular expressions to modify the column values accordingly.
+
+    Parameters:
+        df1 (DataFrame): The pandas DataFrame to modify.
+        column (str): The name of the column in which to apply the replacements.
+        replace_dict (dict): A dictionary where keys are the words/phrases to replace, 
+                             and values are the corresponding replacements.
+
+    Returns:
+        DataFrame: A new DataFrame with the specified column modified by the replacements.
     """
+
     df = df1.copy()
     df.loc[:, column] = df[column].replace(replace_dict, regex=True)
     return df
 
 def obtain_nowanted_terms(conf):
     """
-    Extracts unwanted terms from a given configuration dictionary.
-    
-    :param conf: Dictionary containing configuration settings.
-    :return: List of unwanted words in lowercase.
+    Function that extracts unwanted terms from a given configuration dictionary.
+    It searches for keys ending with "TERMS", "CATEGORIES", or "ORDER" and collects their associated values,
+    converting them to lowercase.
+
+    Parameters:
+        conf (dict): A dictionary containing configuration settings, including lists of terms, categories, or orders.
+
+    Returns:
+        list: A list of unwanted terms in lowercase extracted from the configuration dictionary.
     """
+
     no_liked_keys = [k for k in conf.keys() if k.endswith("TERMS") or k.endswith("CATEGORIES") or k.endswith("ORDER") ]
     no_liked_words = []
     
@@ -622,14 +639,17 @@ def obtain_nowanted_terms(conf):
 
 def get_recipe_ingredients(df, column, new_column, unwanted_words):
     """
-    Processes a DataFrame column by removing words that contain any substring from 'unwanted_words',
-    stripping trailing digits, and storing the result in a new column.
-    
-    :param df: Pandas DataFrame.
-    :param column: Name of the column to process.
-    :param new_column: Name of the new column to store filtered words.
-    :param unwanted_words: List of substrings to filter out.
-    :return: Modified DataFrame with the new column.
+    Function that processes a specified column in a DataFrame by removing words that contain any unwanted substrings,
+    stripping trailing digits, and storing the cleaned result in a new column.
+
+    Parameters:
+        df (DataFrame): The pandas DataFrame to process.
+        column (str): The name of the column to process.
+        new_column (str): The name of the new column to store the filtered ingredients.
+        unwanted_words (list): A list of substrings to filter out from the column values.
+
+    Returns:
+        DataFrame: The modified DataFrame with a new column containing the filtered ingredients.
     """
     df.loc[:, new_column] = df[column].apply(lambda x: ", ".join(
         [
@@ -643,12 +663,16 @@ def get_recipe_ingredients(df, column, new_column, unwanted_words):
 
 def remove_suffixes(df, column, suffixes):
     """
-    Removes specified suffixes from words in a given DataFrame column.
-    
-    :param df: Pandas DataFrame.
-    :param column: Name of the column containing comma-separated words.
-    :param suffixes: List of suffixes to remove.
-    :return: Modified DataFrame with cleaned words in the same column.
+    Function that removes specified suffixes from words in a given DataFrame column.
+    It applies the suffix removal to each word in the column, which is assumed to be comma-separated.
+
+    Parameters:
+        df (DataFrame): The pandas DataFrame to process.
+        column (str): The name of the column containing the comma-separated words.
+        suffixes (list): A list of suffixes to remove from the words.
+
+    Returns:
+        DataFrame: The modified DataFrame with the cleaned words in the same column.
     """
     pattern = re.compile(rf"({'|'.join(map(re.escape, suffixes))})$")
     

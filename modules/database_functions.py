@@ -3,6 +3,16 @@ from openpyxl import load_workbook
 import pandas as pd
 
 def create_db(db_path):
+    """
+    Function that creates a database with the necessary tables for managing recipes, ingredients, categories, 
+    dish orders, cooking techniques, and localization.
+
+    Parameters:
+        db_path (str): The file path where the SQLite database will be created.
+
+    Returns:
+        None: The function creates the database and tables but does not return any value.
+    """
   
     # Create the database
     conn = sqlite3.connect(db_path)
@@ -96,6 +106,17 @@ def create_db(db_path):
     conn.close()
 
 def check_database_tables(db_path):
+    """
+    Function that checks and prints the names of all tables in the specified SQLite database.
+
+    Parameters:
+        db_path (str): The file path to the SQLite database.
+
+    Returns:
+        None: The function connects to the database, queries the list of tables, and prints the names of 
+              the tables, excluding the internal `sqlite_sequence` table. It does not return any value.
+    """
+
     # Connect to the database
     conn = sqlite3.connect(db_path)
 
@@ -116,6 +137,16 @@ def check_database_tables(db_path):
     conn.close()
 
 def get_ingredient_categories(df):
+    """
+    Function that extracts and returns a sorted list of unique ingredient categories from the given DataFrame.
+
+    Parameters:
+        df (DataFrame): A pandas DataFrame containing a column "ingredient_group", which holds comma-separated ingredient categories.
+
+    Returns:
+        list: A sorted list of unique ingredient categories, with any duplicates removed and categories stripped of leading/trailing spaces.
+    """
+
     ingredient_categories=[]
     for index, row in df.iterrows():
         groups = row["ingredient_group"].split(",")
@@ -125,6 +156,18 @@ def get_ingredient_categories(df):
     return sorted(ingredient_categories)
 
 def save_list_in_db(db_path, table_column, value_list):
+    """
+    Function that saves a list of values into a specified database table column, 
+    ensuring that duplicate values are ignored.
+
+    Parameters:
+        db_path (str): The path to the SQLite database file.
+        table_column (str): The name of the table and column to insert values into (in the format 'table_name.column_name').
+        value_list (list): A list of values to be inserted into the specified table column.
+
+    Returns:
+        None: The function does not return anything, it commits changes directly to the database.
+    """
 
     # open database connection
     conn = sqlite3.connect(db_path)
@@ -144,6 +187,20 @@ def save_list_in_db(db_path, table_column, value_list):
 
 
 def save_ingredient_categories(db_path, excel_file_path, category_list):
+
+    """
+    Function that saves ingredient categories and their respective ingredients from an Excel file into a database.
+    It first checks if the category exists in the database, then reads the ingredients from the corresponding Excel 
+    sheet and inserts them into the database under the correct category.
+
+    Parameters:
+        db_path (str): The path to the SQLite database file.
+        excel_file_path (str): The path to the Excel file containing the ingredient categories and ingredients.
+        category_list (list): A list of category names that need to be processed.
+
+    Returns:
+        None: The function does not return anything, it commits changes directly to the database.
+    """
 
     # open database connection
     conn = sqlite3.connect(db_path)
@@ -181,7 +238,18 @@ def save_ingredient_categories(db_path, excel_file_path, category_list):
     conn.close()
 
 def save_recipe(db_path, df):
+    """
+    Function that saves recipe data from a DataFrame into the `recipe` table of a database. 
+    For each recipe in the DataFrame, it retrieves the associated dish order, cooking technique, and origin 
+    from their respective tables and inserts the complete recipe record into the `recipe` table.
 
+    Parameters:
+        db_path (str): The path to the SQLite database file.
+        df (DataFrame): A pandas DataFrame containing recipe data, including recipe name, order, technique, origin, and URL.
+
+    Returns:
+        None: The function does not return anything; it commits changes directly to the database.
+    """
     # Connect to the database
     conn = sqlite3.connect(db_path)
 
@@ -227,6 +295,21 @@ def save_recipe(db_path, df):
     conn.close()
 
 def save_recipe_ingredient_category(db_path, df):
+    """
+    Function that saves the relationship between recipes and their ingredient categories 
+    into the `recipe_ingredient_category` table in the database. The function iterates over the 
+    DataFrame containing recipe data, splits ingredient categories, and inserts the corresponding 
+    recipe and ingredient category IDs into the database.
+
+    Parameters:
+        db_path (str): The path to the SQLite database file.
+        df (DataFrame): A pandas DataFrame containing recipe data with columns such as `recipe` 
+                        and `ingredient_group`, where `ingredient_group` contains comma-separated 
+                        ingredient categories.
+
+    Returns:
+        None: The function does not return anything; it commits changes directly to the database.
+    """
 
     # Connect to the database
     conn = sqlite3.connect(db_path)
@@ -276,6 +359,19 @@ def save_recipe_ingredient_category(db_path, df):
 
 def save_recipe_ingredient(db_path, df):
 
+    """
+    Function that saves the relationship between recipes and their ingredients into the `recipe_ingredient` 
+    table in the database. The function iterates over the DataFrame containing recipe data, extracts ingredients 
+    for each recipe, and inserts the corresponding recipe and ingredient IDs into the database.
+
+    Parameters:
+        db_path (str): The path to the SQLite database file.
+        df (DataFrame): A pandas DataFrame containing recipe data with columns such as `recipe` and `ingredients`, 
+                        where `ingredients` contains a comma-separated list of ingredients.
+
+    Returns:
+        None: The function does not return anything; it commits changes directly to the database.
+    """
     # Connect to the database
     conn = sqlite3.connect(db_path)
 
@@ -315,6 +411,20 @@ def save_recipe_ingredient(db_path, df):
     conn.close()
 
 def show_table_data(db_path, table, limit=None):
+    """
+    Function that retrieves and displays data from a specified table in the database. The function constructs 
+    a dynamic SQL query to fetch the data from the given table, with an optional limit on the number of rows 
+    returned, and then prints out the results.
+
+    Parameters:
+        db_path (str): The path to the SQLite database file.
+        table (str): The name of the table to retrieve data from.
+        limit (int, optional): The maximum number of rows to display. If not specified, all rows will be retrieved.
+
+    Returns:
+        None: The function does not return anything; it prints the results directly.
+    """
+
     # Connect to the database
     conn = sqlite3.connect(db_path)
 

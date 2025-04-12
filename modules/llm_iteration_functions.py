@@ -4,14 +4,16 @@ import json
 import re
 
 def format_text_array(text_array):
-    """
-    Processes an array of text, ensuring that numbered items stay attached to their descriptions.
-    
-    Args:
-        text_array (list): List of text elements.
-    
+   """
+    Function that processes an array of text, ensuring that numbered items stay attached to their descriptions. 
+    The function checks each element in the array and joins a numbered item with its description if the number is at 
+    the end of the element. The formatted text is returned with each sentence separated by a newline.
+
+    Parameters:
+        text_array (list): List of text elements, where each element is a string representing part of the text.
+
     Returns:
-        str: Formatted text with newline characters after each sentence.
+        str: Formatted text where each sentence is separated by a newline, with numbered items attached to their descriptions.
     """
     formatted_text = []
     i = 0
@@ -37,7 +39,7 @@ def translate_text_with_Elia(text, src_lang, dst_lang, verbose = False):
         verbose (bool, optional): If True, prints the response JSON for debugging. Default is False.
 
     Returns:
-        str: The translated text after processing.
+        str: The translated text after processing, with sentences formatted and joined as a string.
     """
     # URL of the main translation page (GET request to retrieve CSRF token and cookies)
     url = "https://elia.eus/traductor"  
@@ -100,6 +102,18 @@ def translate_text_with_Elia(text, src_lang, dst_lang, verbose = False):
     
 def get_welcome_prompt():
 
+    """
+    Function that generates a welcome prompt for a virtual kitchen assistant. 
+    The function creates a message in Basque, provides information about the assistant's capabilities, 
+    and offers two options for the user to choose from. The message is then translated into English for use with a language model.
+
+    Parameters:
+        None
+
+    Returns:
+        PromptTemplate: A template object containing the translated welcome message for the assistant.
+    """
+
     # option context
     submenu1_context = "Kontsultatu errezeta taulak eta kategoria bakoitzeko errezeta kopuruak, baita osagaien erabilera eta ezaugarriak ere."
     submenu2_context = "Kontsultatu osagai zehatz batekin edo plater-ordena batekin egin daitezkeen errezetak, menu aukerak aztertu..."
@@ -125,7 +139,17 @@ def get_welcome_prompt():
     return welcome_prompt
 
 def get_submenu1_prompt():
+    """
+    Function that generates a prompt for the first submenu of the virtual kitchen assistant. 
+    The function lists several options for the user, asking them to choose one. The options are provided in Basque, 
+    and the text is then translated into English for use with a language model.
 
+    Parameters:
+        None
+
+    Returns:
+        PromptTemplate: A template object containing the translated submenu prompt for the assistant.
+    """
     # define submenu behavior
     submenu1 = (
         "Erabiltzaileari hainbat aukera zerrendatu eta bat aukeratzeko eskatu. Laburra izan gehienez 100 hitzekin.\n"
@@ -147,10 +171,31 @@ def get_submenu1_prompt():
 
 
 def get_welcome_menu_user_answer(answer_sim):
+    """
+    Function that generates a message based on the user's choice in the welcome menu. 
+    The function takes the user's selected option and creates a response asking what options are available next.
+
+    Parameters:
+        answer_sim (str): The user's chosen option from the welcome menu.
+
+    Returns:
+        str: A message in Basque confirming the user's selection and asking for further options.
+    """
     text = f"Ze ongi, {answer_sim} aukera aukeratzen dut, zein aukera eskaintzen dituzu?"
     return text
 
 def get_submenu1_answers(answer_sim):
+    """
+    Function that generates a response based on the user's choice in the first submenu. 
+    The function takes the user's selected option and creates a message in Basque, asking for the relevant data based on that choice.
+
+    Parameters:
+        answer_sim (int): The user's chosen option from the submenu.
+
+    Returns:
+        str: A message in Basque that corresponds to the selected option, asking for specific information.
+    """
+
     text = None 
     if answer_sim  == 1:
         text = f"{answer_sim} aukera aukeratzen dut, emaidazu informazio-taula zerrenda."
@@ -167,6 +212,17 @@ def get_submenu1_answers(answer_sim):
     return text
 
 def get_analysis_prompt_behavior():
+    """
+    Function that generates a prompt for analyzing user input to determine if it is requesting a specific recipe or food preparation. 
+    The function outlines the steps for analyzing the input, extracting relevant recipe information, and categorizing ingredients. 
+    The result is returned in a structured JSON format.
+
+    Parameters:
+        None
+
+    Returns:
+        str: A prompt for analyzing user input and returning the analysis in a structured JSON format.
+    """
 
     behave="""
         Analyze the following user input: {user_input}
@@ -230,6 +286,16 @@ def get_analysis_prompt_behavior():
     return behave
 
 def extract_json_as_dict_from_response(response):
+    """
+    Function that extracts a JSON block from a response string and parses it into a Python dictionary. 
+    The function searches for a JSON block wrapped in triple backticks and returns the parsed JSON data.
+
+    Parameters:
+        response (str): The response string containing the JSON block wrapped in triple backticks.
+
+    Returns:
+        dict or None: The parsed JSON as a dictionary if extraction is successful, otherwise None if no valid JSON is found or if there is a parsing error.
+    """
     # The pattern to capture the JSON block
     pattern = r"```json\n(.*?)\n```"
     

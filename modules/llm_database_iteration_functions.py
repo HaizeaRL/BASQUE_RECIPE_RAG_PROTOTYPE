@@ -17,6 +17,17 @@ table_descriptions = {
 
 def get_database(database_path):
 
+    """
+    Function that connects to an SQLite database using the provided database path and returns the database object 
+    if the connection is successful. If the connection fails or the database does not exist, it returns None.
+
+    Parameters:
+        database_path (str): The path to the SQLite database file.
+
+    Returns:
+        db (SQLDatabase or None): The database object if the connection is successful, otherwise None.
+    """
+
     # get database 
     db = SQLDatabase.from_uri(f"sqlite:///{database_path}")
 
@@ -26,6 +37,24 @@ def get_database(database_path):
 
 
 def get_database_tables(database_path, conf, user_mode=False, visualize_data = True, dest_lang = "eu"):
+
+    """
+    Function that connects to an SQLite database, retrieves the list of usable tables, and optionally filters out 
+    bridge tables and visualizes the data. If the connection to the database fails or no tables are found, the function 
+    returns None. The function also supports language translation for error messages and table descriptions.
+
+    Parameters:
+        database_path (str): The path to the SQLite database file.
+        conf (dict): A configuration dictionary containing settings, including a list of bridge tables under the key "BRIDGE_TABLES".
+        user_mode (bool, optional): A flag that, when set to True, filters out bridge tables from the list of tables to visualize. Defaults to False.
+        visualize_data (bool, optional): A flag that controls whether the function should print the list of tables and their descriptions. Defaults to True.
+        dest_lang (str, optional): The target language for translation of messages. Defaults to "eu" (Basque).
+
+    Returns:
+        tuple: A tuple containing:
+            - db (SQLDatabase or None): The connected database object if the connection is successful, otherwise None.
+            - tables_to_visualize (list): A list of table names to be visualized (filtered based on user_mode), or an empty list if no tables exist.
+    """
 
     # Get database
     db = get_database(database_path)
@@ -60,6 +89,20 @@ def get_database_tables(database_path, conf, user_mode=False, visualize_data = T
     return db, tables_to_visualize
 
 def parse_sql_string(sql_string):
+
+    """
+    Function that parses a formatted SQL string, extracting the question and SQL queries from it. The function assumes that 
+    the input string contains a question preceded by "Question: " and SQL queries preceded by "SQLQuery: ", separated by two newlines. 
+
+    Parameters:
+        sql_string (str): The SQL string containing a question and one or more SQL queries.
+
+    Returns:
+        dict: A dictionary with two keys:
+            - "question" (str): The extracted question from the string.
+            - "queries" (list): A list of SQL queries extracted from the string.
+    """
+
     parts = sql_string.split("\n\nSQLQuery: ")
     question = parts[0].replace("Question: ", "").strip()
     queries = parts[1].strip().split("\n")
@@ -71,17 +114,38 @@ def parse_sql_string(sql_string):
 
 
 def extract_sql_from_response(response):
+    """
+    Function that extracts an SQL query from a given response string. The function looks for an SQL query enclosed within 
+    triple backticks (```) with the `sql` syntax, specifically capturing a query starting with `SELECT` and ending with a semicolon.
+
+    Parameters:
+        response (str): The response string containing the SQL query enclosed in triple backticks.
+
+    Returns:
+        str or None: The extracted SQL query if found, or None if no matching query is found.
+    """
+
     pattern = r"```sql\n(SELECT .*?);\n```"  # Captura solo la consulta SQL
     match = re.search(pattern, response, re.DOTALL)
     return match.group(1) if match else None
 
-def extract_sql_from_response2(response):
-    pattern = r"```\n(SELECT .*?);\n```"  # Captura solo la consulta SQL
-    match = re.search(pattern, response, re.DOTALL)
-    return match.group(1) if match else None
 
 def get_rows_number_all_tables(database_path, llm, conf, dest_lang):
-     
+
+    """
+    Function that retrieves the number of rows for each table in the database. The function first connects to the database, excludes 
+    bridge tables, and generates SQL queries to count the rows in each table. It then executes the queries and prints the 
+    results for each table, excluding bridge tables, with the number of rows.
+
+    Parameters:
+        database_path (str): The file path of the database to connect to.
+        llm (object): The language model tool used to generate SQL queries.
+        conf (dict): A dictionary containing configurations, including details about bridge tables.
+        dest_lang (str): The destination language code for translation of output text (e.g., "eu" for Basque).
+
+    Returns:
+        None: This function prints the results of the query execution directly and does not return any value.
+    """     
     # get database tables
     db, tables = get_database_tables(database_path, conf, True, False, dest_lang) # without bridge tables, no print tables
 
@@ -121,6 +185,21 @@ def get_rows_number_all_tables(database_path, llm, conf, dest_lang):
 
 def get_recipe_count_per_category(database_path, llm, category_tables, dest_lang):
 
+    """
+    Function that retrieves the count of recipes per category from the database. For each category table, the function generates 
+    and executes an SQL query to count the number of recipes associated with each category name (not ID) using a 
+    LEFT JOIN between the recipe table and the category table. The results are printed, showing the category name 
+    and the corresponding number of recipes.
+
+    Parameters:
+        database_path (str): The file path of the database to connect to.
+        llm (object): The language model tool used to generate SQL queries.
+        category_tables (list): A list of category tables for which to count the recipes.
+        dest_lang (str): The destination language code for translation of output text (e.g., "eu" for Basque).
+
+    Returns:
+        None: This function prints the results directly and does not return any value.
+    """
     # Get database
     db = get_database(database_path)
     
@@ -164,6 +243,23 @@ def get_recipe_count_per_category(database_path, llm, category_tables, dest_lang
 
 def get_ingredient_category_top3(database_path,  worst = False, dest_lang= "eu"):
 
+    """
+    Function that retrieves and prints the top 3 ingredient categories with the most or fewest recipes in the database. 
+    The function counts the number of recipes associated with each ingredient category, orders them 
+    based on the count (either in descending or ascending order), and then displays the top 3 categories 
+    along with their recipe counts.
+
+    Parameters:
+        database_path (str): The file path of the database to connect to.
+        worst (bool, optional): If True, returns the categories with the fewest recipes. 
+                                 Defaults to False, which returns the categories with the most recipes.
+        dest_lang (str, optional): The destination language code for translation of output text 
+                                    (e.g., "eu" for Basque). Defaults to "eu".
+
+    Returns:
+        None: This function prints the top 3 ingredient categories and their respective recipe counts 
+              directly and does not return any value.
+    """
     # Get database
     db = get_database(database_path)
     
@@ -212,7 +308,21 @@ def get_ingredient_category_top3(database_path,  worst = False, dest_lang= "eu")
 
 
 def get_most_used_ingredient_per_category(database_path, dest_lang):
+    """
+    Function that retrieves and prints the most used ingredient for each ingredient category in the database.
+    The function counts the occurrences of each ingredient within its category and identifies 
+    the most frequently used ingredient for each category. It then displays the category name, 
+    the most used ingredient, and the count of recipes where the ingredient appears.
 
+    Parameters:
+        database_path (str): The file path of the database to connect to.
+        dest_lang (str): The destination language code for translation of output text 
+                         (e.g., "eu" for Basque).
+
+    Returns:
+        None: This function prints the most used ingredient per ingredient category and its 
+              recipe count directly and does not return any value.
+    """
     # Get database
     db = get_database(database_path)
     
@@ -259,8 +369,29 @@ def get_most_used_ingredient_per_category(database_path, dest_lang):
             print(f"\t-'{cat}' osagai kategorian 'gehien' ageri den osagaia: '{ing}' da. Zehazki: {cnt} errezetatan agertzen da.")
     
     
-def get_and_filter_recipe_by_term(db, llm,json_dict, term, dest_lang= "eu"):      
-    
+def get_and_filter_recipe_by_term(db, llm,json_dict, term, dest_lang= "eu"):
+
+    """
+    Function that retrieves and filters recipes from the database based on a given search term. 
+    The function first attempts to find recipes that contain the term in the recipe's name. 
+    If no results are found, it tries to find recipes using a list of ingredients provided 
+    in the input JSON dictionary. The results are returned in the form of a list of recipe names 
+    with their corresponding URLs.
+
+    Parameters:
+        db (SQLDatabase): The database object used to run queries.
+        llm (OpenAI): The language model used to generate SQL queries.
+        json_dict (dict): A dictionary containing the ingredients list, which is used to 
+                          suggest recipes when no recipes match the search term.
+        term (str): The search term used to filter recipes by their name.
+        dest_lang (str): The destination language code for translation of output text 
+                         (e.g., "eu" for Basque). Default is "eu".
+
+    Returns:
+        None: This function prints out a list of recipe names with their corresponding URLs 
+              that match the search criteria. If no matching recipes are found, it will attempt 
+              to provide suggestions based on ingredients.
+    """   
     # ask to generate sql
     write_query = create_sql_query_chain(llm, db)
     chain = write_query
@@ -331,7 +462,29 @@ def get_and_filter_recipe_by_term(db, llm,json_dict, term, dest_lang= "eu"):
 
 def process_json_dict_and_get_bbdd_result(json_dict, database_path , llm, dest_lang= "eu"):
 
-       # Get database
+    """
+    Function that retrieves recipes or food-related information from the database 
+    based on the data provided in the input JSON dictionary. It checks whether the 
+    user is asking for a specific recipe or food and then calls the appropriate 
+    function to filter recipes based on the given terms.
+
+    Parameters:
+        json_dict (dict): A dictionary containing the query parameters, including 
+                          flags for specific requests (like `concrete_recipe_ask` 
+                          or `concrete_food_ask`) and the names of the recipe 
+                          or food (`recipe_name` or `food_name`).
+        database_path (str): The path to the SQLite database used for querying.
+        llm (OpenAI): The language model used to generate SQL queries.
+        dest_lang (str): The destination language code for translation of output text 
+                         (e.g., "eu" for Basque). Default is "eu".
+
+    Returns:
+        None: This function does not return a value. Instead, it prints out results
+              directly by querying the database and filtering recipes or food names 
+              based on the provided terms.
+    """
+
+    # Get database
     db = get_database(database_path)
     
     # database conection ctrl
