@@ -4,7 +4,7 @@ import json
 import re
 
 def format_text_array(text_array):
-   """
+    """
     Function that processes an array of text, ensuring that numbered items stay attached to their descriptions. 
     The function checks each element in the array and joins a numbered item with its description if the number is at 
     the end of the element. The formatted text is returned with each sentence separated by a newline.
