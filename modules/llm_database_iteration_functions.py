@@ -292,7 +292,7 @@ def get_and_filter_recipe_by_term(db, llm,json_dict, term, dest_lang= "eu"):
             # print model message saying that we will try to find solution according to ingredients
             list_ingredients_translated = [lif.translate_text_with_Elia(item, "en", dest_lang) for item in json_dict["ingredients"]]
             
-            text_to_translate = f"""I don't have a specific recipe associated with '{term}' but that recipe uses {list_ingredients_translated} ingredients so I will try to suggest 5 recipes that can be made with these ingredients."""
+            text_to_translate = f"""I don't have a specific recipe associated with '{term}' but that recipe uses {list_ingredients_translated} ingredients so I will try to suggest (at most) 5 recipes that can be made with these ingredients."""
             print("---\n<MODEL>:", lif.translate_text_with_Elia(text_to_translate, "en", dest_lang))
 
             # ask to generate sql
@@ -303,15 +303,12 @@ def get_and_filter_recipe_by_term(db, llm,json_dict, term, dest_lang= "eu"):
                     Match using LEFT JOINS the 'recipe', 'recipe_ingredient', and 'ingredient' tables and    
                     use given ingredient name list {list_ingredients_translated} to filter ingredients.
                     Limit the results to 5 recipes.  
-                    Do not include any other JOINs or additional tables. Provide only the SQL query.
+                    Do not include any other JOINs or additional tables. Provide only the SQL query between ```s.
                     """
             answer = chain.invoke({"question": question_text})
-            print(answer)
-
             if answer:
                 # extract sql from answer
-                query = extract_sql_from_response2(answer)
-                print(query)
+                query = extract_sql_from_response(answer)
                 
                 # execute query
                 execute_query = QuerySQLDataBaseTool(db=db)
